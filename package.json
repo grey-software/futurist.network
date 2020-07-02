@@ -2,7 +2,10 @@
     "name": "futurist.network",
     "version": "0.0.1",
     "description": "Guiding the future in a net positive direction by allowing the public to propose, fund, and work on the themes and technologies of the future.",
-    "main": "index.js",
+    "engines": {
+        "node": "12.18.2"
+    },
+
     "scripts": {
         "dev": "yarn --cwd packages/backend dev;yarn --cwd packages/frontend dev;",
         "build": "yarn --cwd packages/frontend build",
