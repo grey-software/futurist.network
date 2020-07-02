@@ -11,7 +11,10 @@
     "scripts": {
         "dev": "yarn --cwd packages/backend dev;yarn --cwd packages/frontend dev;",
         "build:frontend": "yarn --cwd packages/frontend build",
-        "start:backend": "yarn --cwd packages/backend start"
+        "start:backend": "yarn --cwd packages/backend start",
+        "postinstall": "yarn --cwd packages/frontend;yarn --cwd packages/backend"
+
+
     },
     "repository": {
         "type": "git",
