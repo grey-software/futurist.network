@@ -1,1 +1,1 @@
-web: yarn run serve:backend
+web: yarn run start:backend
