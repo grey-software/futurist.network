@@ -1,34 +1,18 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        frontend
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <div class="container" />
 </template>
 
 <script>
-export default {}
+import projectsQuery from '~/apollo/queries/category/categories'
+
+export default {
+  apollo: {
+    projects: {
+      prefetch: true,
+      query: projectsQuery
+    }
+  }
+}
 </script>
 
 <style>

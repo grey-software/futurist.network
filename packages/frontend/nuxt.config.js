@@ -62,26 +62,25 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
-    '@nuxtjs/apoll',
+    '@nuxt/content'
   ],
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.BACKEND_URL | 'http://localhost:1337/graphql'
-      }
-    }
-  }
-/*
-** Axios module configuration
-** See https://axios.nuxtjs.org/options
-*/
-axios: {},
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {},
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
   */
   content: {},
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || "http://localhost:1337/graphql"
+      }
+    }
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
