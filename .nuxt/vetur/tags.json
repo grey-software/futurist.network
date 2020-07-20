@@ -1,0 +1,38 @@
+{
+  "FuturistAbout": {
+    "description": "Auto imported from components/FuturistAbout.vue"
+  },
+  "LazyFuturistAbout": {
+    "description": "Auto imported from components/FuturistAbout.vue"
+  },
+  "FuturistHero": {
+    "description": "Auto imported from components/FuturistHero.vue"
+  },
+  "LazyFuturistHero": {
+    "description": "Auto imported from components/FuturistHero.vue"
+  },
+  "FuturistNavBar": {
+    "description": "Auto imported from components/FuturistNavBar.vue"
+  },
+  "LazyFuturistNavBar": {
+    "description": "Auto imported from components/FuturistNavBar.vue"
+  },
+  "FuturistTeam": {
+    "description": "Auto imported from components/FuturistTeam.vue"
+  },
+  "LazyFuturistTeam": {
+    "description": "Auto imported from components/FuturistTeam.vue"
+  },
+  "ProjectCard": {
+    "description": "Auto imported from components/ProjectCard.vue"
+  },
+  "LazyProjectCard": {
+    "description": "Auto imported from components/ProjectCard.vue"
+  },
+  "TeamCard": {
+    "description": "Auto imported from components/TeamCard.vue"
+  },
+  "LazyTeamCard": {
+    "description": "Auto imported from components/TeamCard.vue"
+  }
+}

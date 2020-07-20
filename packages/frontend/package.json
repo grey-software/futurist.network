@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "generate": "nuxt build --target static && nuxt export",
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
@@ -18,6 +19,7 @@
     "@nuxtjs/axios": "^5.11.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
+    "core-js": "^3.6.5",
     "graphql": "^15.2.0",
     "nuxt": "^2.13.0"
   },

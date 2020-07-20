@@ -1,5 +1,20 @@
 # futurist.network
 
-A work in progress new website for futurist.network 
+## Build Setup
 
-[Current Design](https://xd.adobe.com/view/4f572a71-f1ea-40d5-7585-7e359d731e6f-3966/)
+```bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
