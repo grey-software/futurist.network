@@ -1,62 +1,45 @@
 <template>
   <div>
+    <futurist-nav-bar></futurist-nav-bar>
     <Nuxt />
   </div>
 </template>
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+import FuturistNavBar from "@/components/FuturistNavBar"
+
+export default {
+  components: {
+    FuturistNavBar,
+  },
 }
+</script>
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700 &family=Montserrat:wght@400;500&display=swap");
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  background-color: #050c17;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
+a {
   text-decoration: none;
-  padding: 10px 30px;
+  color: unset;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
+a:hover {
   text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+  color: unset;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+:root {
+  --color-text: #fcfcfc;
+  --color-text-dark: #fcfcfc;
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
 }
+
 </style>
