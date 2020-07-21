@@ -82,7 +82,7 @@ a:hover {
 
 .g-hero-heading {
   font-weight: 800;
-  font-family: var(--font-heading);
+  font-family: var(--font-heading), sans-serif;
   color: white;
   letter-spacing: -0.025em;
   font-size: calc(12px + 5vw);
@@ -100,29 +100,21 @@ a:hover {
   text-align: center;
 }
 
-.neumorphism-3 {
+.btn {
+  z-index: 1;
+  padding: 8px 50px;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 55px;
-  width: 200px;
-  box-shadow:
-    10px 10px 20px rgba(0, 0, 0, 0.8),
-    -6px -6px 10px rgba(255, 255, 255, 0.1);
-  position: relative;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+  font-weight: bold;
+  border: none;
+  color: white;
 }
 
-.neumorphism-3::after {
-  content: "";
-  border-radius: 30px;
-  position: absolute;
-  height: 75%;
-  width: 95%;
-  background-color: transparent;
-  box-shadow:
-    inset 5px 5px 10px rgba(0, 0, 0, 0.8),
-    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+.btn :hover {
+  text-decoration: none;
 }
 
 /* ----------- MORE INDICATOR ------------ */
@@ -133,5 +125,31 @@ a:hover {
   opacity: 0;
   color: white;
   font-weight: bold;
+}
+
+.mt {
+  margin-top: 20px;
+}
+
+/* ANIMATE */
+.animation-more {
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+/* KEYFRAMES */
+@keyframes drive {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(15px);
+    opacity: 1;
+  }
 }
 </style>

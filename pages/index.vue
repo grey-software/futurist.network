@@ -6,7 +6,6 @@
       class="f-section"
     >
       <futurist-hero />
-      <FuturistAbout />
       <FuturistTeam />
       <!--      <b-carousel-->
       <!--        id="carousel-1"-->

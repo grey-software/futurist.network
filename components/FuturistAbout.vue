@@ -1,32 +1,29 @@
 <template>
   <div>
-    <div class="g-hero justify-content-center">
-      <div class="g-hero">
+    <div class="g-landing">
+      <div class="g-hero d-flex align-content-center justify-content-center flex-column">
         <h1 class="g-hero-heading">
-          About <span class="text-rainbow">US</span>
+          About
+          <span class="text-rainbow">US</span>
         </h1>
+        <p class="g-hero-tag">Propose, Fund, & Work.</p>
 
-        <p class="g-hero-tag mt-0">Meet the Team.</p>
+        <discord-btn />
 
-        <div class=" btn">
-          <b-link
-            class="neumorphism-3"
-            href="#"
-          >
-            <a style="color: white;">Join Now</a>
-          </b-link>
-
-          <div class="more-indicator animation-more mt">
-            <p>MORE</p>
-            <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
-          </div>
+        <!-- MORE INDICATOR -->
+        <div class="more-indicator animation-more mt">
+          <p>MORE</p>
+          <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
         </div>
       </div>
     </div>
     <hr />
     <div class="about">
       <div class="heading">
-        <h1 class="title">What We <span style="color: crimson;">Do?</span></h1>
+        <h1 class="title">
+          What We
+          <span style="color: crimson;">Do?</span>
+        </h1>
         <p class="sub-title">
           The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
           fund, and work on the themes and technologies of the future.
@@ -36,10 +33,7 @@
       <div class="container">
         <div class="row row-cols-3">
           <div class="col">
-            <div
-              class="icon"
-              style="color: #6f75ff;"
-            >
+            <div class="icon" style="color: #6f75ff;">
               <span class="fa-stack fa-2x">
                 <fa-icon
                   :icon="['fas', 'user-friends']"
@@ -52,15 +46,14 @@
 
             <div class="text-box">
               <h5 class="sub-heading">Innovate</h5>
-              <p class="sub-heading-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+              <p
+                class="sub-heading-text"
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
             </div>
           </div>
 
           <div class="col">
-            <div
-              class="icon"
-              style="color: #6fffa6;"
-            >
+            <div class="icon" style="color: #6fffa6;">
               <span class="fa-stack fa-2x">
                 <fa-icon
                   :icon="['fas', 'dollar-sign']"
@@ -73,15 +66,14 @@
 
             <div class="text-box">
               <h5 class="sub-heading">Inspire</h5>
-              <p class="sub-heading-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+              <p
+                class="sub-heading-text"
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
             </div>
           </div>
 
           <div class="col">
-            <div
-              class="icon"
-              style="color: #fab74a;"
-            >
+            <div class="icon" style="color: #fab74a;">
               <span class="fa-stack fa-2x">
                 <fa-icon
                   :icon="['fas', 'chalkboard-teacher']"
@@ -94,13 +86,13 @@
 
             <div class="text-box">
               <h5 class="sub-heading">Teaching</h5>
-              <p class="sub-heading-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+              <p
+                class="sub-heading-text"
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
 
     <div class="about">
@@ -110,53 +102,56 @@
             <img src="../assets/world-map.png" />
           </div>
           <div class="col">
-            <h1
-              class="title"
-              style="text-align: left;"
-            > Tech of <br />the <span style="color: #2bacf9;">Future.</span></h1>
-            <p class="desc">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.
-            </p>
+            <h1 class="title" style="text-align: left;">
+              Tech of
+              <br />the
+              <span style="color: #2bacf9;">Future.</span>
+            </h1>
+            <p
+              class="desc"
+            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
 
-            <div
-              class="sub-box"
-              style="text-align: left;"
-            >
+            <div class="sub-box" style="text-align: left;">
               <div class="row row-cols-2">
                 <div class="col">
-                  <fa-icon
-                    :icon="['fas', 'globe']"
-                    class="fa-3x"
-                    style="color: #6f75ff;"
-                  ></fa-icon>
+                  <fa-icon :icon="['fas', 'globe']" class="fa-3x" style="color: #6f75ff;"></fa-icon>
                   <h5 class="title">Crowdsourcing</h5>
-                  <p class="desc">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.
-                  </p>
+                  <p
+                    class="desc"
+                  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
                 </div>
 
                 <div class="col">
-                  <fa-icon
-                    :icon="['fas', 'users']"
-                    class="fa-3x"
-                    style="color: #6fffa6;"
-                  ></fa-icon>
+                  <fa-icon :icon="['fas', 'users']" class="fa-3x" style="color: #6fffa6;"></fa-icon>
                   <h5 class="title">Futurist Community</h5>
-                  <p class="desc">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.
-                  </p>
+                  <p
+                    class="desc"
+                  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+import DiscordBtn from '@/components/DiscordBtn.vue'
+
+export default {
+  components: {
+    DiscordBtn
+  }  
+}
+</script>
+
 <style scoped>
+.g-hero-heading {
+  padding: 0;
+}
+
 .about {
   color: white;
   margin: 0 120px;

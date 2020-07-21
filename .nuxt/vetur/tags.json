@@ -1,4 +1,10 @@
 {
+  "DiscordBtn": {
+    "description": "Auto imported from components/DiscordBtn.vue"
+  },
+  "LazyDiscordBtn": {
+    "description": "Auto imported from components/DiscordBtn.vue"
+  },
   "FuturistAbout": {
     "description": "Auto imported from components/FuturistAbout.vue"
   },
