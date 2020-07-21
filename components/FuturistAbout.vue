@@ -1,8 +1,30 @@
 <template>
   <div>
+    <div class="g-hero justify-content-center">
+      <div class="g-hero">
+        <h1 class="g-hero-heading">
+          About <span class="text-rainbow">US</span>
+        </h1>
+
+        <p class="g-hero-tag mt-0">Meet the Team.</p>
+
+        <div class=" btn">
+          <b-link
+            class="neumorphism-3"
+            href="#"
+          >
+            <a style="color: white;">Join Now</a>
+          </b-link>
+
+          <div class="more-indicator animation-more mt">
+            <p>MORE</p>
+            <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
+          </div>
+        </div>
+      </div>
+    </div>
     <hr />
     <div class="about">
-
       <div class="heading">
         <h1 class="title">What We <span style="color: crimson;">Do?</span></h1>
         <p class="sub-title">
@@ -134,7 +156,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .about {
   color: white;
   margin: 0 120px;

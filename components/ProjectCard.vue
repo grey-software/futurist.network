@@ -1,33 +1,10 @@
 <template>
-  <!-- <div class="card">
-      <div class="text">
-        <b-col>
-          <b-row>
-            <b-col cols="3">
-              <img :src="project.icon" />
-            </b-col>
-            <b-col cols="9">
-              <div class="title">{{project.name}}</div>
-            </b-col>
-          </b-row>
-        </b-col>
-
-        <p class="description">{{project.desc}}</p>
-
-        <div class="status">{{project.status}}</div>
-
-        <b-link :href="project.githubLink" target="_blank">
-          <fa-icon class="mr-3 icon" :icon="['fab', 'github']" />
-        </b-link>
-      </div>
-  </div>-->
   <b-card
     :title="project.title"
     :img-src="imageUrl"
     :img-alt="`${project.title} Image`"
     img-top
-    style="max-width: 20rem;"
-    class="project-card mb-2"
+    class="project-card m-4"
   >
     <b-card-text>{{project.desc}}</b-card-text>
 
@@ -87,6 +64,10 @@ export default {
 
 .project-card {
   color: gray;
+  margin: 24px;
+  border-radius: 12px;
+  width: 42%;
+  height: 420px;
 }
 </style>
 

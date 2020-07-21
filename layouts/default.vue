@@ -12,11 +12,21 @@ export default {
   components: {
     FuturistNavBar,
   },
+  created () {
+    if (process.client) {
+      document.addEventListener('keyup', (e) => {
+        if (e.key == 'd') {
+          console.log("hello");
+          [].forEach.call(document.querySelectorAll("*"), function (a) { a.style.outline = "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16) })
+        }
+      });
+    }
+  }
 }
 </script>
 
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700 &family=Montserrat:wght@400;500&display=swap");
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700 &family=Montserrat:wght@400;500&display=swap");
 
 *,
 *::before,
@@ -38,8 +48,90 @@ a:hover {
 :root {
   --color-text: #fcfcfc;
   --color-text-dark: #fcfcfc;
-  --font-heading: "Montserrat", sans-serif;
-  --font-body: "Nunito Sans", sans-serif;
+  --font-heading: "Montserrat";
+  --font-body: "Roboto Sans";
 }
 
+.g-landing {
+  margin: 0 120px;
+}
+
+.text-rainbow {
+  color: red;
+  background-image: -webkit-linear-gradient(92deg, red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+.g-hero {
+  height: 100vh;
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.g-hero-heading {
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: white;
+  letter-spacing: -0.025em;
+  font-size: calc(12px + 5vw);
+  line-height: 1.05;
+  z-index: 1000;
+  padding: 0 0 80px 0;
+}
+
+.g-hero-tag {
+  font-size: 18px;
+  color: lightslategrey;
+  letter-spacing: -0.032em;
+  line-height: 1.5;
+  padding: 0 0 40px 0;
+  text-align: center;
+}
+
+.neumorphism-3 {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 200px;
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.8),
+    -6px -6px 10px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.neumorphism-3::after {
+  content: "";
+  border-radius: 30px;
+  position: absolute;
+  height: 75%;
+  width: 95%;
+  background-color: transparent;
+  box-shadow:
+    inset 5px 5px 10px rgba(0, 0, 0, 0.8),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ----------- MORE INDICATOR ------------ */
+.more-indicator {
+  text-align: center;
+  font-size: 14px;
+  padding: 40px 40px;
+  opacity: 0;
+  color: white;
+  font-weight: bold;
+}
 </style>

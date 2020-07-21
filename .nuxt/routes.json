@@ -1,5 +1,12 @@
 [
   {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/arsalagrey/Programming/futurist.network/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_0b72daf6"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/arsalagrey/Programming/futurist.network/pages/index.vue",
