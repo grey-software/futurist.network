@@ -29,6 +29,12 @@
   "LazyFuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
   },
+  "HowItWorks": {
+    "description": "Auto imported from components/HowItWorks.vue"
+  },
+  "LazyHowItWorks": {
+    "description": "Auto imported from components/HowItWorks.vue"
+  },
   "ProjectCard": {
     "description": "Auto imported from components/ProjectCard.vue"
   },

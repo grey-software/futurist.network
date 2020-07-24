@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="g-landing">
-      <div class="g-hero d-flex align-content-center justify-content-center flex-column">
-        <h1 class="g-hero-heading">
+      <div class="hero d-flex align-content-center justify-content-center flex-column">
+        <h1 class="hero-heading">
           About
           <span class="text-rainbow">US</span>
         </h1>
-        <p class="g-hero-tag">Propose, Fund, & Work.</p>
+        <p class="hero-tag">Propose, Fund, & Work.</p>
 
         <discord-btn />
 
@@ -143,12 +143,12 @@ import DiscordBtn from '@/components/DiscordBtn.vue'
 export default {
   components: {
     DiscordBtn
-  }  
+  }
 }
 </script>
 
 <style scoped>
-.g-hero-heading {
+.hero-heading {
   padding: 0;
 }
 

@@ -6,47 +6,26 @@
       class="f-section"
     >
       <futurist-hero />
-      <FuturistTeam />
-      <!--      <b-carousel-->
-      <!--        id="carousel-1"-->
-      <!--        v-model="slide"-->
-      <!--        :interval="1"-->
-      <!--        controls-->
-      <!--        indicators-->
-      <!--        style="text-shadow: 1px 1px 2px #333;"-->
-      <!--        @sliding-start="onSlideStart"-->
-      <!--        @sliding-end="onSlideEnd"-->
-      <!--      >-->
-      <!--        <b-carousel-slide>-->
-      <!--          <b-row cols="2">-->
-      <!--            <b-col>Column</b-col>-->
-      <!--            <b-col>Column</b-col>-->
-      <!--            <b-col>Column</b-col>-->
-      <!--            <b-col>Column</b-col>-->
-      <!--          </b-row>-->
-      <!--        </b-carousel-slide>-->
+      <how-it-works/>
 
-      <!--        <b-carousel-slide>......</b-carousel-slide>-->
-
-      <!--      </b-carousel>-->
 
     </section>
-    <section
-      id="f-projects"
-      class="f-section"
-    >
-      <div
-        v-if="projects"
-        class="flex row flex-wrap"
-      >
-        <div
-          v-for="project in projects"
-          :key="project.title"
-        >
-          <project-card :project="project" />
-        </div>
-      </div>
-    </section>
+<!--    <section-->
+<!--      id="f-projects"-->
+<!--      class="f-section"-->
+<!--    >-->
+<!--      <div-->
+<!--        v-if="projects"-->
+<!--        class="flex row flex-wrap"-->
+<!--      >-->
+<!--        <div-->
+<!--          v-for="project in projects"-->
+<!--          :key="project.title"-->
+<!--        >-->
+<!--          <project-card :project="project" />-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
   </div>
 </template>
 
@@ -55,6 +34,7 @@ import FuturistHero from "@/components/FuturistHero";
 import FuturistAbout from "@/components/FuturistAbout";
 import TeamCard from "@/components/TeamCard";
 import FuturistTeam from "@/components/FuturistTeam";
+import HowItWorks from "@/components/HowItWorks";
 import ProjectCard from "@/components/ProjectCard";
 import gql from "graphql-tag";
 // import ProjectsQuery from "@/apollo/queries/projects/Projects.gql";
@@ -64,8 +44,8 @@ export default {
     FuturistHero,
     FuturistAbout,
     TeamCard,
-    FuturistTeam
-    // ProjectCard
+    FuturistTeam,
+      HowItWorks,
   },
   data () {
     return {

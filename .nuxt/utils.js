@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"apiUrl":"http://159.89.124.15","BASE_URL":"http://localhost:3000","API_URL":"http://159.89.124.15","GRAPHQL_URL":"http://159.89.124.15/graphql"}
+      env: {"apiUrl":"http://159.89.124.15/","BASE_URL":"http://localhost:3000/","API_URL":"http://159.89.124.15/","GRAPHQL_URL":"http://159.89.124.15/graphql"}
     }
     // Only set once
     if (!process.static && context.req) {
