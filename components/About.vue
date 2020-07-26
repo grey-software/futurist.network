@@ -73,14 +73,15 @@
           </div>
 
           <div class="col">
-            <div class="icon" style="color: #fab74a;">
+            <div style="color: #fab74a;">
               <span class="fa-stack fa-2x">
+                <div class="circle fa-stack-2x"></div>
                 <fa-icon
                   :icon="['fas', 'chalkboard-teacher']"
                   class="fa-stack-2x fa-lg"
                   style="color: #fab74a;"
                 ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
+
               </span>
             </div>
 

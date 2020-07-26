@@ -1,16 +1,19 @@
 <template>
   <div>
-    <futurist-nav-bar></futurist-nav-bar>
-    <Nuxt />
+    <NavBar/>
+    <Nuxt/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import FuturistNavBar from "@/components/FuturistNavBar"
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
 
 export default {
   components: {
-    FuturistNavBar,
+    NavBar,
+      Footer,
   },
   created () {
     if (process.client) {

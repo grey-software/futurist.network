@@ -1,15 +1,16 @@
+/* eslint-disable */
 <template>
   <div class="pb-5">
     <!-- Hero -->
     <section
       id="f-hero"
-      class="f-section"
-    >
-      <futurist-hero />
-      <how-it-works/>
+      class="f-section">
 
+      <Hero/>
+      <HowItWorks/>
 
     </section>
+
 <!--    <section-->
 <!--      id="f-projects"-->
 <!--      class="f-section"-->
@@ -30,21 +31,16 @@
 </template>
 
 <script>
-import FuturistHero from "@/components/FuturistHero";
-import FuturistAbout from "@/components/FuturistAbout";
-import TeamCard from "@/components/TeamCard";
-import FuturistTeam from "@/components/FuturistTeam";
-import HowItWorks from "@/components/HowItWorks";
-import ProjectCard from "@/components/ProjectCard";
+import Hero from "../components/Hero";
+import HowItWorks from "../components/HowItWorks";
 import gql from "graphql-tag";
+
+// import ProjectCard from "@/components/ProjectCard";
 // import ProjectsQuery from "@/apollo/queries/projects/Projects.gql";
 
 export default {
   components: {
-    FuturistHero,
-    FuturistAbout,
-    TeamCard,
-    FuturistTeam,
+    Hero,
       HowItWorks,
   },
   data () {

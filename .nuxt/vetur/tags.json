@@ -1,27 +1,21 @@
 {
+  "About": {
+    "description": "Auto imported from components/About.vue"
+  },
+  "LazyAbout": {
+    "description": "Auto imported from components/About.vue"
+  },
   "DiscordBtn": {
     "description": "Auto imported from components/DiscordBtn.vue"
   },
   "LazyDiscordBtn": {
     "description": "Auto imported from components/DiscordBtn.vue"
   },
-  "FuturistAbout": {
-    "description": "Auto imported from components/FuturistAbout.vue"
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
   },
-  "LazyFuturistAbout": {
-    "description": "Auto imported from components/FuturistAbout.vue"
-  },
-  "FuturistHero": {
-    "description": "Auto imported from components/FuturistHero.vue"
-  },
-  "LazyFuturistHero": {
-    "description": "Auto imported from components/FuturistHero.vue"
-  },
-  "FuturistNavBar": {
-    "description": "Auto imported from components/FuturistNavBar.vue"
-  },
-  "LazyFuturistNavBar": {
-    "description": "Auto imported from components/FuturistNavBar.vue"
+  "LazyFooter": {
+    "description": "Auto imported from components/Footer.vue"
   },
   "FuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
@@ -29,11 +23,23 @@
   "LazyFuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
   },
+  "Hero": {
+    "description": "Auto imported from components/Hero.vue"
+  },
+  "LazyHero": {
+    "description": "Auto imported from components/Hero.vue"
+  },
   "HowItWorks": {
     "description": "Auto imported from components/HowItWorks.vue"
   },
   "LazyHowItWorks": {
     "description": "Auto imported from components/HowItWorks.vue"
+  },
+  "NavBar": {
+    "description": "Auto imported from components/NavBar.vue"
+  },
+  "LazyNavBar": {
+    "description": "Auto imported from components/NavBar.vue"
   },
   "ProjectCard": {
     "description": "Auto imported from components/ProjectCard.vue"
