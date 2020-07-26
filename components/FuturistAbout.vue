@@ -95,7 +95,11 @@
       </div>
     </div>
 
-    <div class="about">
+    <span v-for="team in teams" :key="team.name">
+      <TeamCard :name="team.name" :linkedin="team.linkedin" :mail="team.mail" :headline="team.headline" :discord="team.discord" />
+    </span>
+
+    <div class="about mt-5">
       <div class="container">
         <div class="row row-cols-2">
           <div class="col">
@@ -139,10 +143,36 @@
 
 <script>
 import DiscordBtn from '@/components/DiscordBtn.vue'
+import TeamCard from "@/components/TeamCard";
 
 export default {
+  data() {
+    return {
+      teams: [{
+        mail: "jaymejean@gmail.com",
+        headline: "Board Member",
+        name: "Jaymes Jean",
+        discord: "tsujo#0313",
+        linkedin: "https://www.linkedin.com/in/jaymes-jean-9990918a/"
+      }, {
+        mail: "stellarator001@gmail.com",
+        headline: "Board Member / Team Lead for Space",
+        name: "Naeem England",
+        discord: "Stellarator#1218",
+        linkedin: ""
+      }, {
+        mail: "ngoert@gmail.com",
+        headline: "Founder & Board Member",
+        name: "Nick Goertzen",
+        discord: "Thiizic#1778",
+        linkedin: "https://www.linkedin.com/in/nick-g-59492493/"
+      }
+      ]
+    }
+  },
   components: {
-    DiscordBtn
+    DiscordBtn,
+    TeamCard
   }  
 }
 </script>

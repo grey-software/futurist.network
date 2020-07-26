@@ -50,6 +50,7 @@ a:hover {
   --color-text-dark: #fcfcfc;
   --font-heading: "Montserrat";
   --font-body: "Roboto Sans";
+  --bg: "#050c17";
 }
 
 .g-landing {
