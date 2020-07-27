@@ -19,15 +19,17 @@
     </div>
     <hr />
     <div class="about">
-      <div class="heading">
-        <h1 class="title">
-          What We
-          <span style="color: crimson;">Do?</span>
-        </h1>
-        <p class="sub-title">
-          The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
-          fund, and work on the themes and technologies of the future.
-        </p>
+      <div class="container">
+        <div class="heading">
+          <h1 class="title">
+            What We
+            <span class="text-red">Do?</span>
+          </h1>
+          <p class="sub-title">
+            The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
+            fund, and work on the themes and technologies of the future.
+          </p>
+        </div>
       </div>
 
       <div class="container">
@@ -95,46 +97,25 @@
       </div>
     </div>
 
-    <span v-for="team in teams" :key="team.name">
-      <TeamCard :name="team.name" :linkedin="team.linkedin" :mail="team.mail" :headline="team.headline" :discord="team.discord" />
-    </span>
-
-    <div class="about mt-5">
+    <div class="about pb-5">
+      <div class="container text-left">
+        <h1 class="title">
+          The
+          <span class="text-purple">Team.</span>
+        </h1>
+      </div>
       <div class="container">
-        <div class="row row-cols-2">
-          <div class="col">
-            <img src="../assets/world-map.png" />
-          </div>
-          <div class="col">
-            <h1 class="title" style="text-align: left;">
-              Tech of
-              <br />the
-              <span style="color: #2bacf9;">Future.</span>
-            </h1>
-            <p
-              class="desc"
-            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
-
-            <div class="sub-box" style="text-align: left;">
-              <div class="row row-cols-2">
-                <div class="col">
-                  <fa-icon :icon="['fas', 'globe']" class="fa-3x" style="color: #6f75ff;"></fa-icon>
-                  <h5 class="title">Crowdsourcing</h5>
-                  <p
-                    class="desc"
-                  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
-                </div>
-
-                <div class="col">
-                  <fa-icon :icon="['fas', 'users']" class="fa-3x" style="color: #6fffa6;"></fa-icon>
-                  <h5 class="title">Futurist Community</h5>
-                  <p
-                    class="desc"
-                  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="row d-flex justify-content-around">
+          <span class="col-lg-4 col-12" v-for="team in teams" :key="team.name">
+            <TeamCard
+              :name="team.name"
+              :linkedin="team.linkedin"
+              :mail="team.mail"
+              :headline="team.headline"
+              :discord="team.discord"
+              :imgSrc="team.imgSrc"
+            />
+          </span>
         </div>
       </div>
     </div>
@@ -142,39 +123,43 @@
 </template>
 
 <script>
-import DiscordBtn from '@/components/DiscordBtn.vue'
+import DiscordBtn from "@/components/DiscordBtn.vue";
 import TeamCard from "@/components/TeamCard";
 
 export default {
   data() {
     return {
-      teams: [{
-        mail: "jaymejean@gmail.com",
-        headline: "Board Member",
-        name: "Jaymes Jean",
-        discord: "tsujo#0313",
-        linkedin: "https://www.linkedin.com/in/jaymes-jean-9990918a/"
-      }, {
-        mail: "stellarator001@gmail.com",
-        headline: "Board Member / Team Lead for Space",
-        name: "Naeem England",
-        discord: "Stellarator#1218",
-        linkedin: ""
-      }, {
-        mail: "ngoert@gmail.com",
-        headline: "Founder & Board Member",
-        name: "Nick Goertzen",
-        discord: "Thiizic#1778",
-        linkedin: "https://www.linkedin.com/in/nick-g-59492493/"
-      }
+      teams: [
+        {
+          mail: "jaymejean@gmail.com",
+          headline: "Board Member",
+          name: "Jaymes Jean",
+          discord: "tsujo#0313",
+          linkedin: "https://www.linkedin.com/in/jaymes-jean-9990918a/",
+          imgSrc: "/img/jaymesImg.png"
+        }, {
+          mail: "ngoert@gmail.com",
+          headline: "Founder & Board Member",
+          name: "Nick Goertzen",
+          discord: "Thiizic#1778",
+          linkedin: "https://www.linkedin.com/in/nick-g-59492493/",
+          imgSrc: "/img/nickImg.png"
+        }, {
+          mail: "stellarator001@gmail.com",
+          headline: "Board Member / Team Lead",
+          name: "Naeem England",
+          discord: "Stellarator#1218",
+          linkedin: "",
+          imgSrc: "/img/naeemImg.png"
+        }
       ]
-    }
+    };
   },
   components: {
     DiscordBtn,
     TeamCard
-  }  
-}
+  }
+};
 </script>
 
 <style scoped>
@@ -264,5 +249,13 @@ hr {
 
 .text-box {
   padding: 120px 0;
+}
+
+.text-purple {
+  color: #5a1de6 !important;
+}
+
+.text-red {
+  color: crimson;
 }
 </style>

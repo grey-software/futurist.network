@@ -2,15 +2,21 @@
   <div
     class="card neu-dark d-flex flex-column align-items-center justify-content-center justify-content-evenly"
   >
-    <div class="circle" />
+    <img :src="imgSrc" class="circle" />
     <div class="card-body">
       <p class="card-text">{{ headline }}</p>
       <h5 class="card-title">{{ name }}</h5>
     </div>
     <div class="icon d-flex align-items-center justify-content-around">
-      <a :href="emailAddress"><fa-icon :icon="['fas', 'envelope']" class="fa-lg"></fa-icon></a>
-      <a :href="discord"><fa-icon :icon="['fab', 'discord']" class="fa-lg"></fa-icon></a>
-      <a :href="linkedin"><fa-icon :icon="['fab', 'linkedin']" class="fa-lg"></fa-icon></a>
+      <a :href="emailAddress">
+        <fa-icon :icon="['fas', 'envelope']" class="fa-lg"></fa-icon>
+      </a>
+      <a @click="copyToClipboard()" v-b-tooltip.hover :title="isCopied">
+        <fa-icon :icon="['fab', 'discord']" class="fa-lg"></fa-icon>
+      </a>
+      <a :href="linkedin">
+        <fa-icon :icon="['fab', 'linkedin']" class="fa-lg"></fa-icon>
+      </a>
     </div>
   </div>
 </template>
@@ -22,21 +28,56 @@ export default {
     headline: String,
     name: String,
     discord: String,
-    linkedin: String
+    linkedin: String,
+    imgSrc: String
+  },
+  data() {
+    return { isCopied: "Click to copy username" };
+  },
+  methods: {
+    copyToClipboard(e) {
+      var text = navigator.clipboard
+        .writeText(this.discord)
+        .then(() => {
+          this.isCopied = "Copied!";
+          console.log(this.isCopied);
+          setTimeout(() => {
+            this.isCopied = "Click to copy username";
+          }, 5000);
+        })
+        .catch(() => {
+          this.isCopied = "Try Again!";
+          setTimeout(() => {
+            this.isCopied = "Click to copy username";
+          }, 1000);
+        });
+      console.log("Copy " + text);
+    }
+  },
+  computed: {
+    emailAddress() {
+      return "mailto:" + this.mail;
+    }
   }
-}
+};
 </script>
 
 <style scoped>
 .card {
-  margin: 20px 120px;
   color: white;
   border-radius: 10%;
   border: 0;
   background: var(--bg);
   position: relative;
-  max-width: 16rem;
+  margin: 42px;
   height: 26rem;
+}
+
+@media screen and (min-width: 980px) {
+  .card {
+    margin: 0;
+    max-width: 18rem;
+  }
 }
 
 .neu-dark {
@@ -64,9 +105,8 @@ export default {
 }
 
 .circle {
-  border: 5px solid;
-  height: 180px;
-  width: 180px;
+  height: 164px;
+  width: 164px;
   border-radius: 50%;
   margin-left: 5px;
   text-align: center;
