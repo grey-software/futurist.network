@@ -7,28 +7,6 @@
     >
       <futurist-hero />
       <FuturistTeam />
-      <!--      <b-carousel-->
-      <!--        id="carousel-1"-->
-      <!--        v-model="slide"-->
-      <!--        :interval="1"-->
-      <!--        controls-->
-      <!--        indicators-->
-      <!--        style="text-shadow: 1px 1px 2px #333;"-->
-      <!--        @sliding-start="onSlideStart"-->
-      <!--        @sliding-end="onSlideEnd"-->
-      <!--      >-->
-      <!--        <b-carousel-slide>-->
-      <!--          <b-row cols="2">-->
-      <!--            <b-col>Column</b-col>-->
-      <!--            <b-col>Column</b-col>-->
-      <!--            <b-col>Column</b-col>-->
-      <!--            <b-col>Column</b-col>-->
-      <!--          </b-row>-->
-      <!--        </b-carousel-slide>-->
-
-      <!--        <b-carousel-slide>......</b-carousel-slide>-->
-
-      <!--      </b-carousel>-->
 
     </section>
     <section

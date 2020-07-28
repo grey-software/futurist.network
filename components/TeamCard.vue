@@ -81,7 +81,7 @@ export default {
 }
 
 .neu-dark {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7), 0 0 22px rgba(255, 255, 255, 0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.705), 0 0 22px rgba(255, 255, 255, 0.185);
 }
 
 .card-body {

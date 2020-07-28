@@ -98,8 +98,8 @@
     </div>
 
     <div class="about pb-5">
-      <div class="container text-left">
-        <h1 class="title">
+      <div class="container">
+        <h1 class="title title-left">
           The
           <span class="text-purple">Team.</span>
         </h1>
@@ -137,14 +137,16 @@ export default {
           discord: "tsujo#0313",
           linkedin: "https://www.linkedin.com/in/jaymes-jean-9990918a/",
           imgSrc: "/img/jaymesImg.png"
-        }, {
+        },
+        {
           mail: "ngoert@gmail.com",
           headline: "Founder & Board Member",
           name: "Nick Goertzen",
           discord: "Thiizic#1778",
           linkedin: "https://www.linkedin.com/in/nick-g-59492493/",
           imgSrc: "/img/nickImg.png"
-        }, {
+        },
+        {
           mail: "stellarator001@gmail.com",
           headline: "Board Member / Team Lead",
           name: "Naeem England",
@@ -187,12 +189,14 @@ hr {
 
 .title {
   font-weight: 700;
-  font-family: var(--font-heading);
   color: var(--color-text-dark);
   letter-spacing: -0.025em;
   font-size: 70px;
-  z-index: 1000;
   padding: 0 0 20px 0;
+}
+
+.title-left {
+  text-align: left;
 }
 
 .sub-title {
@@ -206,8 +210,6 @@ hr {
   height: 300px;
   width: 310px;
   border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
   transform: translate(-100px) scale(0.8);
 }
 
@@ -257,5 +259,19 @@ hr {
 
 .text-red {
   color: crimson;
+}
+
+@media screen and (max-width: 576px) {
+  .about {
+    margin: 20px;
+  }
+
+  .sub-title {
+    margin: 0;
+  }
+
+  .title-left {
+    text-align: center;
+  }
 }
 </style>

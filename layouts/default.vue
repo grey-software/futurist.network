@@ -6,23 +6,26 @@
 </template>
 
 <script>
-import FuturistNavBar from "@/components/FuturistNavBar"
+import FuturistNavBar from "@/components/FuturistNavBar";
 
 export default {
   components: {
-    FuturistNavBar,
+    FuturistNavBar
   },
-  created () {
+  created() {
     if (process.client) {
-      document.addEventListener('keyup', (e) => {
-        if (e.key == 'd') {
+      document.addEventListener("keyup", e => {
+        if (e.key == "d") {
           console.log("hello");
-          [].forEach.call(document.querySelectorAll("*"), function (a) { a.style.outline = "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16) })
+          [].forEach.call(document.querySelectorAll("*"), function(a) {
+            a.style.outline =
+              "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
+          });
         }
       });
     }
   }
-}
+};
 </script>
 
 <style>
@@ -48,13 +51,19 @@ a:hover {
 :root {
   --color-text: #fcfcfc;
   --color-text-dark: #fcfcfc;
-  --font-heading: "Montserrat";
+  --font-heading: "Montserrat", "sans-serif";
   --font-body: "Roboto Sans";
   --bg: "#050c17";
 }
 
 .g-landing {
   margin: 0 120px;
+}
+
+@media screen and (max-width: 576px) {
+  .g-landing {
+    margin: 0;
+  }
 }
 
 .text-rainbow {
