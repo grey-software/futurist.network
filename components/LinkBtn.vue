@@ -1,10 +1,19 @@
 <template>
   <div class="btn d-flex justify-content-center">
-    <b-link class="neumorphism-3" href="https://discord.com/invite/Z37nV2Z">
-      <a style="color: white;">Join Now</a>
+    <b-link class="neumorphism-3" :href="link">
+      <a style="color: white;">{{ txt }}</a>
     </b-link>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    txt: String,
+    link: String
+  }
+}
+</script>
 
 <style scoped>
 .neumorphism-3 {

@@ -7,7 +7,7 @@
         <br />the <span class="text-rainbow">Future.</span>
       </h1>
 
-      <discord-btn />
+      <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
 
       <!-- MORE INDICATOR -->
       <div class="more-indicator animation-more mt">
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import DiscordBtn from '@/components/DiscordBtn.vue'
+import LinkBtn from '@/components/LinkBtn.vue'
 
 export default {
   components: {
-    DiscordBtn
+    LinkBtn
   }  
 }
 </script>

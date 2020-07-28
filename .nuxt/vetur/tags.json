@@ -1,10 +1,4 @@
 {
-  "DiscordBtn": {
-    "description": "Auto imported from components/DiscordBtn.vue"
-  },
-  "LazyDiscordBtn": {
-    "description": "Auto imported from components/DiscordBtn.vue"
-  },
   "FuturistAbout": {
     "description": "Auto imported from components/FuturistAbout.vue"
   },
@@ -28,6 +22,12 @@
   },
   "LazyFuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
+  },
+  "LinkBtn": {
+    "description": "Auto imported from components/LinkBtn.vue"
+  },
+  "LazyLinkBtn": {
+    "description": "Auto imported from components/LinkBtn.vue"
   },
   "ProjectCard": {
     "description": "Auto imported from components/ProjectCard.vue"

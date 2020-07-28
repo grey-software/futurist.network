@@ -8,7 +8,7 @@
         </h1>
         <p class="g-hero-tag">Propose, Fund, & Work.</p>
 
-        <discord-btn />
+        <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
 
         <!-- MORE INDICATOR -->
         <div class="more-indicator animation-more mt">
@@ -18,112 +18,114 @@
       </div>
     </div>
     <hr />
-    <div class="about">
-      <div class="container">
-        <div class="heading">
-          <h1 class="title">
-            What We
-            <span class="text-red">Do?</span>
-          </h1>
-          <p class="sub-title">
-            The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
-            fund, and work on the themes and technologies of the future.
-          </p>
-        </div>
+    <div class="container">
+      <div class="heading">
+        <h1 class="title">
+          What We
+          <span class="text-red">Do?</span>
+        </h1>
+        <p class="sub-title">
+          The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
+          fund, and work on the themes and technologies of the future.
+        </p>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="row row-cols-3">
-          <div class="col">
-            <div class="icon" style="color: #6f75ff;">
-              <span class="fa-stack fa-2x">
-                <fa-icon
-                  :icon="['fas', 'user-friends']"
-                  class="fa-stack-2x fa-lg"
-                  style="color: #6f75ff;"
-                ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
-              </span>
-            </div>
-
-            <div class="text-box">
-              <h5 class="sub-heading">Innovate</h5>
-              <p
-                class="sub-heading-text"
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            </div>
+    <div class="container">
+      <div class="row row-cols-3">
+        <div class="col">
+          <div class="icon" style="color: #6f75ff;">
+            <span class="fa-stack fa-2x">
+              <fa-icon
+                :icon="['fas', 'user-friends']"
+                class="fa-stack-2x fa-lg"
+                style="color: #6f75ff;"
+              ></fa-icon>
+              <div class="circle fa-stack-2x"></div>
+            </span>
           </div>
 
-          <div class="col">
-            <div class="icon" style="color: #6fffa6;">
-              <span class="fa-stack fa-2x">
-                <fa-icon
-                  :icon="['fas', 'dollar-sign']"
-                  class="fa-stack-2x fa-lg"
-                  style="color: #6fffa6;"
-                ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
-              </span>
-            </div>
+          <div class="text-box">
+            <h5 class="sub-heading">Innovate</h5>
+            <p
+              class="sub-heading-text"
+            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+        </div>
 
-            <div class="text-box">
-              <h5 class="sub-heading">Inspire</h5>
-              <p
-                class="sub-heading-text"
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            </div>
+        <div class="col">
+          <div class="icon" style="color: #6fffa6;">
+            <span class="fa-stack fa-2x">
+              <fa-icon
+                :icon="['fas', 'dollar-sign']"
+                class="fa-stack-2x fa-lg"
+                style="color: #6fffa6;"
+              ></fa-icon>
+              <div class="circle fa-stack-2x"></div>
+            </span>
           </div>
 
-          <div class="col">
-            <div class="icon" style="color: #fab74a;">
-              <span class="fa-stack fa-2x">
-                <fa-icon
-                  :icon="['fas', 'chalkboard-teacher']"
-                  class="fa-stack-2x fa-lg"
-                  style="color: #fab74a;"
-                ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
-              </span>
-            </div>
+          <div class="text-box">
+            <h5 class="sub-heading">Inspire</h5>
+            <p
+              class="sub-heading-text"
+            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+          </div>
+        </div>
 
-            <div class="text-box">
-              <h5 class="sub-heading">Teaching</h5>
-              <p
-                class="sub-heading-text"
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            </div>
+        <div class="col">
+          <div class="icon" style="color: #fab74a;">
+            <span class="fa-stack fa-2x">
+              <fa-icon
+                :icon="['fas', 'chalkboard-teacher']"
+                class="fa-stack-2x fa-lg"
+                style="color: #fab74a;"
+              ></fa-icon>
+              <div class="circle fa-stack-2x"></div>
+            </span>
+          </div>
+
+          <div class="text-box">
+            <h5 class="sub-heading">Teaching</h5>
+            <p
+              class="sub-heading-text"
+            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="about pb-5">
-      <div class="container">
-        <h1 class="title title-left">
-          The
-          <span class="text-purple">Team.</span>
-        </h1>
+    <div class="container">
+      <h1 class="title title-left">
+        The
+        <span class="text-purple">Team.</span>
+      </h1>
+      <div class="row d-flex justify-content-around mb-5">
+        <span class="col-lg-4 col-12" v-for="team in teams" :key="team.name">
+          <TeamCard
+            :name="team.name"
+            :linkedin="team.linkedin"
+            :mail="team.mail"
+            :headline="team.headline"
+            :discord="team.discord"
+            :imgSrc="team.imgSrc"
+          />
+        </span>
       </div>
-      <div class="container">
-        <div class="row d-flex justify-content-around">
-          <span class="col-lg-4 col-12" v-for="team in teams" :key="team.name">
-            <TeamCard
-              :name="team.name"
-              :linkedin="team.linkedin"
-              :mail="team.mail"
-              :headline="team.headline"
-              :discord="team.discord"
-              :imgSrc="team.imgSrc"
-            />
-          </span>
-        </div>
-      </div>
+    </div>
+    <div class="container d-flex flex-column align-items-center">
+      <h1 class="contact-title text-center">TELL US HOW WE ARE DOING</h1>
+      <h2 class="contact-text">
+        Want to send us a feedback? Send Us A Message
+        <span class="text-green">futurist@net.io</span>
+      </h2>
+      <link-btn class="m-5" txt="Message Me!" link="mailto:futurist@net.io" />
     </div>
   </div>
 </template>
 
 <script>
-import DiscordBtn from "@/components/DiscordBtn.vue";
+import LinkBtn from "@/components/LinkBtn.vue";
 import TeamCard from "@/components/TeamCard";
 
 export default {
@@ -158,7 +160,7 @@ export default {
     };
   },
   components: {
-    DiscordBtn,
+    LinkBtn,
     TeamCard
   }
 };
@@ -167,13 +169,6 @@ export default {
 <style scoped>
 .g-hero-heading {
   padding: 0;
-}
-
-.about {
-  color: white;
-  margin: 0 120px;
-  padding: 40px 0;
-  text-align: center;
 }
 
 hr {
@@ -261,17 +256,36 @@ hr {
   color: crimson;
 }
 
-@media screen and (max-width: 576px) {
-  .about {
-    margin: 20px;
-  }
+.text-green {
+  color: #6fffa6;
+}
 
+.contact-title {
+  margin: 120px 0 0;
+  font-size: 30px;
+  letter-spacing: 2.1px;
+  color: #ff8646;
+  text-transform: uppercase;
+}
+
+.contact-text {
+  letter-spacing: 0.8px;
+  font-size: 80px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+@media screen and (max-width: 576px) {
   .sub-title {
     margin: 0;
   }
 
   .title-left {
     text-align: center;
+  }
+
+  .contact-text {
+    font-size: 55px;
   }
 }
 </style>
