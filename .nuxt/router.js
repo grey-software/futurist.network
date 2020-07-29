@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _0b72daf6 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _19fe6d4a = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _4a8ebd57 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _6a46981c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -24,11 +24,11 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _0b72daf6,
+    component: _4a8ebd57,
     name: "about"
   }, {
     path: "/",
-    component: _19fe6d4a,
+    component: _6a46981c,
     name: "index"
   }],
 

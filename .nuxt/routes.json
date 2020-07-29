@@ -2,15 +2,13 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/Users/arsalagrey/Programming/futurist.network/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_0b72daf6"
+    "component": "/Users/milindvishnoi/Desktop/projects/futurist.network/pages/about.vue",
+    "chunkName": "pages/about"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/arsalagrey/Programming/futurist.network/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_19fe6d4a"
+    "component": "/Users/milindvishnoi/Desktop/projects/futurist.network/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]
