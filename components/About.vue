@@ -1,163 +1,148 @@
 <template>
   <div>
+    <!-- Hero -->
     <div class="g-landing">
-      <div class="hero d-flex align-content-center justify-content-center flex-column">
-        <h1 class="hero-heading">
+      <div class="g-hero d-flex align-content-center justify-content-center flex-column">
+        <h1 class="g-hero-heading">
           About
           <span class="text-rainbow">US</span>
         </h1>
-        <p class="hero-tag">Propose, Fund, & Work.</p>
-
-        <Btn name="Join Now"/>
-
-        <!-- MORE INDICATOR -->
+        <p class="g-hero-tag">Propose, Fund, & Work.</p>
+        <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
         <div class="more-indicator animation-more mt">
           <p>MORE</p>
           <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
         </div>
       </div>
     </div>
+
+    <!-- Our Values -->
     <hr />
-    <div class="about">
+    <div class="container">
       <div class="heading">
-        <h1 class="title">
-          What We
-          <span style="color: crimson;">Do?</span>
+        <h1 class="title text-center">
+          Our Values
         </h1>
-        <p class="sub-title">
+        <p class="sub-title text-center">
           The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
           fund, and work on the themes and technologies of the future.
         </p>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="row row-cols-3">
-          <div class="col">
-            <div class="icon" style="color: #6f75ff;">
-              <span class="fa-stack fa-2x">
-                <fa-icon
-                  :icon="['fas', 'user-friends']"
-                  class="fa-stack-2x fa-lg"
-                  style="color: #6f75ff;"
-                ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
-              </span>
-            </div>
-
-            <div class="text-box">
-              <h5 class="sub-heading">Innovate</h5>
-              <p
-                class="sub-heading-text"
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="icon" style="color: #6fffa6;">
-              <span class="fa-stack fa-2x">
-                <fa-icon
-                  :icon="['fas', 'dollar-sign']"
-                  class="fa-stack-2x fa-lg"
-                  style="color: #6fffa6;"
-                ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
-              </span>
-            </div>
-
-            <div class="text-box">
-              <h5 class="sub-heading">Inspire</h5>
-              <p
-                class="sub-heading-text"
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            </div>
-          </div>
-
-          <div class="col">
-            <div style="color: #fab74a;">
-              <span class="fa-stack fa-2x">
-                <div class="circle fa-stack-2x"></div>
-                <fa-icon
-                  :icon="['fas', 'chalkboard-teacher']"
-                  class="fa-stack-2x fa-lg"
-                  style="color: #fab74a;"
-                ></fa-icon>
-
-              </span>
-            </div>
-
-            <div class="text-box">
-              <h5 class="sub-heading">Teaching</h5>
-              <p
-                class="sub-heading-text"
-              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-            </div>
-          </div>
+    <div class="container">
+      <div class="row d-flex justify-content-around mb-3">
+        <div class="col-lg-4 col-12" v-for="val in valueDesc" :key="val.heading">
+          <ValueCard :heading="val.heading" :bgColor="val.bgColor" :desc="val.desc" :icon="val.icon" />
         </div>
       </div>
     </div>
 
-    <div class="about">
-      <div class="container">
-        <div class="row row-cols-2">
-          <div class="col">
-            <img src="../assets/world-map.png" />
-          </div>
-          <div class="col">
-            <h1 class="title" style="text-align: left;">
-              Tech of
-              <br />the
-              <span style="color: #2bacf9;">Future.</span>
-            </h1>
-            <p
-              class="desc"
-            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
+    <!-- The Team -->
+    <div class="container">
+      <h1 class="title title-left align-center">
+        The
+        <span class="text-purple">Team.</span>
+      </h1>
+      <div class="row d-flex justify-content-around mb-5">
+        <span class="col-lg-4 col-12" v-for="team in teams" :key="team.name">
+          <TeamCard
+            :name="team.name"
+            :linkedin="team.linkedin"
+            :mail="team.mail"
+            :headline="team.headline"
+            :discord="team.discord"
+            :imgSrc="team.imgSrc"
+          />
+        </span>
+      </div>
+    </div>
 
-            <div class="sub-box" style="text-align: left;">
-              <div class="row row-cols-2">
-                <div class="col">
-                  <fa-icon :icon="['fas', 'globe']" class="fa-3x" style="color: #6f75ff;"></fa-icon>
-                  <h5 class="title">Crowdsourcing</h5>
-                  <p
-                    class="desc"
-                  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
-                </div>
-
-                <div class="col">
-                  <fa-icon :icon="['fas', 'users']" class="fa-3x" style="color: #6fffa6;"></fa-icon>
-                  <h5 class="title">Futurist Community</h5>
-                  <p
-                    class="desc"
-                  >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. Foinshgt instajfe nonumy eirmod tempor.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Contact Us -->
+    <div class="lighter-bg">
+      <div class="container d-flex flex-column align-items-center">
+        <h1 class="contact-title text-center">TELL US HOW WE ARE DOING</h1>
+        <h2 class="contact-text">
+          Want to send us feedback? Send Us A Message
+          <span class="text-green">futurist@net.io</span>
+        </h2>
+        <link-btn class="m-5" txt="Message Me!" link="mailto:futurist@net.io" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Btn from '../components/Btn.vue'
+import LinkBtn from "@/components/LinkBtn.vue";
+import TeamCard from "@/components/TeamCard";
+import ValueCard from "@/components/ValueCard";
 
 export default {
+  data() {
+    return {
+      valueDesc: [
+        {
+          heading: "Global Security",
+          bgColor: "#6f75ff",
+          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          icon: "user-friends"
+        },
+        {
+          heading: "Technological Progress",
+          bgColor: "#6fffa6",
+          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          icon: "dollar-sign"
+        },
+        {
+          heading: "Global Security",
+          bgColor: "#fab74a",
+          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          icon: "chalkboard-teacher"
+        },
+      ],
+      teams: [
+        {
+          mail: "jaymejean@gmail.com",
+          headline: "Board Member",
+          name: "Jaymes Jean",
+          discord: "tsujo#0313",
+          linkedin: "https://www.linkedin.com/in/jaymes-jean-9990918a/",
+          imgSrc: "/img/jaymesImg.png"
+        },
+        {
+          mail: "ngoert@gmail.com",
+          headline: "Founder & Board Member",
+          name: "Nick Goertzen",
+          discord: "Thiizic#1778",
+          linkedin: "https://www.linkedin.com/in/nick-g-59492493/",
+          imgSrc: "/img/nickImg.png"
+        },
+        {
+          mail: "stellarator001@gmail.com",
+          headline: "Board Member / Team Lead",
+          name: "Naeem England",
+          discord: "Stellarator#1218",
+          linkedin: "",
+          imgSrc: "/img/naeemImg.png"
+        }
+      ]
+    };
+  },
   components: {
-    Btn
+    LinkBtn,
+    TeamCard,
+    ValueCard
   }
-}
+};
 </script>
 
 <style scoped>
-.hero-heading {
-  padding: 0;
+.lighter-bg {
+  background-color: rgba(11, 26, 50, 1);
 }
 
-.about {
-  color: white;
-  margin: 0 120px;
-  padding: 40px 0;
-  text-align: center;
+.g-hero-heading {
+  padding: 0;
 }
 
 hr {
@@ -168,16 +153,14 @@ hr {
 }
 
 .heading {
-  padding: 0 0 120px;
+  padding: 0 0 50px;
 }
 
 .title {
   font-weight: 700;
-  font-family: var(--font-heading);
   color: var(--color-text-dark);
   letter-spacing: -0.025em;
   font-size: 70px;
-  z-index: 1000;
   padding: 0 0 20px 0;
 }
 
@@ -187,53 +170,54 @@ hr {
   color: lightslategrey;
 }
 
-.circle {
-  border: 5px solid;
-  height: 300px;
-  width: 310px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  transform: translate(-100px) scale(0.8);
+.text-purple {
+  color: #5a1de6 !important;
 }
 
-.sub-heading {
-  font-weight: 700;
-  font-size: 26px;
+.text-green {
+  color: #6fffa6;
 }
 
-.sub-heading-text {
-  color: lightslategrey;
+.contact-title {
+  margin: 120px 0 0;
+  font-size: 30px;
+  letter-spacing: 2.1px;
+  color: #ff8646;
+  text-transform: uppercase;
 }
 
-.desc {
-  text-align: left;
-  color: lightslategrey;
-  font-size: 13px;
+.contact-text {
+  letter-spacing: 0.8px;
+  font-size: 80px;
+  text-align: center;
+  color: var(--color-text);
 }
 
-.sub-box {
-  padding: 40px 0;
+@media screen and (max-width: 992px) {
+  .sub-title {
+    margin: 0 40px;
+  }
 }
 
-.sub-box .title {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 20px 0 0;
-}
+@media screen and (max-width: 576px) {
+  .heading {
+    padding: 0 0 20px;
+  }
 
-.sub-box .desc {
-  padding: 0;
-}
+  .sub-title {
+    margin: 0;
+  }
 
-.col img {
-  height: 600px;
-  width: 700px;
-  text-align: left;
-  transform: translate(-120px, -80px);
-}
+  .contact-text {
+    font-size: 47px;
+  }
 
-.text-box {
-  padding: 120px 0;
+  .contact-title {
+    font-size: 20px;
+  }
+
+  .align-center {
+    text-align: center;
+  }
 }
 </style>

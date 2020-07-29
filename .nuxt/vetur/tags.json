@@ -5,17 +5,17 @@
   "LazyAbout": {
     "description": "Auto imported from components/About.vue"
   },
-  "Btn": {
-    "description": "Auto imported from components/Btn.vue"
-  },
-  "LazyBtn": {
-    "description": "Auto imported from components/Btn.vue"
-  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
+  },
+  "FuturistHero": {
+    "description": "Auto imported from components/FuturistHero.vue"
+  },
+  "LazyFuturistHero": {
+    "description": "Auto imported from components/FuturistHero.vue"
   },
   "FuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
@@ -34,6 +34,12 @@
   },
   "LazyHowItWorks": {
     "description": "Auto imported from components/HowItWorks.vue"
+  },
+  "LinkBtn": {
+    "description": "Auto imported from components/LinkBtn.vue"
+  },
+  "LazyLinkBtn": {
+    "description": "Auto imported from components/LinkBtn.vue"
   },
   "NavBar": {
     "description": "Auto imported from components/NavBar.vue"
@@ -64,6 +70,12 @@
   },
   "LazyTeamCard": {
     "description": "Auto imported from components/TeamCard.vue"
+  },
+  "ValueCard": {
+    "description": "Auto imported from components/ValueCard.vue"
+  },
+  "LazyValueCard": {
+    "description": "Auto imported from components/ValueCard.vue"
   },
   "WorkWithExperts": {
     "description": "Auto imported from components/WorkWithExperts.vue"
