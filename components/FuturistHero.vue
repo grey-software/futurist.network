@@ -1,6 +1,6 @@
 <template>
   <div class="g-landing">
-    <div class="g-hero  d-flex align-content-center justify-content-center flex-column">
+    <div class="g-hero d-flex align-content-center justify-content-center flex-column">
       <p class="g-hero-tag">Propose, Fund, & Work.</p>
       <h1 class="g-hero-heading">
         Crowdsourcing

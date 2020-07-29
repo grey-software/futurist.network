@@ -1,49 +1,53 @@
+/* eslint-disable */
 <template>
   <div class="pb-5">
     <!-- Hero -->
     <section
       id="f-hero"
-      class="f-section"
-    >
-      <futurist-hero />
-      <FuturistTeam />
+      class="f-section">
+
+      <Hero/>
+      <WorkWithExperts/>
+      <HowItWorks/>
+      <ReadyToBeAFuturist/>
 
     </section>
-    <section
-      id="f-projects"
-      class="f-section"
-    >
-      <div
-        v-if="projects"
-        class="flex row flex-wrap"
-      >
-        <div
-          v-for="project in projects"
-          :key="project.title"
-        >
-          <project-card :project="project" />
-        </div>
-      </div>
-    </section>
+
+<!--    <section-->
+<!--      id="f-projects"-->
+<!--      class="f-section"-->
+<!--    >-->
+<!--      <div-->
+<!--        v-if="projects"-->
+<!--        class="flex row flex-wrap"-->
+<!--      >-->
+<!--        <div-->
+<!--          v-for="project in projects"-->
+<!--          :key="project.title"-->
+<!--        >-->
+<!--          <project-card :project="project" />-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
   </div>
 </template>
 
 <script>
-import FuturistHero from "@/components/FuturistHero";
-import FuturistAbout from "@/components/FuturistAbout";
-import TeamCard from "@/components/TeamCard";
-import FuturistTeam from "@/components/FuturistTeam";
-import ProjectCard from "@/components/ProjectCard";
+import Hero from "../components/Hero";
+import HowItWorks from "../components/HowItWorks";
+import ReadyToBeAFuturist from "../components/ReadyToBeAFuturist";
+import WorkWithExperts from "../components/WorkWithExperts";
 import gql from "graphql-tag";
+
+// import ProjectCard from "@/components/ProjectCard";
 // import ProjectsQuery from "@/apollo/queries/projects/Projects.gql";
 
 export default {
   components: {
-    FuturistHero,
-    FuturistAbout,
-    TeamCard,
-    FuturistTeam
-    // ProjectCard
+    Hero,
+      HowItWorks,
+      ReadyToBeAFuturist,
+      WorkWithExperts
   },
   data () {
     return {
@@ -82,5 +86,12 @@ export default {
 <style scoped>
 * {
   background-color: #050c17;
+}
+
+img {
+  height: 800px;
+  width: auto;
+  transform: rotate(30deg) translate(-150px, -540px);
+  background-color: transparent;
 }
 </style>

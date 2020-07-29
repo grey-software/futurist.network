@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="g-landing">
-      <div class="g-hero d-flex align-content-center justify-content-center flex-column">
-        <h1 class="g-hero-heading">
+      <div class="hero d-flex align-content-center justify-content-center flex-column">
+        <h1 class="hero-heading">
           About
           <span class="text-rainbow">US</span>
         </h1>
-        <p class="g-hero-tag">Propose, Fund, & Work.</p>
-
+        <p class="hero-tag">Propose, Fund, & Work.</p>
+        
         <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
 
         <!-- MORE INDICATOR -->
@@ -62,7 +62,7 @@
     <div class="container d-flex flex-column align-items-center">
       <h1 class="contact-title text-center">TELL US HOW WE ARE DOING</h1>
       <h2 class="contact-text">
-        Want to send us a feedback? Send Us A Message
+        Want to send us feedback? Send Us A Message
         <span class="text-green">futurist@net.io</span>
       </h2>
       <link-btn class="m-5" txt="Message Me!" link="mailto:futurist@net.io" />
@@ -135,7 +135,7 @@ export default {
 </script>
 
 <style scoped>
-.g-hero-heading {
+.hero-heading {
   padding: 0;
 }
 

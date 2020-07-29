@@ -27,6 +27,10 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
+      {
+        rel: 'stylesheet',
+        href: 'href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap'
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
@@ -34,6 +38,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'assets/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
