@@ -3,14 +3,12 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/milindvishnoi/Desktop/projects/futurist.network/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_4a8ebd57"
+    "chunkName": "pages/about"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/milindvishnoi/Desktop/projects/futurist.network/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_6a46981c"
+    "chunkName": "pages/index"
   }
 ]

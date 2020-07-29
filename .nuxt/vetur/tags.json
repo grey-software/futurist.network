@@ -5,12 +5,6 @@
   "LazyAbout": {
     "description": "Auto imported from components/About.vue"
   },
-  "Btn": {
-    "description": "Auto imported from components/Btn.vue"
-  },
-  "LazyBtn": {
-    "description": "Auto imported from components/Btn.vue"
-  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },

@@ -1,22 +1,22 @@
 <template>
   <div>
+    <!-- Hero -->
     <div class="g-landing">
-      <div class="hero d-flex align-content-center justify-content-center flex-column">
-        <h1 class="hero-heading">
+      <div class="g-hero d-flex align-content-center justify-content-center flex-column">
+        <h1 class="g-hero-heading">
           About
           <span class="text-rainbow">US</span>
         </h1>
-        <p class="hero-tag">Propose, Fund, & Work.</p>
-        
+        <p class="g-hero-tag">Propose, Fund, & Work.</p>
         <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
-
-        <!-- MORE INDICATOR -->
         <div class="more-indicator animation-more mt">
           <p>MORE</p>
           <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
         </div>
       </div>
     </div>
+
+    <!-- Our Values -->
     <hr />
     <div class="container">
       <div class="heading">
@@ -59,13 +59,15 @@
     </div>
 
     <!-- Contact Us -->
-    <div class="container d-flex flex-column align-items-center">
-      <h1 class="contact-title text-center">TELL US HOW WE ARE DOING</h1>
-      <h2 class="contact-text">
-        Want to send us feedback? Send Us A Message
-        <span class="text-green">futurist@net.io</span>
-      </h2>
-      <link-btn class="m-5" txt="Message Me!" link="mailto:futurist@net.io" />
+    <div class="lighter-bg">
+      <div class="container d-flex flex-column align-items-center">
+        <h1 class="contact-title text-center">TELL US HOW WE ARE DOING</h1>
+        <h2 class="contact-text">
+          Want to send us feedback? Send Us A Message
+          <span class="text-green">futurist@net.io</span>
+        </h2>
+        <link-btn class="m-5" txt="Message Me!" link="mailto:futurist@net.io" />
+      </div>
     </div>
   </div>
 </template>
@@ -135,7 +137,11 @@ export default {
 </script>
 
 <style scoped>
-.hero-heading {
+.lighter-bg {
+  background-color: rgba(11, 26, 50, 1);
+}
+
+.g-hero-heading {
   padding: 0;
 }
 
