@@ -60,22 +60,23 @@ export default {
 
   .hero-heading {
     font-weight: 800;
-    font-family: var(--font-heading), sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
-    letter-spacing: -0.025em;
-    font-size: calc(12px + 5vw);
-    line-height: 1.05;
+    letter-spacing: 1px;
+    font-size: calc(12px + 3vw);
     z-index: 1000;
     padding: 0 0 80px 0;
   }
 
   .hero-tag {
     font-size: 18px;
-    color: lightslategrey;
-    letter-spacing: -0.032em;
+    font-weight: 600;
+    color: #7c7c7c;
+    letter-spacing: 0;
     line-height: 1.5;
     padding: 0 0 20px 0;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .btn {

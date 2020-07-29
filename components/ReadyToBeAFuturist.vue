@@ -49,7 +49,7 @@
 
   .heading {
     font-weight: 800;
-    font-family: var(--font-heading), sans-serif;
+    font-family: var(--font-heading);
     color: white;
     letter-spacing: -0.025em;
     font-size: 70px;
