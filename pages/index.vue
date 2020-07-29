@@ -8,6 +8,10 @@
 
       <Hero/>
       <HowItWorks/>
+      <ReadyToBeAFuturist/>
+
+
+
 
     </section>
 
@@ -33,6 +37,7 @@
 <script>
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
+import ReadyToBeAFuturist from "../components/ReadyToBeAFuturist";
 import gql from "graphql-tag";
 
 // import ProjectCard from "@/components/ProjectCard";
@@ -42,6 +47,7 @@ export default {
   components: {
     Hero,
       HowItWorks,
+      ReadyToBeAFuturist,
   },
   data () {
     return {
@@ -80,5 +86,12 @@ export default {
 <style scoped>
 * {
   background-color: #050c17;
+}
+
+img {
+  height: 800px;
+  width: auto;
+  transform: rotate(30deg) translate(-150px, -540px);
+  background-color: transparent;
 }
 </style>

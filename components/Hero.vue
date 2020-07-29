@@ -7,7 +7,7 @@
         <br />the <span class="text-rainbow">Future.</span>
       </h1>
 
-      <discord-btn />
+      <Btn name="Join Now" />
 
       <!-- MORE INDICATOR -->
       <div class="more-indicator animation-more mt">
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import DiscordBtn from '@/components/DiscordBtn.vue'
+import Btn from '@/components/Btn.vue'
 
 export default {
   components: {
-    DiscordBtn
+    Btn
   }
 }
 </script>

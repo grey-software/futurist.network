@@ -5,11 +5,11 @@
   "LazyAbout": {
     "description": "Auto imported from components/About.vue"
   },
-  "DiscordBtn": {
-    "description": "Auto imported from components/DiscordBtn.vue"
+  "Btn": {
+    "description": "Auto imported from components/Btn.vue"
   },
-  "LazyDiscordBtn": {
-    "description": "Auto imported from components/DiscordBtn.vue"
+  "LazyBtn": {
+    "description": "Auto imported from components/Btn.vue"
   },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
@@ -46,6 +46,18 @@
   },
   "LazyProjectCard": {
     "description": "Auto imported from components/ProjectCard.vue"
+  },
+  "ReadyToBeAFuturist": {
+    "description": "Auto imported from components/ReadyToBeAFuturist.vue"
+  },
+  "LazyReadyToBeAFuturist": {
+    "description": "Auto imported from components/ReadyToBeAFuturist.vue"
+  },
+  "Subscribe": {
+    "description": "Auto imported from components/Subscribe.vue"
+  },
+  "LazySubscribe": {
+    "description": "Auto imported from components/Subscribe.vue"
   },
   "TeamCard": {
     "description": "Auto imported from components/TeamCard.vue"

@@ -3,14 +3,12 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/ninaricci/WebstormProjects/futurist.network/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_9ae95cb0"
+    "chunkName": "pages/about"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/ninaricci/WebstormProjects/futurist.network/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_5b79a726"
+    "chunkName": "pages/index"
   }
 ]
