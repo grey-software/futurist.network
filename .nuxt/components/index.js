@@ -9,6 +9,7 @@ export { default as ProjectCard } from '../../components/ProjectCard.vue'
 export { default as ReadyToBeAFuturist } from '../../components/ReadyToBeAFuturist.vue'
 export { default as Subscribe } from '../../components/Subscribe.vue'
 export { default as TeamCard } from '../../components/TeamCard.vue'
+export { default as WorkWithExperts } from '../../components/WorkWithExperts.vue'
 
 export const LazyAbout = import('../../components/About.vue' /* webpackChunkName: "components/About'}" */).then(c => c.default || c)
 export const LazyBtn = import('../../components/Btn.vue' /* webpackChunkName: "components/Btn'}" */).then(c => c.default || c)
@@ -21,3 +22,4 @@ export const LazyProjectCard = import('../../components/ProjectCard.vue' /* webp
 export const LazyReadyToBeAFuturist = import('../../components/ReadyToBeAFuturist.vue' /* webpackChunkName: "components/ReadyToBeAFuturist'}" */).then(c => c.default || c)
 export const LazySubscribe = import('../../components/Subscribe.vue' /* webpackChunkName: "components/Subscribe'}" */).then(c => c.default || c)
 export const LazyTeamCard = import('../../components/TeamCard.vue' /* webpackChunkName: "components/TeamCard'}" */).then(c => c.default || c)
+export const LazyWorkWithExperts = import('../../components/WorkWithExperts.vue' /* webpackChunkName: "components/WorkWithExperts'}" */).then(c => c.default || c)

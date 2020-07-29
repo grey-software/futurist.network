@@ -7,11 +7,9 @@
       class="f-section">
 
       <Hero/>
+      <WorkWithExperts/>
       <HowItWorks/>
       <ReadyToBeAFuturist/>
-
-
-
 
     </section>
 
@@ -38,6 +36,7 @@
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import ReadyToBeAFuturist from "../components/ReadyToBeAFuturist";
+import WorkWithExperts from "../components/WorkWithExperts";
 import gql from "graphql-tag";
 
 // import ProjectCard from "@/components/ProjectCard";
@@ -48,6 +47,7 @@ export default {
     Hero,
       HowItWorks,
       ReadyToBeAFuturist,
+      WorkWithExperts
   },
   data () {
     return {

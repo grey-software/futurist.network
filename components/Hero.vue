@@ -74,7 +74,7 @@ export default {
     color: lightslategrey;
     letter-spacing: -0.032em;
     line-height: 1.5;
-    padding: 0 0 40px 0;
+    padding: 0 0 20px 0;
     text-align: center;
   }
 
