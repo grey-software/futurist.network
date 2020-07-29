@@ -20,11 +20,10 @@
     <hr />
     <div class="container">
       <div class="heading">
-        <h1 class="title">
-          What We
-          <span class="text-red">Do?</span>
+        <h1 class="title text-center">
+          Our Values
         </h1>
-        <p class="sub-title">
+        <p class="sub-title text-center">
           The Futurist foundation is an organization working to guide the future in a net positive direction by allowing the public to propose,
           fund, and work on the themes and technologies of the future.
         </p>
@@ -32,71 +31,16 @@
     </div>
 
     <div class="container">
-      <div class="row row-cols-3">
-        <div class="col">
-          <div class="icon" style="color: #6f75ff;">
-            <span class="fa-stack fa-2x">
-              <fa-icon
-                :icon="['fas', 'user-friends']"
-                class="fa-stack-2x fa-lg"
-                style="color: #6f75ff;"
-              ></fa-icon>
-              <div class="circle fa-stack-2x"></div>
-            </span>
-          </div>
-
-          <div class="text-box">
-            <h5 class="sub-heading">Innovate</h5>
-            <p
-              class="sub-heading-text"
-            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="icon" style="color: #6fffa6;">
-            <span class="fa-stack fa-2x">
-              <fa-icon
-                :icon="['fas', 'dollar-sign']"
-                class="fa-stack-2x fa-lg"
-                style="color: #6fffa6;"
-              ></fa-icon>
-              <div class="circle fa-stack-2x"></div>
-            </span>
-          </div>
-
-          <div class="text-box">
-            <h5 class="sub-heading">Inspire</h5>
-            <p
-              class="sub-heading-text"
-            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="icon" style="color: #fab74a;">
-            <span class="fa-stack fa-2x">
-              <fa-icon
-                :icon="['fas', 'chalkboard-teacher']"
-                class="fa-stack-2x fa-lg"
-                style="color: #fab74a;"
-              ></fa-icon>
-              <div class="circle fa-stack-2x"></div>
-            </span>
-          </div>
-
-          <div class="text-box">
-            <h5 class="sub-heading">Teaching</h5>
-            <p
-              class="sub-heading-text"
-            >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
-          </div>
+      <div class="row d-flex justify-content-around mb-3">
+        <div class="col-lg-4 col-12" v-for="val in valueDesc" :key="val.heading">
+          <ValueCard :heading="val.heading" :bgColor="val.bgColor" :desc="val.desc" :icon="val.icon" />
         </div>
       </div>
     </div>
 
+    <!-- The Team -->
     <div class="container">
-      <h1 class="title title-left">
+      <h1 class="title title-left align-center">
         The
         <span class="text-purple">Team.</span>
       </h1>
@@ -113,6 +57,8 @@
         </span>
       </div>
     </div>
+
+    <!-- Contact Us -->
     <div class="container d-flex flex-column align-items-center">
       <h1 class="contact-title text-center">TELL US HOW WE ARE DOING</h1>
       <h2 class="contact-text">
@@ -127,10 +73,31 @@
 <script>
 import LinkBtn from "@/components/LinkBtn.vue";
 import TeamCard from "@/components/TeamCard";
+import ValueCard from "@/components/ValueCard";
 
 export default {
   data() {
     return {
+      valueDesc: [
+        {
+          heading: "Global Security",
+          bgColor: "#6f75ff",
+          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          icon: "user-friends"
+        },
+        {
+          heading: "Technological Progress",
+          bgColor: "#6fffa6",
+          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          icon: "dollar-sign"
+        },
+        {
+          heading: "Global Security",
+          bgColor: "#fab74a",
+          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          icon: "chalkboard-teacher"
+        },
+      ],
       teams: [
         {
           mail: "jaymejean@gmail.com",
@@ -161,7 +128,8 @@ export default {
   },
   components: {
     LinkBtn,
-    TeamCard
+    TeamCard,
+    ValueCard
   }
 };
 </script>
@@ -179,7 +147,7 @@ hr {
 }
 
 .heading {
-  padding: 0 0 120px;
+  padding: 0 0 50px;
 }
 
 .title {
@@ -190,70 +158,14 @@ hr {
   padding: 0 0 20px 0;
 }
 
-.title-left {
-  text-align: left;
-}
-
 .sub-title {
   margin: 0 120px;
   padding-bottom: 40px;
   color: lightslategrey;
 }
 
-.circle {
-  border: 5px solid;
-  height: 300px;
-  width: 310px;
-  border-radius: 50%;
-  transform: translate(-100px) scale(0.8);
-}
-
-.sub-heading {
-  font-weight: 700;
-  font-size: 26px;
-}
-
-.sub-heading-text {
-  color: lightslategrey;
-}
-
-.desc {
-  text-align: left;
-  color: lightslategrey;
-  font-size: 13px;
-}
-
-.sub-box {
-  padding: 40px 0;
-}
-
-.sub-box .title {
-  font-size: 20px;
-  font-weight: 600;
-  padding: 20px 0 0;
-}
-
-.sub-box .desc {
-  padding: 0;
-}
-
-.col img {
-  height: 600px;
-  width: 700px;
-  text-align: left;
-  transform: translate(-120px, -80px);
-}
-
-.text-box {
-  padding: 120px 0;
-}
-
 .text-purple {
   color: #5a1de6 !important;
-}
-
-.text-red {
-  color: crimson;
 }
 
 .text-green {
@@ -275,17 +187,31 @@ hr {
   color: var(--color-text);
 }
 
+@media screen and (max-width: 992px) {
+  .sub-title {
+    margin: 0 40px;
+  }
+}
+
 @media screen and (max-width: 576px) {
+  .heading {
+    padding: 0 0 20px;
+  }
+
   .sub-title {
     margin: 0;
   }
 
-  .title-left {
-    text-align: center;
+  .contact-text {
+    font-size: 47px;
   }
 
-  .contact-text {
-    font-size: 55px;
+  .contact-title {
+    font-size: 20px;
+  }
+
+  .align-center {
+    text-align: center;
   }
 }
 </style>

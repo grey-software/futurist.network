@@ -73,7 +73,7 @@ export default {
   height: 26rem;
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 960px) {
   .card {
     margin: 0;
     max-width: 18rem;
@@ -115,6 +115,6 @@ export default {
 .icon {
   padding: 0 0;
   position: relative;
-  width: 14rem;
+  width: 80%;
 }
 </style>

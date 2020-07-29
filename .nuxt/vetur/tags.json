@@ -40,5 +40,11 @@
   },
   "LazyTeamCard": {
     "description": "Auto imported from components/TeamCard.vue"
+  },
+  "ValueCard": {
+    "description": "Auto imported from components/ValueCard.vue"
+  },
+  "LazyValueCard": {
+    "description": "Auto imported from components/ValueCard.vue"
   }
 }

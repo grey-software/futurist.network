@@ -5,6 +5,7 @@ export { default as FuturistTeam } from '../../components/FuturistTeam.vue'
 export { default as LinkBtn } from '../../components/LinkBtn.vue'
 export { default as ProjectCard } from '../../components/ProjectCard.vue'
 export { default as TeamCard } from '../../components/TeamCard.vue'
+export { default as ValueCard } from '../../components/ValueCard.vue'
 
 export const LazyFuturistAbout = import('../../components/FuturistAbout.vue' /* webpackChunkName: "components/FuturistAbout'}" */).then(c => c.default || c)
 export const LazyFuturistHero = import('../../components/FuturistHero.vue' /* webpackChunkName: "components/FuturistHero'}" */).then(c => c.default || c)
@@ -13,3 +14,4 @@ export const LazyFuturistTeam = import('../../components/FuturistTeam.vue' /* we
 export const LazyLinkBtn = import('../../components/LinkBtn.vue' /* webpackChunkName: "components/LinkBtn'}" */).then(c => c.default || c)
 export const LazyProjectCard = import('../../components/ProjectCard.vue' /* webpackChunkName: "components/ProjectCard'}" */).then(c => c.default || c)
 export const LazyTeamCard = import('../../components/TeamCard.vue' /* webpackChunkName: "components/TeamCard'}" */).then(c => c.default || c)
+export const LazyValueCard = import('../../components/ValueCard.vue' /* webpackChunkName: "components/ValueCard'}" */).then(c => c.default || c)
