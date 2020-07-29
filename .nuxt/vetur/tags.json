@@ -1,27 +1,21 @@
 {
-  "DiscordBtn": {
-    "description": "Auto imported from components/DiscordBtn.vue"
+  "About": {
+    "description": "Auto imported from components/About.vue"
   },
-  "LazyDiscordBtn": {
-    "description": "Auto imported from components/DiscordBtn.vue"
+  "LazyAbout": {
+    "description": "Auto imported from components/About.vue"
   },
-  "FuturistAbout": {
-    "description": "Auto imported from components/FuturistAbout.vue"
+  "Btn": {
+    "description": "Auto imported from components/Btn.vue"
   },
-  "LazyFuturistAbout": {
-    "description": "Auto imported from components/FuturistAbout.vue"
+  "LazyBtn": {
+    "description": "Auto imported from components/Btn.vue"
   },
-  "FuturistHero": {
-    "description": "Auto imported from components/FuturistHero.vue"
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
   },
-  "LazyFuturistHero": {
-    "description": "Auto imported from components/FuturistHero.vue"
-  },
-  "FuturistNavBar": {
-    "description": "Auto imported from components/FuturistNavBar.vue"
-  },
-  "LazyFuturistNavBar": {
-    "description": "Auto imported from components/FuturistNavBar.vue"
+  "LazyFooter": {
+    "description": "Auto imported from components/Footer.vue"
   },
   "FuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
@@ -29,16 +23,52 @@
   "LazyFuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
   },
+  "Hero": {
+    "description": "Auto imported from components/Hero.vue"
+  },
+  "LazyHero": {
+    "description": "Auto imported from components/Hero.vue"
+  },
+  "HowItWorks": {
+    "description": "Auto imported from components/HowItWorks.vue"
+  },
+  "LazyHowItWorks": {
+    "description": "Auto imported from components/HowItWorks.vue"
+  },
+  "NavBar": {
+    "description": "Auto imported from components/NavBar.vue"
+  },
+  "LazyNavBar": {
+    "description": "Auto imported from components/NavBar.vue"
+  },
   "ProjectCard": {
     "description": "Auto imported from components/ProjectCard.vue"
   },
   "LazyProjectCard": {
     "description": "Auto imported from components/ProjectCard.vue"
   },
+  "ReadyToBeAFuturist": {
+    "description": "Auto imported from components/ReadyToBeAFuturist.vue"
+  },
+  "LazyReadyToBeAFuturist": {
+    "description": "Auto imported from components/ReadyToBeAFuturist.vue"
+  },
+  "Subscribe": {
+    "description": "Auto imported from components/Subscribe.vue"
+  },
+  "LazySubscribe": {
+    "description": "Auto imported from components/Subscribe.vue"
+  },
   "TeamCard": {
     "description": "Auto imported from components/TeamCard.vue"
   },
   "LazyTeamCard": {
     "description": "Auto imported from components/TeamCard.vue"
+  },
+  "WorkWithExperts": {
+    "description": "Auto imported from components/WorkWithExperts.vue"
+  },
+  "LazyWorkWithExperts": {
+    "description": "Auto imported from components/WorkWithExperts.vue"
   }
 }

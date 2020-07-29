@@ -1,11 +1,18 @@
 <template>
   <div class="btn d-flex justify-content-center">
     <b-link class="neumorphism-3" href="https://discord.com/invite/Z37nV2Z">
-      <a style="color: white;">Join Now</a>
+      <a style="color: white;">{{name}}</a>
     </b-link>
   </div>
 </template>
-
+<script>
+    export default {
+        name: 'Button',
+        props: {
+            name: String,
+        }
+    }
+</script>
 <style scoped>
 .neumorphism-3 {
   border-radius: 30px;

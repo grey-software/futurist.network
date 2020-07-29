@@ -1,12 +1,12 @@
 <template>
-  <futurist-about />
+  <About />
 </template>
 
 <script>
-import FuturistAbout from '@/components/FuturistAbout.vue'
+import About from '../components/About.vue'
 export default {
   components: {
-      FuturistAbout
+      About
   }
 }
 </script>

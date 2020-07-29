@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="g-landing">
-      <div class="g-hero d-flex align-content-center justify-content-center flex-column">
-        <h1 class="g-hero-heading">
+      <div class="hero d-flex align-content-center justify-content-center flex-column">
+        <h1 class="hero-heading">
           About
           <span class="text-rainbow">US</span>
         </h1>
-        <p class="g-hero-tag">Propose, Fund, & Work.</p>
+        <p class="hero-tag">Propose, Fund, & Work.</p>
 
-        <discord-btn />
+        <Btn name="Join Now"/>
 
         <!-- MORE INDICATOR -->
         <div class="more-indicator animation-more mt">
@@ -73,14 +73,15 @@
           </div>
 
           <div class="col">
-            <div class="icon" style="color: #fab74a;">
+            <div style="color: #fab74a;">
               <span class="fa-stack fa-2x">
+                <div class="circle fa-stack-2x"></div>
                 <fa-icon
                   :icon="['fas', 'chalkboard-teacher']"
                   class="fa-stack-2x fa-lg"
                   style="color: #fab74a;"
                 ></fa-icon>
-                <div class="circle fa-stack-2x"></div>
+
               </span>
             </div>
 
@@ -138,17 +139,17 @@
 </template>
 
 <script>
-import DiscordBtn from '@/components/DiscordBtn.vue'
+import Btn from '../components/Btn.vue'
 
 export default {
   components: {
-    DiscordBtn
-  }  
+    Btn
+  }
 }
 </script>
 
 <style scoped>
-.g-hero-heading {
+.hero-heading {
   padding: 0;
 }
 
