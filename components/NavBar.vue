@@ -13,7 +13,6 @@
       >
 
         <img
-
           class="logo"
           src="../assets/f-logo.png"
         />
@@ -32,29 +31,25 @@
     <div class="nav-links">
       <nuxt-link
         @click.native="checked = false"
-        to="/projects"
+        to="/about"
         class="g-nav-link mr-4"
-      >Projects</nuxt-link>
+      >About Us</nuxt-link>
       <nuxt-link
         @click.native="checked = false"
-        to="/education"
+        to="/contact"
         class="g-nav-link mr-4"
       >Contact</nuxt-link>
 
-      <nuxt-link
-        @click.native="checked = false"
-        to="/education"
-        class="g-nav-link mr-4"
-      >
-        <div class=" btn">
-          <b-link
-            class="neumorphism-3"
-            href="#"
-          >
-            <a style="color: white;">Donate</a>
-          </b-link>
-        </div>
-      </nuxt-link>
+      <div class="btn">
+        <b-link
+          class="neumorphism-3"
+          target="_blank"
+          href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
+        >
+          <a style="color: white;">Donate</a>
+        </b-link>
+      </div>
+
     </div>
   </div>
 </template>
@@ -98,11 +93,11 @@ export default {
 
 .btn {
   z-index: 1;
-  padding: 0;
+  padding: 8px 16px;
   margin: 0;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.5em;
   letter-spacing: 2px;
   transition: 0.3s ease;
   font-weight: bold;
@@ -119,8 +114,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55px;
-  width: 200px;
+  height: 72px;
+  width: 232px;
   box-shadow:
     10px 10px 20px rgba(0, 0, 0, 0.8),
     -6px -6px 10px rgba(255, 255, 255, 0.1);

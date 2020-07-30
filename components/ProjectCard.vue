@@ -9,6 +9,14 @@
     <b-card-text>{{project.desc}}</b-card-text>
 
     <b-button
+      @click="copyToClipboard(project.email)"
+      v-b-tooltip.hover
+      :title="project.email"
+      class="icon-button rounded-circle"
+    >
+      <fa-icon :icon="['fas', 'envelope']"></fa-icon>
+    </b-button>
+    <b-button
       @click="copyToClipboard(project.discord)"
       v-b-tooltip.hover
       :title="project.discord"
@@ -34,7 +42,7 @@ export default {
     }
   },
   methods: {
-    copyToClipboard(str) {
+    copyToClipboard (str) {
       const el = document.createElement("textarea");
       el.value = str;
       el.setAttribute("readonly", "");
@@ -47,7 +55,7 @@ export default {
     }
   },
   computed: {
-    imageUrl() {
+    imageUrl () {
       return `http://159.89.124.15${this.project.image.url}`
     }
   }

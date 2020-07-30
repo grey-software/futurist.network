@@ -22,3 +22,7 @@ a:hover {
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Roboto', sans-serif;
 }
+
+.flex-col {
+  flex-direction: column;
+}
