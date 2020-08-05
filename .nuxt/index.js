@@ -11,13 +11,13 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_680ce604 from 'nuxt_plugin_plugin_680ce604' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_75954f43 from 'nuxt_plugin_bootstrapvue_75954f43' // Source: ./bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_libplugin0c479e94_bb8a4b4a from 'nuxt_plugin_libplugin0c479e94_bb8a4b4a' // Source: ./lib.plugin.0c479e94.js (mode: 'all')
-import nuxt_plugin_fontawesome_91f90d54 from 'nuxt_plugin_fontawesome_91f90d54' // Source: ./fontawesome.js (mode: 'all')
-import nuxt_plugin_apollomodule_6a3f3ce0 from 'nuxt_plugin_apollomodule_6a3f3ce0' // Source: ./apollo-module.js (mode: 'all')
-import nuxt_plugin_pluginclient_105ead0c from 'nuxt_plugin_pluginclient_105ead0c' // Source: ./content/plugin.client.js (mode: 'client')
-import nuxt_plugin_pluginserver_5d8a1b02 from 'nuxt_plugin_pluginserver_5d8a1b02' // Source: ./content/plugin.server.js (mode: 'server')
+import nuxt_plugin_plugin_738ccaec from 'nuxt_plugin_plugin_738ccaec' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_273e979e from 'nuxt_plugin_bootstrapvue_273e979e' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_libplugin63cf06e6_fad3f3e2 from 'nuxt_plugin_libplugin63cf06e6_fad3f3e2' // Source: ./lib.plugin.63cf06e6.js (mode: 'all')
+import nuxt_plugin_fontawesome_659f41c4 from 'nuxt_plugin_fontawesome_659f41c4' // Source: ./fontawesome.js (mode: 'all')
+import nuxt_plugin_apollomodule_3deabc64 from 'nuxt_plugin_apollomodule_3deabc64' // Source: ./apollo-module.js (mode: 'all')
+import nuxt_plugin_pluginclient_06974068 from 'nuxt_plugin_pluginclient_06974068' // Source: ./content/plugin.client.js (mode: 'client')
+import nuxt_plugin_pluginserver_6c50b1f0 from 'nuxt_plugin_pluginserver_6c50b1f0' // Source: ./content/plugin.server.js (mode: 'server')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -170,32 +170,32 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_680ce604 === 'function') {
-    await nuxt_plugin_plugin_680ce604(app.context, inject)
+  if (typeof nuxt_plugin_plugin_738ccaec === 'function') {
+    await nuxt_plugin_plugin_738ccaec(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_75954f43 === 'function') {
-    await nuxt_plugin_bootstrapvue_75954f43(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_273e979e === 'function') {
+    await nuxt_plugin_bootstrapvue_273e979e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_libplugin0c479e94_bb8a4b4a === 'function') {
-    await nuxt_plugin_libplugin0c479e94_bb8a4b4a(app.context, inject)
+  if (typeof nuxt_plugin_libplugin63cf06e6_fad3f3e2 === 'function') {
+    await nuxt_plugin_libplugin63cf06e6_fad3f3e2(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_fontawesome_91f90d54 === 'function') {
-    await nuxt_plugin_fontawesome_91f90d54(app.context, inject)
+  if (typeof nuxt_plugin_fontawesome_659f41c4 === 'function') {
+    await nuxt_plugin_fontawesome_659f41c4(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_apollomodule_6a3f3ce0 === 'function') {
-    await nuxt_plugin_apollomodule_6a3f3ce0(app.context, inject)
+  if (typeof nuxt_plugin_apollomodule_3deabc64 === 'function') {
+    await nuxt_plugin_apollomodule_3deabc64(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_pluginclient_105ead0c === 'function') {
-    await nuxt_plugin_pluginclient_105ead0c(app.context, inject)
+  if (process.client && typeof nuxt_plugin_pluginclient_06974068 === 'function') {
+    await nuxt_plugin_pluginclient_06974068(app.context, inject)
   }
 
-  if (process.server && typeof nuxt_plugin_pluginserver_5d8a1b02 === 'function') {
-    await nuxt_plugin_pluginserver_5d8a1b02(app.context, inject)
+  if (process.server && typeof nuxt_plugin_pluginserver_6c50b1f0 === 'function') {
+    await nuxt_plugin_pluginserver_6c50b1f0(app.context, inject)
   }
 
   // Lock enablePreview in context

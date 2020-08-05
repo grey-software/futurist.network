@@ -1,10 +1,11 @@
 <template>
   <div class="g-landing">
-    <div class="hero">
-      <p class="hero-tag">Propose, Fund, & Work.</p>
-      <h1 class="hero-heading">
+    <div class="g-hero d-flex align-content-center justify-content-center flex-column">
+      <p class="g-hero-tag">Propose, Fund, & Work.</p>
+      <h1 class="g-hero-heading">
         Crowdsourcing
-        <br />the <span class="text-rainbow">Future.</span>
+        <br />the
+        <span class="text-rainbow">Future.</span>
       </h1>
 
       <Btn class="mt-5" name="Join Now" />
@@ -12,20 +13,19 @@
       <!-- MORE INDICATOR -->
       <div class="more-indicator animation-more mt">
         <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
-
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Btn from '@/components/Btn.vue'
+import LinkBtn from "@/components/LinkBtn.vue";
 
 export default {
   components: {
-    Btn
-  }
-}
+    LinkBtn
+  },
+};
 </script>
 
 <style>

@@ -23,6 +23,12 @@
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
   },
+  "FuturistHero": {
+    "description": "Auto imported from components/FuturistHero.vue"
+  },
+  "LazyFuturistHero": {
+    "description": "Auto imported from components/FuturistHero.vue"
+  },
   "FuturistTeam": {
     "description": "Auto imported from components/FuturistTeam.vue"
   },

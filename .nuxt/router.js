@@ -25,7 +25,7 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _0b72daf6,
+    component: _4a8ebd57,
     name: "about"
   }, {
     path: "/donations",
@@ -33,7 +33,7 @@ export const routerOptions = {
     name: "donations"
   }, {
     path: "/",
-    component: _19fe6d4a,
+    component: _6a46981c,
     name: "index"
   }],
 
