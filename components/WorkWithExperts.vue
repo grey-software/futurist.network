@@ -77,7 +77,7 @@
   font-size: 18px;
   font-weight: 500;
   color: lightslategrey;
-  width: 434px;
+  width: 600px;
 }
 
 .category {

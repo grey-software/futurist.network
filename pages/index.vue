@@ -8,29 +8,29 @@
     >
 
       <Hero />
-      <WorkWithExperts />
-      <section
-        id="f-projects"
-        class="f-section d-flex flex-col align-items-center mb-5"
-      >
-        <hr />
-        <div class="title">Featured <span style="color: #6fffa6;">Projects</span></div>
-        <div
-          v-if="projects"
-          class="flex row flex-wrap justify-content-center"
-        >
-
-          <project-card
-            v-for="project in projects"
-            :key="project.title"
-            :project="project"
-          />
-        </div>
-      </section>
-      <HowItWorks class="pt-5"/>
-      <ReadyToBeAFuturist />
-
     </section>
+    <WorkWithExperts />
+    <section
+      id="f-projects"
+      class="f-section d-flex flex-col align-items-center mb-5"
+    >
+      <hr />
+      <div class="title">Featured <span style="color: #6fffa6;">Projects</span></div>
+      <div
+        v-if="projects"
+        class="flex row flex-wrap justify-content-center"
+      >
+
+        <project-card
+          v-for="project in projects"
+          :key="project.title"
+          :project="project"
+        />
+      </div>
+    </section>
+    <HowItWorks class="pt-5" />
+    <ReadyToBeAFuturist />
+
 
   </div>
 </template>

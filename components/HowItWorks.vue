@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section pb-5">
     <div class="section-content">
       <p class="hero-tag">HOW IT WORKS</p>
       <h2 class="hero-heading">The Project Pitch</h2>
@@ -9,12 +9,13 @@
           <div class="how-it-works-card">
             <fa-icon
               :icon="['fas', 'volume-up']"
-              class="fa-3x"
+              class="how-it-works-icon"
             ></fa-icon>
             <div class="tag-line">
               <p> Pitch a project! </p>
-              <p class="hero-tag"> STEP 1 </p>
+
             </div>
+            <p class="hero-tag"> STEP 1 </p>
 
           </div>
         </div>
@@ -22,12 +23,12 @@
           <div class="how-it-works-card">
             <fa-icon
               :icon="['fas', 'link']"
-              class="fa-3x"
+              class="how-it-works-icon"
             ></fa-icon>
             <div class="tag-line">
               <p> Connect with an expert. </p>
-              <p class="hero-tag"> STEP 2 </p>
             </div>
+            <p class="hero-tag"> STEP 2 </p>
 
           </div>
         </div>
@@ -35,60 +36,16 @@
           <div class="how-it-works-card">
             <fa-icon
               :icon="['fas', 'handshake']"
-              class="fa-3x"
+              class="how-it-works-icon"
             ></fa-icon>
             <div class="tag-line">
               <p> Meet & collaborate with the community! </p>
-              <p class="hero-tag"> STEP 3 </p>
             </div>
+            <p class="hero-tag"> STEP 3 </p>
 
           </div>
         </div>
       </div>
-
-      <!-- <b-container class="bv-example-row">
-        <b-row>
-          <b-col>
-            <div>
-              <fa-icon
-                :icon="['fas', 'volume-up']"
-                class="fa-3x"
-              ></fa-icon>
-              <div class="tag-line">
-                <p> Pitch a project! </p>
-                <p class="hero-tag"> STEP 1 </p>
-              </div>
-
-            </div>
-          </b-col>
-          <b-col>
-            <div>
-              <fa-icon
-                :icon="['fas', 'link']"
-                class="fa-3x"
-              ></fa-icon>
-              <div class="tag-line">
-                <p> Connect with an expert. </p>
-                <p class="hero-tag"> STEP 2 </p>
-              </div>
-
-            </div>
-          </b-col>
-          <b-col>
-            <div>
-              <fa-icon
-                :icon="['fas', 'handshake']"
-                class="fa-3x"
-              ></fa-icon>
-              <div class="tag-line">
-                <p> Meet & collaborate with the community! </p>
-                <p class="hero-tag"> STEP 3 </p>
-              </div>
-
-            </div>
-          </b-col>
-        </b-row>
-      </b-container> -->
     </div>
   </div>
 
@@ -107,7 +64,7 @@
 .section-content {
   text-align: center;
   color: white;
-  padding: 0 120px;
+  padding: 0 20%;
 }
 
 .hero-heading {
@@ -122,7 +79,7 @@
 }
 
 .hero-tag {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: #fa8a01;
   letter-spacing: -0.032em;
@@ -132,11 +89,17 @@
 }
 
 .tag-line {
-  padding: 20px 0;
+  padding: 24px 0;
+  height: 72px;
+  font-size: 24px;
 }
 
 .how-it-works-card {
   width: 232px;
   height: 256px;
+}
+
+.how-it-works-icon {
+  font-size: 84px;
 }
 </style>

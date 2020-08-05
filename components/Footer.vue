@@ -66,6 +66,7 @@
           <li>
             <p class="more"> More Links. </p>
             <div class="links">
+              <p>Donate Now</p>
               <p>Futurist Network</p>
               <p>Our Team</p>
               <p>Contact Us</p>

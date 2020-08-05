@@ -27,15 +27,4 @@
   position: relative;
 }
 
-.neumorphism-3::after {
-  content: "";
-  border-radius: 30px;
-  position: absolute;
-  height: 75%;
-  width: 95%;
-  background-color: transparent;
-  box-shadow:
-    inset 5px 5px 10px rgba(0, 0, 0, 0.8),
-    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
-}
 </style>

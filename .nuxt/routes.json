@@ -3,14 +3,18 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/arsalagrey/Programming/futurist.network/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_0b72daf6"
+    "chunkName": "pages/about"
+  },
+  {
+    "name": "donations",
+    "path": "/donations",
+    "component": "/Users/arsalagrey/Programming/futurist.network/pages/donations.vue",
+    "chunkName": "pages/donations"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/arsalagrey/Programming/futurist.network/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_19fe6d4a"
+    "chunkName": "pages/index"
   }
 ]

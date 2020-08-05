@@ -7,11 +7,10 @@
         <br />the <span class="text-rainbow">Future.</span>
       </h1>
 
-      <Btn name="Join Now" />
+      <Btn class="mt-5" name="Join Now" />
 
       <!-- MORE INDICATOR -->
       <div class="more-indicator animation-more mt">
-        <p>MORE</p>
         <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
 
       </div>
@@ -52,29 +51,12 @@ export default {
     }
   }
 
-  .hero {
-    height: 100vh;
-    text-align: center;
-    padding: 80px 40px;
-  }
-
-  .hero-heading {
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    letter-spacing: 1px;
-    font-size: calc(12px + 3vw);
-    z-index: 1000;
-    padding: 0 0 80px 0;
-  }
-
   .hero-tag {
     font-size: 18px;
     font-weight: 600;
     color: #7c7c7c;
     letter-spacing: 0;
     line-height: 1.5;
-    padding: 0 0 20px 0;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
   }

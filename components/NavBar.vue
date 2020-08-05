@@ -36,19 +36,17 @@
       >About Us</nuxt-link>
       <nuxt-link
         @click.native="checked = false"
-        to="/contact"
+        to="/donations"
         class="g-nav-link mr-4"
-      >Contact</nuxt-link>
+      >Donations</nuxt-link>
 
-      <div class="btn">
-        <b-link
-          class="neumorphism-3"
-          target="_blank"
-          href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
-        >
-          <a style="color: white;">Donate</a>
-        </b-link>
-      </div>
+      <a
+        class="btn neumorphism-3"
+        target="_blank"
+        href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
+      >
+        <span style="color: white;">Donate</span>
+      </a>
 
     </div>
   </div>
@@ -121,18 +119,6 @@ export default {
     -6px -6px 10px rgba(255, 255, 255, 0.1);
   position: relative;
   transform: scale(0.6);
-}
-
-.neumorphism-3::after {
-  content: "";
-  border-radius: 30px;
-  position: absolute;
-  height: 75%;
-  width: 95%;
-  background-color: transparent;
-  box-shadow:
-    inset 5px 5px 10px rgba(0, 0, 0, 0.8),
-    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
 }
 </style>
 

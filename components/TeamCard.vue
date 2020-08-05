@@ -1,64 +1,120 @@
 <template>
-  <div class="card neu-dark" style="width: 16rem; height: 26rem;">
-    <div class="card-inner">
-      <div class="circle"></div>
-      <div class="card-body">
-        <p class="card-text">Design</p>
-        <h5 class="card-title">Nina Ricci</h5>
-
-        <b-row class="icon">
-          <b-col><fa-icon :icon="['fas', 'envelope']" class="fa-lg"></fa-icon></b-col>
-          <b-col><fa-icon :icon="['fab', 'discord']" class="fa-lg"></fa-icon></b-col>
-          <b-col><fa-icon :icon="['fab', 'linkedin']" class="fa-lg"></fa-icon></b-col>
-        </b-row>
-      </div>
+  <div
+    class="card neu-dark d-flex flex-column align-items-center justify-content-center justify-content-evenly"
+  >
+    <img :src="imgSrc" class="circle" />
+    <div class="card-body">
+      <p class="card-text">{{ headline }}</p>
+      <h5 class="card-title">{{ name }}</h5>
+    </div>
+    <div class="icon d-flex align-items-center justify-content-around">
+      <a :href="emailAddress">
+        <fa-icon :icon="['fas', 'envelope']" class="fa-lg"></fa-icon>
+      </a>
+      <a @click="copyToClipboard()" v-b-tooltip.hover :title="isCopied">
+        <fa-icon :icon="['fab', 'discord']" class="fa-lg"></fa-icon>
+      </a>
+      <a :href="linkedin">
+        <fa-icon :icon="['fab', 'linkedin']" class="fa-lg"></fa-icon>
+      </a>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    mail: String,
+    headline: String,
+    name: String,
+    discord: String,
+    linkedin: String,
+    imgSrc: String
+  },
+  data() {
+    return { isCopied: "Click to copy username" };
+  },
+  methods: {
+    copyToClipboard(e) {
+      var text = navigator.clipboard
+        .writeText(this.discord)
+        .then(() => {
+          this.isCopied = "Copied!";
+          console.log(this.isCopied);
+          setTimeout(() => {
+            this.isCopied = "Click to copy username";
+          }, 5000);
+        })
+        .catch(() => {
+          this.isCopied = "Try Again!";
+          setTimeout(() => {
+            this.isCopied = "Click to copy username";
+          }, 1000);
+        });
+      console.log("Copy " + text);
+    }
+  },
+  computed: {
+    emailAddress() {
+      return "mailto:" + this.mail;
+    }
+  }
+};
+</script>
+
 <style scoped>
+.card {
+  color: white;
+  border-radius: 10%;
+  border: 0;
+  background: var(--bg);
+  position: relative;
+  margin: 42px;
+  height: 26rem;
+}
+
+@media screen and (min-width: 960px) {
   .card {
-    margin: 20px 120px;
-    color: white;
-    border-radius: 5%;
-  }
-
-  .neu-dark {
-    box-shadow:
-      10px 10px 20px rgba(0, 0, 0, 0.9),
-      -10px -10px 22px rgba(255, 255, 255, 0.1);
-  }
-
-  .card-body {
-    text-align: center;
-    margin: 20px;
-    transform: translate(0, -60px);
-  }
-
-  .card-title {
-    font-weight: 700;
-    font-size: 25px;
     margin: 0;
-    padding: 10px 0 30px 0;
+    max-width: 18rem;
   }
+}
 
-  .card-text {
-    color: lightslategrey;
-    font-size: 16px;
-    margin: 0;
-  }
+.neu-dark {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.705), 0 0 22px rgba(255, 255, 255, 0.185);
+}
 
-  .circle {
-    border: 5px solid;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    transform: scale(0.6);
-  }
+.card-body {
+  flex: none;
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
 
-  .icon {
-    padding: 0 0;
-  }
+.card-title {
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0;
+  padding: 10px 0 30px 0;
+}
+
+.card-text {
+  color: lightslategrey;
+  font-size: 16px;
+  margin: 0;
+}
+
+.circle {
+  height: 164px;
+  width: 164px;
+  border-radius: 50%;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.icon {
+  padding: 0 0;
+  position: relative;
+  width: 80%;
+}
 </style>

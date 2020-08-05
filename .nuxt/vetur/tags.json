@@ -11,6 +11,12 @@
   "LazyBtn": {
     "description": "Auto imported from components/Btn.vue"
   },
+  "Faq": {
+    "description": "Auto imported from components/Faq.vue"
+  },
+  "LazyFaq": {
+    "description": "Auto imported from components/Faq.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
@@ -34,6 +40,12 @@
   },
   "LazyHowItWorks": {
     "description": "Auto imported from components/HowItWorks.vue"
+  },
+  "LinkBtn": {
+    "description": "Auto imported from components/LinkBtn.vue"
+  },
+  "LazyLinkBtn": {
+    "description": "Auto imported from components/LinkBtn.vue"
   },
   "NavBar": {
     "description": "Auto imported from components/NavBar.vue"
@@ -64,6 +76,12 @@
   },
   "LazyTeamCard": {
     "description": "Auto imported from components/TeamCard.vue"
+  },
+  "ValueCard": {
+    "description": "Auto imported from components/ValueCard.vue"
+  },
+  "LazyValueCard": {
+    "description": "Auto imported from components/ValueCard.vue"
   },
   "WorkWithExperts": {
     "description": "Auto imported from components/WorkWithExperts.vue"
