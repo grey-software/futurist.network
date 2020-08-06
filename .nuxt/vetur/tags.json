@@ -5,17 +5,17 @@
   "LazyAbout": {
     "description": "Auto imported from components/About.vue"
   },
-  "Btn": {
-    "description": "Auto imported from components/Btn.vue"
-  },
-  "LazyBtn": {
-    "description": "Auto imported from components/Btn.vue"
-  },
   "Faq": {
     "description": "Auto imported from components/Faq.vue"
   },
   "LazyFaq": {
     "description": "Auto imported from components/Faq.vue"
+  },
+  "FaqCollapse": {
+    "description": "Auto imported from components/FaqCollapse.vue"
+  },
+  "LazyFaqCollapse": {
+    "description": "Auto imported from components/FaqCollapse.vue"
   },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"

@@ -1,6 +1,6 @@
 export { default as About } from '../../components/About.vue'
-export { default as Btn } from '../../components/Btn.vue'
 export { default as Faq } from '../../components/Faq.vue'
+export { default as FaqCollapse } from '../../components/FaqCollapse.vue'
 export { default as Footer } from '../../components/Footer.vue'
 export { default as FuturistHero } from '../../components/FuturistHero.vue'
 export { default as FuturistTeam } from '../../components/FuturistTeam.vue'
@@ -16,8 +16,8 @@ export { default as ValueCard } from '../../components/ValueCard.vue'
 export { default as WorkWithExperts } from '../../components/WorkWithExperts.vue'
 
 export const LazyAbout = import('../../components/About.vue' /* webpackChunkName: "components/About'}" */).then(c => c.default || c)
-export const LazyBtn = import('../../components/Btn.vue' /* webpackChunkName: "components/Btn'}" */).then(c => c.default || c)
 export const LazyFaq = import('../../components/Faq.vue' /* webpackChunkName: "components/Faq'}" */).then(c => c.default || c)
+export const LazyFaqCollapse = import('../../components/FaqCollapse.vue' /* webpackChunkName: "components/FaqCollapse'}" */).then(c => c.default || c)
 export const LazyFooter = import('../../components/Footer.vue' /* webpackChunkName: "components/Footer'}" */).then(c => c.default || c)
 export const LazyFuturistHero = import('../../components/FuturistHero.vue' /* webpackChunkName: "components/FuturistHero'}" */).then(c => c.default || c)
 export const LazyFuturistTeam = import('../../components/FuturistTeam.vue' /* webpackChunkName: "components/FuturistTeam'}" */).then(c => c.default || c)
