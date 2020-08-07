@@ -1,22 +1,28 @@
 <template>
-  <b-card no-body class="mb-5 mt-5">
-    <b-card-header header-tag="header" class="p-1" role="tab">
-      <b-link class="neumorphism-3" block v-b-toggle="'index'+faqId" variant="info">
+  <div class="mt-4 mb-5">
+    <div
+      class="p-1 px-3 pt-2 collapse-btn"
+      block
+      v-b-toggle="'index'+faqId"
+      variant="info"
+      header-tag="header"
+      role="tab"
+    >
+      <div class="d-flex align-items-center justify-content-between question">
         <div>{{ question }}</div>
-      </b-link>
-    </b-card-header>
+        <fa-icon :icon="['fas', 'plus']" class="fa-lg"></fa-icon>
+      </div>
+    </div>
     <b-collapse :id="'index'+faqId" accordion="my-accordion" role="tabpanel">
-      <b-card-body>
-        <b-card-text>{{ desc }}</b-card-text>
-      </b-card-body>
+      <div class="answer ml-3 my-4">{{ answer }}</div>
     </b-collapse>
-  </b-card>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    desc: String,
+    answer: String,
     question: String,
     faqId: String,
   },
@@ -24,23 +30,32 @@ export default {
 </script>
 
 <style scoped>
-.neumorphism-3 {
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  height: 55px;
-  width: 200px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8), -6px -6px 10px rgba(255, 255, 255, 0.1);
-  position: relative;
+.collapse-btn {
+  background: #050c17;
+  text-align: left;
+  border-radius: 16px;
+  box-shadow: -10px -10px 22px #4b4b4b80;
+  height: 65px;
+  color: #fff;
+  width: 100%;
 }
 
-.neumorphism-3::after {
-  content: "";
-  border-radius: 30px;
-  position: absolute;
-  height: 75%;
-  width: 95%;
-  background-color: transparent;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.8), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+.question {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -0.025em;
+  font-size: 25px;
+  top: 5px;
+}
+
+.answer {
+  color: #838383;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.96px;
+  font-weight: 600;
 }
 </style>
