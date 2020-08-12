@@ -56,7 +56,7 @@
 
 .heading {
   font-weight: 700;
-  font-family: var(--font-heading);
+  font-family: 'Montserrat', sans-serif;
   color: white;
   font-size: 20px;
   padding: 20px 0 20px 0;

@@ -54,7 +54,7 @@ img {
 
 .heading {
   font-weight: 800;
-  font-family: var(--font-heading);
+  font-family: 'Montserrat', sans-serif;
   color: white;
   letter-spacing: -0.025em;
   font-size: 70px;

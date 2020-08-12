@@ -95,7 +95,7 @@ a:hover {
 
 .g-hero-heading {
   font-weight: 800;
-  font-family: var(--font-heading), sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   letter-spacing: -0.025em;
   font-size: calc(12px + 5vw);

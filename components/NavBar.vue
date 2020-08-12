@@ -78,7 +78,7 @@ export default {
   font-size: 26px;
   color: var(--color-text);
   font-weight: 500;
-  font-family: var(--font-heading);
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
@@ -86,7 +86,6 @@ export default {
   font-size: 18px;
   color: var(--color-text);
   font-weight: 500;
-  font-family: var(--font-heading);
 }
 
 .btn {
