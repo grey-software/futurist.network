@@ -88,6 +88,11 @@
         />
       </div>
     </div>
+
+    <div class="container mt-5 mb-5">
+      <FaqCollapse question="Hey" answer="Let's see" faqId="1" />
+      <FaqCollapse question="Hey" answer="Let's see" faqId="2" />
+    </div>
   </div>
 </template>
 
@@ -95,6 +100,7 @@
 import LinkBtn from "@/components/LinkBtn.vue";
 import TeamCard from "@/components/TeamCard";
 import ValueCard from "@/components/ValueCard";
+import FaqCollapse from "@/components/FaqCollapse.vue";
 
 export default {
   data () {
@@ -150,7 +156,8 @@ export default {
   components: {
     LinkBtn,
     TeamCard,
-    ValueCard
+    ValueCard,
+    FaqCollapse
   }
 };
 </script>
