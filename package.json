@@ -1,5 +1,6 @@
 {
     "name": "futurist.network",
+    "description": "Futurism is the belief in the need to look to the future rather than reflect on the past, coupled with an optimism that personal and social fulfilment lies in the future in the form of technological progress and integration.",
     "version": "1.0.0",
     "private": true,
     "scripts": {

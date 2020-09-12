@@ -3,35 +3,37 @@
   <div class="pb-5">
     <!-- Hero -->
     <section
-      id="f-hero"
-      class="f-section"
+      id="hero-section"
+      class="hero f-section d-flex align-content-center justify-content-center flex-column"
     >
+      <p class="hero-tag">Propose, Fund, & Work.</p>
+      <div>
+        <h1 class="hero-heading">
+          Crowdsourcing
+          <br />the
+          <span class="text-rainbow">Future.</span>
+        </h1>
+        <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
 
-      <Hero />
+        <div class="more-indicator animation-more mt">
+          <p>MORE</p>
+          <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
+        </div>
+      </div>
     </section>
     <WorkWithExperts />
-    <section
-      id="f-projects"
-      class="f-section d-flex flex-col align-items-center mb-5"
-    >
+    <section id="f-projects" class="f-section d-flex flex-col align-items-center mb-5">
       <hr />
-      <div class="title">Featured <span style="color: #6fffa6;">Projects</span></div>
-      <div
-        v-if="projects"
-        class="flex row flex-wrap justify-content-center"
-      >
-
-        <project-card
-          v-for="project in projects"
-          :key="project.title"
-          :project="project"
-        />
+      <div class="title">
+        Featured
+        <span style="color: #6fffa6;">Projects</span>
+      </div>
+      <div v-if="projects" class="flex row flex-wrap justify-content-center">
+        <project-card v-for="project in projects" :key="project.title" :project="project" />
       </div>
     </section>
     <HowItWorks class="pt-5" />
     <ReadyToBeAFuturist />
-
-
   </div>
 </template>
 
@@ -50,39 +52,39 @@ export default {
     Hero,
     HowItWorks,
     ReadyToBeAFuturist,
-    WorkWithExperts
+    WorkWithExperts,
   },
-  data () {
+  data() {
     return {
       slide: 0,
-      sliding: null
-    }
+      sliding: null,
+    };
   },
   methods: {
-    onSlideStart (slide) {
-      this.sliding = true
+    onSlideStart(slide) {
+      this.sliding = true;
     },
-    onSlideEnd (slide) {
-      this.sliding = false
-    }
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
   },
   apollo: {
     projects: {
       query: gql`
         query Projects {
           projects {
-            title,
-            desc,
+            title
+            desc
             image {
               url
-            },
-            link,
+            }
+            link
             discord
           }
         }
-      `
-    }
-  }
+      `,
+    },
+  },
 };
 </script>
 

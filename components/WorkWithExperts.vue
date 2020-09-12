@@ -1,83 +1,67 @@
 <template>
-  <div class="section justify-content-center">
+  <div class="container d-flex flex-column align-items-center p">
     <p class="category">MENTORSHIP</p>
-    <h1 class="heading mb-4">Work with <br />the <span style="color: #d52be8;">experts.</span></h1>
-    <p class="tag">The Futurist Foundation is an organization that allows individuals like you to propose,
+    <div class="heading mb-4">Work with <br />the <span style="color: #d52be8;">experts.</span></div>
+    <p class="tag text-center">The Futurist Foundation is an organization that allows individuals like you to propose,
       fund, and work on the technologies of the future.</p>
 
-    <div class="groups">
+    <div class="w-100 d-flex align-items-center justify-content-center flex-column flex-md-row">
+      <div class="mr-md-3 text-center">
+        <img src="../assets/spaceship.png" />
+      </div>
 
-      <b-row>
-        <b-col>
-          <img src="../assets/spaceship.png" />
-        </b-col>
+      <div class="col group">
 
-        <b-col>
-          <b-row style="margin: 20px 0;">
-            <div class="neumorphism">
-              <fa-icon
-                class="fa-fw icon"
-                :icon="['fa', 'brain']"
-              ></fa-icon>
-              <a class="group-name">
-                A.I.</a>
-            </div>
-          </b-row>
+        <div class="my-3 neumorphism">
+          <fa-icon
+            class="fa-fw icon"
+            :icon="['fa', 'brain']"
+          ></fa-icon>
+          <a class="group-name">
+            A.I.</a>
+        </div>
 
-          <b-row style="margin: 20px 0;">
-            <div class="neumorphism">
-              <fa-icon
-                class="fa-fw icon"
-                :icon="['fa', 'heartbeat']"
-              ></fa-icon>
-              <a class="group-name">
-                Longevity</a>
-            </div>
-          </b-row>
+        <div class="my-3 neumorphism">
+          <fa-icon
+            class="fa-fw icon"
+            :icon="['fa', 'heartbeat']"
+          ></fa-icon>
+          <a class="group-name">
+            Longevity</a>
+        </div>
 
-          <b-row style="margin: 20px 0;">
-            <div class="neumorphism">
-              <fa-icon
-                class="fa-fw icon"
-                :icon="['fa', 'robot']"
-              ></fa-icon>
-              <a class="group-name">
-                Robotics</a>
-            </div>
-          </b-row>
-
-        </b-col>
-
-      </b-row>
+        <div class="my-3 neumorphism">
+          <fa-icon
+            class="fa-fw icon"
+            :icon="['fa', 'robot']"
+          ></fa-icon>
+          <a class="group-name">
+            Robotics</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 
 <style scoped>
-.section {
-  margin: 0 120px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+* {
+  color: white;
 }
 
 .heading {
   font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
+  font-family: var(--font-heading);
   letter-spacing: -0.025em;
   font-size: 60px;
   line-height: 1.05;
-  z-index: 1000;
 }
 
 .tag {
   font-size: 18px;
   font-weight: 500;
   color: lightslategrey;
-  width: 600px;
+  max-width: 600px;
 }
 
 .category {
@@ -89,9 +73,12 @@
   padding: 20px 20px;
 }
 
+.group {
+  max-width: 400px;
+}
+
 .neumorphism {
   height: 50px;
-  width: 350px;
   border-radius: 5px;
   text-align: left;
   padding: 10px 20px;
@@ -109,14 +96,15 @@ img {
   border-radius: 20px;
 }
 
-.groups {
-  padding: 40px 0;
-  color: white;
-}
-
 .group-name {
   padding: 0 10px;
   font-weight: 700;
   font-size: 20px;
+}
+
+@media screen and (max-width: 540px) {
+  img {
+    width: 300px;
+  }
 }
 </style>

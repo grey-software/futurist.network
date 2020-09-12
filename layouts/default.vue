@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 export default {
   components: {
@@ -17,48 +17,21 @@ export default {
   },
   created() {
     if (process.client) {
-      document.addEventListener("keyup", e => {
+      document.addEventListener("keyup", (e) => {
         if (e.key == "d") {
           console.log("hello");
-          [].forEach.call(document.querySelectorAll("*"), function(a) {
+          [].forEach.call(document.querySelectorAll("*"), function (a) {
             a.style.outline =
               "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16);
           });
         }
       });
     }
-  }
+  },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700 &family=Montserrat:wght@400;500&display=swap");
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  background-color: #050c17;
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-}
-
-a:hover {
-  text-decoration: none;
-  color: unset;
-}
-
-:root {
-  --color-text: #fcfcfc;
-  --color-text-dark: #fcfcfc;
-  --font-heading: "Montserrat", "sans-serif";
-  --font-body: "Roboto Sans";
-  --bg: "#050c17";
-}
-
 .g-landing {
   margin: 0 120px;
 }
@@ -85,32 +58,6 @@ a:hover {
   to {
     -webkit-filter: hue-rotate(-360deg);
   }
-}
-
-.g-hero {
-  height: 100vh;
-  text-align: center;
-  padding: 80px 40px;
-}
-
-.g-hero-heading {
-  font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  letter-spacing: -0.025em;
-  font-size: calc(12px + 5vw);
-  line-height: 1.05;
-  z-index: 1000;
-  padding: 0 0 80px 0;
-}
-
-.g-hero-tag {
-  font-size: 18px;
-  color: lightslategrey;
-  letter-spacing: -0.032em;
-  line-height: 1.5;
-  padding: 0 0 40px 0;
-  text-align: center;
 }
 
 .btn {

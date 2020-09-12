@@ -20,6 +20,11 @@ a:hover {
   --color-text-dark: #fcfcfc;
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Roboto", sans-serif;
+  --bg: "#050c17";
+}
+
+body {
+  font-fami: var(--font-body);
 }
 
 .flex {
@@ -32,11 +37,35 @@ a:hover {
 
 .hero-heading {
   font-weight: 800;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   color: white;
   letter-spacing: 1px;
   font-size: calc(12px + 3vw);
-  z-index: 1000;
+}
+
+.g-hero {
+  height: 100vh;
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.g-hero-heading {
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: white;
+  letter-spacing: -0.025em;
+  font-size: calc(12px + 5vw);
+  line-height: 1.05;
+  padding: 0 0 80px 0;
+}
+
+.g-hero-tag {
+  font-size: 18px;
+  color: lightslategrey;
+  letter-spacing: -0.032em;
+  line-height: 1.5;
+  padding: 0 0 40px 0;
+  text-align: center;
 }
 
 .hero {
@@ -47,4 +76,17 @@ a:hover {
 
 .spacer {
   flex-grow: 1;
+}
+
+/* < Medium Size */
+@media (max-width: 768px) { 
+  .hero-heading {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-heading {
+    font-size: 35px;
+  }
 }

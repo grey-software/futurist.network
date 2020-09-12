@@ -1,4 +1,4 @@
-
+const OG_IMAGE = "http://futurist.network/_nuxt/img/f-logo.ddc7e6d.png"
 require('dotenv').config()
 
 export default {
@@ -24,7 +24,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'og:title', name: 'og:title', content: 'Futurist Network' },
+      { hid: 'og:image', name: 'og:image', content: OG_IMAGE },
+      { hid: 'og:url', name: 'og:url', content: 'http://futurist.network/' },
+      { hid: 'og:type', name: 'og:type', content: 'website' }
     ],
     link: [
       {

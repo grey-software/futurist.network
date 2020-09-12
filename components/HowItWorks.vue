@@ -1,81 +1,65 @@
 <template>
-  <div class="section pb-5">
-    <div class="section-content">
+  <div class="section w-100 mb-5">
+    <div class="d-flex flex-column container">
       <p class="hero-tag">HOW IT WORKS</p>
-      <h2 class="hero-heading">The Project Pitch</h2>
+      <h2 class="hero-heading mb-5">The Project Pitch</h2>
 
-      <div class="d-flex justify-content-between">
-        <div class="d-flex column">
-          <div class="how-it-works-card">
-            <fa-icon
-              :icon="['fas', 'volume-up']"
-              class="how-it-works-icon"
-            ></fa-icon>
+      <div
+        class="d-flex container justify-content-between align-items-center flex-column flex-md-row"
+      >
+
+        <div class="d-flex flex-column">
+          <div class="how-it-works-card mb-5">
+            <fa-icon :icon="['fas', 'volume-up']" class="how-it-works-icon"></fa-icon>
             <div class="tag-line">
-              <p> Pitch a project! </p>
-
+              <p>Pitch a project!</p>
             </div>
-            <p class="hero-tag"> STEP 1 </p>
-
+            <p class="hero-tag">STEP 1</p>
           </div>
         </div>
-        <div class="d-flex column">
-          <div class="how-it-works-card">
-            <fa-icon
-              :icon="['fas', 'link']"
-              class="how-it-works-icon"
-            ></fa-icon>
-            <div class="tag-line">
-              <p> Connect with an expert. </p>
-            </div>
-            <p class="hero-tag"> STEP 2 </p>
 
+        <div class="d-flex column">
+          <div class="how-it-works-card mb-5">
+            <fa-icon :icon="['fas', 'link']" class="how-it-works-icon"></fa-icon>
+            <div class="tag-line">
+              <p>Connect with an expert.</p>
+            </div>
+            <p class="hero-tag">STEP 2</p>
           </div>
         </div>
-        <div class="d-flex column">
-          <div class="how-it-works-card">
-            <fa-icon
-              :icon="['fas', 'handshake']"
-              class="how-it-works-icon"
-            ></fa-icon>
-            <div class="tag-line">
-              <p> Meet & collaborate with the community! </p>
-            </div>
-            <p class="hero-tag"> STEP 3 </p>
 
+        <div class="d-flex column">
+          <div class="how-it-works-card mb-5">
+            <fa-icon :icon="['fas', 'handshake']" class="how-it-works-icon"></fa-icon>
+            <div class="tag-line">
+              <p>Meet & collaborate with the community!</p>
+            </div>
+            <p class="hero-tag">STEP 3</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
 * {
   background-color: rgba(11, 26, 50, 1);
+  color: white;
 }
 
 .section {
   text-align: center;
-  color: white;
-}
-
-.section-content {
-  text-align: center;
-  color: white;
-  padding: 0 20%;
+  background-color: rgba(11, 26, 50, 1);
 }
 
 .hero-heading {
   font-weight: 800;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
+  font-family: var(--font-heading);
   letter-spacing: -0.025em;
   font-size: 60px;
   line-height: 1.05;
-  z-index: 1000;
-  padding: 0 0 80px 0;
 }
 
 .hero-tag {
@@ -95,11 +79,17 @@
 }
 
 .how-it-works-card {
-  width: 232px;
+  width: 220px;
   height: 256px;
 }
 
 .how-it-works-icon {
   font-size: 84px;
+}
+
+@media screen and (min-width: 992px) {
+  .how-it-works-card {
+    width: 232px;
+  }
 }
 </style>
