@@ -22,9 +22,9 @@
       </div>
     </section>
     <WorkWithExperts />
-    <section id="f-projects" class="f-section d-flex flex-col align-items-center mb-5">
+    <section class="d-flex flex-col align-items-center mb-5">
       <hr />
-      <div class="title">
+      <div class="hero-heading py-4">
         Featured
         <span style="color: #6fffa6;">Projects</span>
       </div>

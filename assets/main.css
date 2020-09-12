@@ -24,7 +24,11 @@ a:hover {
 }
 
 body {
-  font-fami: var(--font-body);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 .flex {
@@ -85,6 +89,7 @@ body {
   }
 }
 
+/* Mobile Size */
 @media (max-width: 576px) {
   .hero-heading {
     font-size: 35px;
