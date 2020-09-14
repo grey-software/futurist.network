@@ -89,5 +89,11 @@ export default {
   letter-spacing: 0.96px;
   font-weight: 600;
 }
+
+@media (max-width: 576px) {
+  .project-card {
+    width: 100%;
+  }
+}
 </style>
 
