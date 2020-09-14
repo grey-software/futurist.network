@@ -2,7 +2,7 @@
 <template>
   <div class="f-footer">
     <b-container class="bv-example-row">
-      <b-row>
+      <b-row justify-space-between>
         <b-col cols="7">
           <li>
             <img src="../assets/f-logo.png"/>
