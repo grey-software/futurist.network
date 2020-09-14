@@ -48,30 +48,6 @@
       </div>
     </div>
 
-    <!-- The Team -->
-    <div class="container">
-      <h1 class="title title-left align-center">
-        The
-        <span class="text-purple">Team.</span>
-      </h1>
-      <div class="row d-flex justify-content-around mb-5">
-        <span
-          class="col-lg-4 col-12"
-          v-for="team in teams"
-          :key="team.name"
-        >
-          <TeamCard
-            :name="team.name"
-            :linkedin="team.linkedin"
-            :mail="team.mail"
-            :headline="team.headline"
-            :discord="team.discord"
-            :imgSrc="team.imgSrc"
-          />
-        </span>
-      </div>
-    </div>
-
     <!-- Contact Us -->
     <div class="lighter-bg">
       <div class="container d-flex flex-column align-items-center">

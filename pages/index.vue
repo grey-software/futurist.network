@@ -21,8 +21,8 @@
         </div>
       </div>
     </section>
-    <WorkWithExperts />
-    <section class="d-flex flex-col align-items-center mb-5">
+    <WorkWithExperts class="my-5" />
+    <section class="d-flex flex-col align-items-center mb-5 mt-5">
       <hr />
       <div class="hero-heading py-4">
         Featured
