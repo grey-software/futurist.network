@@ -16,18 +16,20 @@
 
           <li>
             <div style="color: #fab74a; justify-items: center;">
-              <span class="fa-stack fa-lg">
-                <fa-icon
-                  :icon="['fas', 'circle']"
-                  class="fa-stack-2x"
-                  style="color: #fab74a;"
-                ></fa-icon>
-                <fa-icon
-                  :icon="['fas', 'envelope']"
-                  class="fa-stack-1x"
-                  style="color: black; background-color: #fab74a;"
-                ></fa-icon>
-              </span>
+              <a href="mailto:contact@thefuturistfoundation.com">
+                <span class="fa-stack fa-lg">
+                  <fa-icon
+                    :icon="['fas', 'circle']"
+                    class="fa-stack-2x"
+                    style="color: #fab74a;"
+                  ></fa-icon>
+                  <fa-icon
+                    :icon="['fas', 'envelope']"
+                    class="fa-stack-1x"
+                    style="color: black; background-color: #fab74a;"
+                  ></fa-icon>
+                </span>
+              </a>
 
               <span class="fa-stack fa-lg">
                 <fa-icon
