@@ -166,7 +166,7 @@ export default {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 992px) {
   .nav > .nav-btn {
     display: inline-block;
     float: right;
@@ -214,11 +214,13 @@ export default {
 
   .nav > #nav-check:not(:checked) ~ .nav-links {
     opacity: 0;
+    z-index: -1;
   }
 
   .nav > #nav-check:checked ~ .nav-links {
     overflow-y: auto;
     opacity: 1;
+    z-index: 1;
   }
 }
 </style>
