@@ -1,46 +1,31 @@
 <template>
-  <div class="section">
+  <div class="container text-center">
     <h1 class="heading">
       Ready to be a
       <span style="color: #fa8a01;">Futurist?</span>
     </h1>
-    <p class="tag">
-      Come and explore our community via Discord! Chat with experts from all over the world.
-      Discover and experience new things!
-    </p>
-    <b-row style="margin: 0 220px;">
-      <b-col>
+    <div class="w100 d-flex justify-content-center">
+      <div class="tag text-center">
+        Come and explore our community via Discord! Chat with experts from all over the world.
+        Discover and experience new things!
+      </div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center">
+      <div>
         <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
-      </b-col>
+      </div>
 
-      <b-col>
+      <div>
         <link-btn txt="Youtube" link="https://discord.com/invite/Z37nV2Z" />
-      </b-col>
-    </b-row>
+      </div>
+    </div>
 
-    <img src="../assets/Astronaut.png" />
+    <!-- <img src="../assets/Astronaut.png" class="d-none" /> -->
     <subscribe class="subscribe" />
   </div>
 </template>
 
-<script>
-import LinkBtn from "../components/LinkBtn.vue";
-import Subscribe from "../components/Subscribe.vue";
-
-export default {
-  components: {
-    LinkBtn,
-    Subscribe,
-  },
-};
-</script>
 <style scoped>
-.section {
-  padding: 120px 0 0 0;
-  margin: 0 120px;
-  text-align: center;
-}
-
 img {
   height: 800px;
   width: auto;
@@ -59,12 +44,11 @@ img {
   letter-spacing: -0.025em;
   font-size: 70px;
   line-height: 1.05;
-  z-index: 1000;
   padding: 0 0 20px 0;
 }
 
 .tag {
-  margin: 0 120px;
+  max-width: 600px;
   font-size: 18px;
   color: lightslategrey;
   padding: 0 0 40px 0;

@@ -1,9 +1,9 @@
 /* eslint-disable */
 <template>
-  <div class="f-footer">
+  <div class="container f-footer">
     <b-container class="bv-example-row">
-      <b-row justify-space-between>
-        <b-col cols="7">
+      <b-row>
+        <b-col cols="12" md="12" lg="9">
           <li>
             <img src="../assets/f-logo.png"/>
           </li>
@@ -16,18 +16,20 @@
 
           <li>
             <div style="color: #fab74a; justify-items: center;">
-              <span class="fa-stack fa-lg">
-                <fa-icon
-                  :icon="['fas', 'circle']"
-                  class="fa-stack-2x"
-                  style="color: #fab74a;"
-                ></fa-icon>
-                <fa-icon
-                  :icon="['fas', 'envelope']"
-                  class="fa-stack-1x"
-                  style="color: black; background-color: #fab74a;"
-                ></fa-icon>
-              </span>
+              <a href="mailto:contact@thefuturistfoundation.com">
+                <span class="fa-stack fa-lg">
+                  <fa-icon
+                    :icon="['fas', 'circle']"
+                    class="fa-stack-2x"
+                    style="color: #fab74a;"
+                  ></fa-icon>
+                  <fa-icon
+                    :icon="['fas', 'envelope']"
+                    class="fa-stack-1x"
+                    style="color: black; background-color: #fab74a;"
+                  ></fa-icon>
+                </span>
+              </a>
 
               <span class="fa-stack fa-lg">
                 <fa-icon
@@ -62,9 +64,9 @@
           </li>
         </b-col>
 
-        <b-col style="padding: 0 80px;">
+        <b-col>
           <li>
-            <p class="more"> More Links. </p>
+            <p class="more pt-5 pb-3"> More Links. </p>
             <div class="links">
               <p>Donate Now</p>
               <p>Futurist Network</p>
@@ -81,7 +83,6 @@
 </template>
 <style scoped>
   .f-footer {
-    margin: 0 120px;
     padding: 40px;
     color: white;
   }
@@ -100,12 +101,13 @@
     font-weight: 500;
     font-size: 16px;
     padding: 40px 0;
+    max-width: 600px;
   }
 
   .more {
     color: #fa8a01;
     font-weight: 700;
-    padding: 40px 0;
+    font-size: 20px;
   }
 
   .links {
