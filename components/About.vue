@@ -54,7 +54,7 @@
         <h1 class="contact-title text-center">TELL US HOW WE'RE DOING</h1>
         <h2 class="contact-text px-5">
           Want to send us feedback? Send Us A Message
-          <span class="text-green">futurist@net.io</span>
+          <span class="text-green">contact@thefuturistfoundation.com</span>
         </h2>
         <link-btn
           class="m-5"
