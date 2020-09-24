@@ -1,34 +1,35 @@
 <template>
   <b-card
-    :img-src="imageUrl"
-    :img-alt="`${project.title} Image`"
-    img-top
     class="project-card m-4"
   >
-    <div class="flex-col">
+    <!-- <div class="project-img">
+      <img :src="imageUrl" :alt="`${project.title} Image`" />
+    </div> -->
+    <div class="flex-col" style="min-height: 200px;">
       <h1 class="project-title">{{project.title}}</h1>
       <b-card-text classs="project-desc">{{project.desc}}</b-card-text>
+    </div>
       <div class="spacer"/>
-      <b-card-footer>
+      <div class="mt-5">
         <b-button
           @click="copyToClipboard(project.email)"
           v-b-tooltip.hover
           :title="project.email"
-          class="icon-button rounded-circle"
+          class="icon-button mr-4"
         >
           <fa-icon :icon="['fas', 'envelope']"></fa-icon>
+          Email
         </b-button>
         <b-button
           @click="copyToClipboard(project.discord)"
           v-b-tooltip.hover
           :title="project.discord"
-          class="icon-button rounded-circle"
+          class="icon-button"
         >
           <fa-icon :icon="['fab', 'discord']"></fa-icon>
+          Discord
         </b-button>
-      </b-card-footer>
-
-    </div>
+      </div>
   </b-card>
 </template>
 
@@ -69,18 +70,21 @@ export default {
 
 
 <style scoped>
+.btn {
+  border-radius: 20px;
+}
+
 .icon-button {
-  width: 48px;
+  width: 120px;
   height: 48px;
   padding: 8px;
 }
 
 .project-card {
   color: white;
+  box-shadow: 12px 24px 72px -12px rgba(133, 126, 126, 0.3);
   margin: 24px;
-  width: 42%;
-  height: 545px;
-  box-shadow: 10px 10px 22px #030303;
+  width: 400px;
   border-radius: 50px;
 }
 
@@ -90,7 +94,7 @@ export default {
   font-weight: 600;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 810px) {
   .project-card {
     width: 100%;
   }
