@@ -1,0 +1,65 @@
+<template>
+  <div class="pb-5">
+    <div
+      class="mt-5 d-flex flex-column justify-content-center align-items-center"
+    >
+      <CenteredHero
+        icon="../../icons/resources.svg"
+        title="Resources"
+        desc="We curate from across the internet and produce original content for our community!"
+        arrow-link="#resources-grid"
+      />
+    </div>
+    <a id="resources-grid" />
+    <div v-for="tag in sortedTags" :key="tag" class="container px-5">
+      <div class="mt-2 mb-3 ml-3 cssc-heading resource-tag">
+        {{ tag.replace('-', ' ') }}
+      </div>
+      <ResourcesGrid :items="resourcesForTag(tag)" />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  async asyncData ({ $content, params, error }) {
+    const resourcesDataStore = await $content('resources').fetch()
+    const tags = new Set()
+    const resources = []
+    for (const resourceData of resourcesDataStore) {
+      const resource = {
+        title: resourceData.title,
+        desc: resourceData.desc,
+        icon: resourceData.icon,
+        link: `/resources/${resourceData.link}`,
+        tags: resourceData.tags
+      }
+      resource.tags.forEach((tag) => {
+        tags.add(tag)
+      })
+      resources.push(resource)
+    }
+    return { resources, tags }
+  },
+  computed: {
+    sortedTags () {
+      const sortedTags = Array.from(this.tags).sort()
+      // Resources with more items should show up higher.
+      sortedTags.sort((a, b) => this.resourcesForTag(b).length - this.resourcesForTag(a).length)
+      return sortedTags
+    }
+  },
+  methods: {
+    resourcesForTag (tag) {
+      const filteredResources = this.resources.filter(resource => resource.tags.includes(tag))
+      return filteredResources
+    }
+  }
+}
+</script>
+
+<style scoped>
+.resource-tag {
+  text-transform: capitalize;
+}
+</style>
