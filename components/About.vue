@@ -65,8 +65,7 @@
     </div>
 
     <div class="container mt-5 mb-5">
-      <FaqCollapse question="Hey" answer="Let's see" faqId="1" />
-      <FaqCollapse question="Hey" answer="Let's see" faqId="2" />
+      <FaqCollapse v-for="(faq, index) in faqs" :key="index" :question="faq.question" :answer="faq.answer" :faqId="index" />
     </div>
   </div>
 </template>
@@ -84,19 +83,19 @@ export default {
         {
           heading: "Global Security",
           bgColor: "#6f75ff",
-          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          desc: "We will use technology to inspire and enhance global security, through promoting international cooperation of science, de-escalation of arms, and supporting research that betters mankind.",
           icon: "user-friends"
         },
         {
           heading: "Technological Progress",
           bgColor: "#6fffa6",
-          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          desc: "We aim to move technological progress forward by enhancing humanity’s  understanding of science, logic, and keeping an open mind. Such activity will also promote pragmatic sciences that will further open the path into the future.",
           icon: "dollar-sign"
         },
         {
-          heading: "Global Security",
+          heading: "Wide Access",
           bgColor: "#fab74a",
-          desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
+          desc: "We promote the inclusion of all people regardless of any individual trait, and aim to have a lifestyle where everyone will accept the use of technology to better all lives.",
           icon: "chalkboard-teacher"
         },
       ],
@@ -125,6 +124,24 @@ export default {
           linkedin: "",
           imgSrc: "/img/naeemImg.png"
         }
+      ],
+      faqs: [
+        {
+          question: 'Who are we?',
+          answer: 'The Futurist Foundation (hereafter referred to as TFF) is a non-profit organization that advocates for the inclusion of transhumanist philosophy and technology into a futurist framework.'
+        },
+        {
+          question: 'What do we do?',
+          answer: 'We fundraise for, produce and promote projects that have the specific aim of raising awareness about transhumanism, and educating the public on the scientific and philosophical matters of the future.'
+        },
+        {
+          question: 'How do we do it?',
+          answer: 'For projects produced by ourselves, our team leaders and board members form and oversee teams of volunteers, either independent from TFF or part of our organization, to create content that serves our goals. Donations we receive from charitable supports goes to supplying resources we need to both create project content, and motivate our volunteers. We will also team up with other groups and organizations outside TFF to create projects, and likewise donations will go towards supporting those actions.'
+        },
+        {
+          question: 'How can you help?',
+          answer: 'First up - let everyone know about us! The power to accomplish our goals will stem from our notoriety in the public and academic eye. The more people who are aware of us, the more interest our goals will receive, and the more support we will gain. Furthermore - get involved! Join our media platforms to chat or brainstorm with us. Finally, consider donating to support one of our projects.'
+        }
       ]
     };
   },
@@ -146,7 +163,7 @@ export default {
   background-color: rgba(11, 26, 50, 1);
 }
 
-.g-hero-heading {
+.f-hero-heading {
   padding: 0;
 }
 

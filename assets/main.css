@@ -2,7 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  background-color: #050c17;
 }
 
 a {
@@ -20,11 +19,16 @@ a:hover {
   --color-text-dark: #fcfcfc;
   --font-heading: "Montserrat", sans-serif;
   --font-body: "Roboto", sans-serif;
-  --bg: "#050c17";
+  --bg: #050c17;
+  --color-primary-light: #F9CF47;
+  --color-primary: #F4AE43;
+  --color-primary-dark: #FA8A01;
+  --bg: #fff;
 }
 
 body {
   font-family: var(--font-body);
+  background-color: #050c17;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,13 +51,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: calc(12px + 3vw);
 }
 
-.g-hero {
+.f-hero {
   height: 100vh;
   text-align: center;
   padding: 80px 40px;
 }
 
-.g-hero-heading {
+.f-hero-heading {
   font-weight: 800;
   font-family: var(--font-heading);
   color: white;
@@ -63,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 0 80px 0;
 }
 
-.g-hero-tag {
+.f-hero-tag {
   font-size: 18px;
   color: lightslategrey;
   letter-spacing: -0.032em;
@@ -94,4 +98,138 @@ h1, h2, h3, h4, h5, h6 {
   .hero-heading {
     font-size: 35px;
   }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-body);
+}
+
+.f-heading {
+  color: var(--color-heading);
+  font-size: 72px;
+  font-weight: bold;
+}
+
+.f-subheadings {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.scroll-child {
+  flex: 0 0 auto;
+  margin-right: 36px;
+  font-size: 24px;
+}
+
+/* < Lg Size */
+@media screen and (max-width: 992px) {
+  .f-heading {
+    font-size: 80px;
+    line-height: 1.05;
+  }
+
+  .f-subheadings {
+    font-size: 25px;
+  }
+}
+
+/* For mobile */
+@media (max-width: 576px) {
+  .f-heading {
+    font-size: 48px;
+  }
+
+  .f-subheadings {
+    font-size: 20px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+iframe {
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.f-btn {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.f-btn-alt {
+  color: var(--color-primary) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--color-primary-light) !important;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.f-btn-cta {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  outline: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.42rem;
+}
+
+.f-btn:active,
+.f-btn-cta:active {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.f-btn:hover,
+.f-btn-cta:hover {
+  color: var(--color-primary-light) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--color-primary-light) !important;
+}
+
+.f-btn-cta-alt {
+  color: var(--color-primary) !important;
+  background-color: var(--bg) !important;
+  border-color: var(--color-primary-light) !important;
+  outline: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.42rem;
+}
+
+.f-btn-alt:hover,
+.f-btn-cta-alt:hover {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }

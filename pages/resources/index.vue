@@ -11,35 +11,19 @@
       />
     </div>
     <a id="resources-grid" />
-    <div v-for="tag in sortedTags" :key="tag" class="container px-5">
-      <div class="mt-2 mb-3 ml-3 cssc-heading resource-tag">
-        {{ tag.replace('-', ' ') }}
-      </div>
-      <ResourcesGrid :items="resourcesForTag(tag)" />
-    </div>
+    <ResourcesGrid :items="resources" />
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData ({ $content, params, error }) {
+   async asyncData ({ $content, params, error }) {
     const resourcesDataStore = await $content('resources').fetch()
-    const tags = new Set()
-    const resources = []
-    for (const resourceData of resourcesDataStore) {
-      const resource = {
-        title: resourceData.title,
-        desc: resourceData.desc,
-        icon: resourceData.icon,
-        link: `/resources/${resourceData.link}`,
-        tags: resourceData.tags
-      }
-      resource.tags.forEach((tag) => {
-        tags.add(tag)
-      })
-      resources.push(resource)
-    }
-    return { resources, tags }
+    console.log(resourcesDataStore)
+    const resources = resourcesDataStore.map((resource) => {
+      return { title: resource.title, desc: resource.desc, icon: resource.icon, link: `/resources/${resource.link}` }
+    })
+    return { resources }
   },
   computed: {
     sortedTags () {

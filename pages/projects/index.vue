@@ -53,18 +53,6 @@ export default {
   flex-wrap: wrap;
 }
 
-.v-application .pl-4 {
-  padding-left: 1.5rem !important;
-}
-
-.v-application .mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-
-.v-application .mr-4 {
-  margin-right: 1.5rem !important;
-}
-
 .resource-tag {
   text-transform: capitalize;
 }

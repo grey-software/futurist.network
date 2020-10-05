@@ -1,24 +1,14 @@
 <template>
-  <div class="container nav g-header pt-4">
-    <input
-      type="checkbox"
-      id="nav-check"
-      v-model="checked"
-    >
+  <div class="container nav f-header pt-4">
+    <input type="checkbox" id="nav-check" v-model="checked" />
     <div class="nav-header">
       <nuxt-link
         class="d-flex align-items-center ml-1"
         to="/"
         @click.native="checked = false"
       >
-
-        <img
-          class="logo"
-          src="../assets/f-logo.png"
-        />
-
+        <img class="logo" src="../assets/f-logo.png" />
       </nuxt-link>
-
     </div>
     <div class="nav-btn">
       <label for="nav-check">
@@ -32,40 +22,38 @@
       <nuxt-link
         @click.native="checked = false"
         to="/about"
-        class="g-nav-link mr-4"
-      >About Us</nuxt-link>
+        class="f-nav-link nav-link mr-4"
+        >About Us</nuxt-link
+      >
       <nuxt-link
         @click.native="checked = false"
-        to="/donations"
-        class="g-nav-link mr-4"
-      >Donations</nuxt-link>
-
-      <a
-        class="btn neumorphism-3"
-        target="_blank"
-        href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
+        to="/projects"
+        class="f-nav-link nav-link mr-4"
+        >Projects</nuxt-link
       >
-        <span style="color: white;">Donate</span>
-      </a>
-
+      <nuxt-link
+        @click.native="checked = false"
+        to="/resources"
+        class="f-nav-link nav-link mr-4"
+        >Resources</nuxt-link
+      >
+      <button class="paypal-button"><img class="paypal-icon" src="@/assets/icons/paypal.png" />Donate</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      checked: false
-    }
+      checked: false,
+    };
   },
-}
+};
 </script>
-
 <style scoped>
-.g-header {
+.f-header {
   height: 12vh;
-  background-color: #050c17;
 }
 
 .logo {
@@ -78,50 +66,20 @@ export default {
   font-size: 26px;
   color: var(--color-text);
   font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-heading);
   text-transform: uppercase;
 }
 
-.g-nav-link {
-  font-size: 18px;
+.f-nav-link {
+  font-size: 1.125rem;
   color: var(--color-text);
   font-weight: 500;
-}
-
-.btn {
-  z-index: 1;
-  padding: 8px 16px;
-  margin: 0;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  transition: 0.3s ease;
-  font-weight: bold;
-  border: none;
-  color: white;
-}
-
-.btn :hover {
-  text-decoration: none;
-}
-
-.neumorphism-3 {
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 72px;
-  width: 232px;
-  box-shadow:
-    10px 10px 20px rgba(0, 0, 0, 0.8),
-    -6px -6px 10px rgba(255, 255, 255, 0.1);
-  position: relative;
-  transform: scale(0.6);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
 }
 </style>
 
-<style scoped>
+<style>
 .nav {
   width: 100%;
   position: relative;
@@ -142,31 +100,29 @@ export default {
   display: none;
 }
 
-.nav > .nav-links {
-  display: inline;
+.nav-links {
+  display: flex;
+  align-items: center;
   float: right;
   margin-left: auto;
   font-size: 18px;
 }
 
-.nav > .nav-links > a {
-  display: inline-block;
-  padding: 15px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
-
-/* .nav > .nav-links > a:hover { */
-
-/*  background-color: rgba(0, 0, 0, 0.3); */
-
-/* } */
-
 .nav > #nav-check {
   display: none;
 }
 
-@media (max-width: 992px) {
+.nav-link {
+  letter-spacing: 0;
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  height: fit-content;
+  color: #efefef;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
   .nav > .nav-btn {
     display: inline-block;
     float: right;
@@ -194,7 +150,7 @@ export default {
     border-top: 2px solid #eee;
   }
 
-  .nav > .nav-links {
+  .nav-links {
     position: absolute;
     display: block;
     width: 42%;
@@ -206,10 +162,17 @@ export default {
     right: 50px;
   }
 
-  .nav > .nav-links > a {
+  .nav-link {
     display: block;
     width: 100%;
     padding-left: 16px;
+    transition: none;
+  }
+
+  .nav-link:hover,
+  .nav-link:active {
+    letter-spacing: 0;
+    transform: none;
   }
 
   .nav > #nav-check:not(:checked) ~ .nav-links {
@@ -220,7 +183,39 @@ export default {
   .nav > #nav-check:checked ~ .nav-links {
     overflow-y: auto;
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
   }
 }
+
+.paypal-icon {
+  height: 28px;
+  margin-right: 8px;
+}
+
+.paypal-button {
+  border-radius: 24px;
+  height: 48px;
+  border: 1px solid #003084;
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 2px 20px;
+  color: #003084;
+  font-size: 20px;
+  background-color: white;
+  transition: all 0.3s ease-out;
+}
+
+.paypal-button:hover {
+  cursor: pointer;
+  border: 1px solid #1ba0de;
+}
+
+.paypal-button:active {
+  cursor: pointer;
+  border: 1px solid #1ba0de;
+  color: white;
+  background-color: #003084;
+}
 </style>
+

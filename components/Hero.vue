@@ -1,8 +1,8 @@
 <template>
   <div class="g-landing">
-    <div class="g-hero d-flex align-content-center justify-content-center flex-column">
-      <p class="g-hero-tag">Propose, Fund, & Work.</p>
-      <h1 class="g-hero-heading">
+    <div class="f-hero d-flex align-content-center justify-content-center flex-column">
+      <p class="f-hero-tag">Propose, Fund, & Work.</p>
+      <h1 class="f-hero-heading">
         Crowdsourcing
         <br />the
         <span class="text-rainbow">Future.</span>

@@ -13,26 +13,40 @@
           <br />the
           <span class="text-rainbow">Future.</span>
         </h1>
-        <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
+        <link-btn
+          txt="Join Discord"
+          link="https://discord.com/invite/Z37nV2Z"
+        />
+
+        <div class="d-flex justify-center mt-10 mt-sm-20"></div>
 
         <div class="more-indicator animation-more mt">
-          <p>MORE</p>
-          <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
+          <a href="#work-with-experts"
+            ><img
+              class="bounce"
+              id="arrow"
+              src="@/assets/icons/arrow.svg"
+              alt="Down Arrow"
+          /></a>
         </div>
       </div>
     </section>
-    <WorkWithExperts class="my-5" />
+    <WorkWithExperts id="work-with-experts"/>
     <section class="d-flex flex-col align-items-center mb-5 mt-5">
       <hr />
       <div class="hero-heading py-4">
         Featured
         <span style="color: #6fffa6;">Projects</span>
       </div>
-      <div v-if="projects" class="flex row flex-wrap justify-content-center">
-        <project-card v-for="project in projects" :key="project.title" :project="project" />
-      </div>
+      <!-- <div v-if="projects" class="flex row flex-wrap justify-content-center">
+        <project-card
+          v-for="project in projects"
+          :key="project.title"
+          :project="project"
+        />
+      </div> -->
     </section>
-    <HowItWorks class="pt-5" />
+    <HowItWorks />
     <ReadyToBeAFuturist />
   </div>
 </template>
@@ -67,24 +81,7 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false;
     },
-  },
-  apollo: {
-    projects: {
-      query: gql`
-        query Projects {
-          projects {
-            title
-            desc
-            image {
-              url
-            }
-            link
-            discord
-          }
-        }
-      `,
-    },
-  },
+  }
 };
 </script>
 
@@ -101,18 +98,43 @@ hr {
   border-radius: 12px;
 }
 
-img {
-  height: 800px;
-  width: auto;
-  transform: rotate(30deg) translate(-150px, -540px);
-  background-color: transparent;
-}
-
 .title {
   font-weight: 700;
   color: var(--color-text-dark);
   letter-spacing: -0.025em;
   font-size: 70px;
   padding: 0 0 20px 0;
+}
+
+#arrow {
+  bottom: 50px;
+  width: 75px;
+}
+
+.bounce {
+  -webkit-animation: bounce 0.75s infinite;
+}
+
+@-webkit-keyframes bounce {
+  25% {
+    transform: scale(1, 0.9) translate(0, 0);
+  }
+
+  75% {
+    transform: scale(1, 1) translate(0, -10px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #arrow {
+    width: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  #arrow {
+    width: 50px;
+    bottom: 25px;
+  }
 }
 </style>

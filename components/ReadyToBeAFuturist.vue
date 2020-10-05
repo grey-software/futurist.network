@@ -20,8 +20,7 @@
       </div>
     </div>
 
-    <!-- <img src="../assets/Astronaut.png" class="d-none" /> -->
-    <subscribe class="subscribe" />
+    <subscribe/>
   </div>
 </template>
 
@@ -31,10 +30,6 @@ img {
   width: auto;
   transform: rotate(30deg) translate(-260px, -140px);
   background-color: transparent;
-}
-
-.subscribe {
-  transform: translate(0, -600px);
 }
 
 .heading {
