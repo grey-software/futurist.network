@@ -7,7 +7,6 @@
       "link": "https://www.toonin.ml",
       "logo": "/logos/projects/toonin.svg",
       "tags": ["open-source"],
-      "status": "Live",
       "discord": "arsala#6051"
     },
     {
@@ -17,7 +16,6 @@
       "link": "https://material-math.grey.software",
       "logo": "/logos/projects/material-math.png",
       "tags": ["open-source"],
-      "status": "Live",
       "discord": "arsala#6051"
     },
     {
@@ -27,7 +25,6 @@
       "repo": "https://github.com/grey-software/grey-software",
       "link": "https://grey.software",
       "tags": ["open-source"],
-      "status": "Live",
       "discord": "arsala#6051"
     },
     {
@@ -37,8 +34,34 @@
       "repo": "https://github.com/grey-software/LinkedIn-Focus",
       "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
       "tags": ["open-source"],
-      "status": "In Developement",
       "discord": "arsala#6051"
+    },
+    {
+      "name": "Open Source",
+      "desc": "The Open Source discord is a project of the Futurist Foundation. Open source promotes wide access and global security, by allowing knowledge to remain free and open for ALL.",
+      "logo": "/logos/projects/linkedin-focu.png",
+      "repo": "https://github.com/grey-software/LinkedIn-Focus",
+      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
+      "tags": ["open-source"],
+      "discord": "https://discord.gg/5q6z6V4"
+    },
+    {
+      "name": "Desgin For Good",
+      "desc": "We believe that design is one of the most important aspects of our every day life. It effects people more than they know. Good design should be a requirement. Here we focus on helping projects within the non profit, redesigning, and improving bad designs.",
+      "logo": "/logos/projects/linkedin-focu.png",
+      "repo": "https://github.com/grey-software/LinkedIn-Focus",
+      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
+      "tags": ["open-source"],
+      "discord": "https://discord.gg/ynZgjYf"
+    },
+    {
+      "name": "Skill Sharing",
+      "desc": "Sometimes its hard to learn new things by yourself. Futurist Foundation has started a Skill Sharing server for members to take courses together, study, ask/answer questions and just learn new things.",
+      "logo": "/logos/projects/linkedin-focu.png",
+      "repo": "https://github.com/grey-software/LinkedIn-Focus",
+      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
+      "tags": ["open-source"],
+      "discord": "https://discord.gg/xKEf9az"
     }
   ]
 }
