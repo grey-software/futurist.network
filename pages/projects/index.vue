@@ -30,12 +30,14 @@ export default {
     const projects = []
     for (const projectData of projectsDataStore[0].projects) {
       const project = {
-        name: projectData.name,
+        title: projectData.name,
         desc: projectData.desc,
         repo: projectData.repo,
         logo: projectData.logo,
-        demo: projectData.demo,
-        tags: projectData.tags
+        link: projectData.link,
+        tags: projectData.tags,
+        status: projectData.status,
+        discord: projectData.discord
       }
       project.tags.forEach((tag) => {
         tags.add(tag)

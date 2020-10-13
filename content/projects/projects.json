@@ -4,33 +4,41 @@
       "name": "Toonin",
       "desc": "Share or stream audio and video over the web in real time.",
       "repo": "https://github.com/grey-software/toonin",
-      "demo": "https://www.toonin.ml",
+      "link": "https://www.toonin.ml",
       "logo": "/logos/projects/toonin.svg",
-      "tags": ["open-source"]
+      "tags": ["open-source"],
+      "status": "Live",
+      "discord": "arsala#6051"
     },
     {
       "name": "Material Math",
       "desc": "Practice math problems in a fun, beautiful, material experience!",
       "repo": "https://github.com/grey-software/material-math",
-      "demo": "https://material-math.grey.software",
+      "link": "https://material-math.grey.software",
       "logo": "/logos/projects/material-math.png",
-      "tags": ["open-source"]
+      "tags": ["open-source"],
+      "status": "Live",
+      "discord": "arsala#6051"
     },
     {
-      "name": "Twitter Focus",
-      "desc": "Hide the feed and What's Happening panel on Twitter so you can focus and control your experience!",
-      "logo": "/logos/projects/twitter-focus.png",
-      "repo": "https://github.com/grey-software/Twitter-Focus",
-      "demo": "https://chrome.google.com/webstore/detail/twitter-focus/kmdpomipbibobgdgfeidajmnlecloeml?hl=en&authuser=2",
-      "tags": ["open-source"]
+      "name": "Grey Software Website",
+      "desc": "Grey Software is creating the open source ecosystem of the future where software maintainers mentor students and build free software together!",
+      "logo": "/logos/projects/grey-software.png",
+      "repo": "https://github.com/grey-software/grey-software",
+      "link": "https://grey.software",
+      "tags": ["open-source"],
+      "status": "Live",
+      "discord": "arsala#6051"
     },
     {
       "name": "LinkedIn Focus",
       "desc": "Hide the news feed and news panel on LinkedIn so you can focus on your career!",
       "logo": "/logos/projects/linkedin-focus.png",
       "repo": "https://github.com/grey-software/LinkedIn-Focus",
-      "demo": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
-      "tags": ["open-source"]
+      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
+      "tags": ["open-source"],
+      "status": "In Developement",
+      "discord": "arsala#6051"
     }
   ]
 }

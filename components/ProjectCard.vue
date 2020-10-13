@@ -2,32 +2,39 @@
   <b-card
     class="project-card m-4"
   >
-    <!-- <div class="project-img">
-      <img :src="imageUrl" :alt="`${project.title} Image`" />
-    </div> -->
     <div class="flex-col" style="min-height: 200px;">
-      <h1 class="project-title">{{project.title}}</h1>
+      <div class="d-flex">
+        <img class="circle mr-3" :src="project.logo" />
+        <span class="project-title">{{project.title}}</span>
+      </div>
       <b-card-text classs="project-desc">{{project.desc}}</b-card-text>
     </div>
       <div class="spacer"/>
       <div class="mt-5">
         <b-button
-          @click="copyToClipboard(project.email)"
-          v-b-tooltip.hover
-          :title="project.email"
-          class="icon-button mr-4"
+          class="icon-button mr-3"
         >
-          <fa-icon :icon="['fas', 'envelope']"></fa-icon>
-          Email
+          <a target="_blank" :href="project.repo">
+            <fa-icon :icon="['fab', 'github']"></fa-icon>
+            Repo
+          </a>
+        </b-button>
+        <b-button
+          class="icon-button"
+        >
+          <a target="_blank" :href="project.link">
+            <fa-icon :icon="['fas', 'globe']"></fa-icon>
+            Link
+          </a>
         </b-button>
         <b-button
           @click="copyToClipboard(project.discord)"
           v-b-tooltip.hover
           :title="project.discord"
-          class="icon-button"
+          class="icon-button mt-3"
         >
-          <fa-icon :icon="['fab', 'discord']"></fa-icon>
-          Discord
+            <fa-icon :icon="['fab', 'discord']"></fa-icon>
+            Discord
         </b-button>
       </div>
   </b-card>
@@ -42,12 +49,14 @@ export default {
       link: String,
       email: String,
       discord: String,
-      image: {
+      logo: {
         url: String
-      }
+      },
+      status: String,
+      discord: String
     }
   },
-  methods: {
+  methods:{
     copyToClipboard (str) {
       const el = document.createElement("textarea");
       el.value = str;
@@ -74,8 +83,14 @@ export default {
   border-radius: 20px;
 }
 
+.circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
 .icon-button {
-  width: 120px;
+  width: 130px;
   height: 48px;
   padding: 8px;
 }
@@ -86,9 +101,11 @@ export default {
   margin: 24px;
   width: 400px;
   border-radius: 50px;
+  background: var(--bg);
 }
 
 .project-title {
+  font-size: 30px;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.96px;
   font-weight: 600;
