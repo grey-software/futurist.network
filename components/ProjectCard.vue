@@ -14,14 +14,6 @@
         <b-button
           class="icon-button mr-3"
         >
-          <a target="_blank" :href="project.repo">
-            <fa-icon :icon="['fab', 'github']"></fa-icon>
-            Repo
-          </a>
-        </b-button>
-        <b-button
-          class="icon-button"
-        >
           <a target="_blank" :href="project.link">
             <fa-icon :icon="['fas', 'globe']"></fa-icon>
             Link
@@ -31,7 +23,7 @@
           @click="copyToClipboard(project.discord)"
           v-b-tooltip.hover
           :title="project.discord"
-          class="icon-button mt-3"
+          class="icon-button"
         >
             <fa-icon :icon="['fab', 'discord']"></fa-icon>
             Discord
