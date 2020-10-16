@@ -12,7 +12,7 @@
     </div>
     <a id="projects" />
       <div v-for="tag in tags" :key="tag" class="container px-5">
-        <div class="mt-2 mb-3 ml-3 cssc-heading resource-tag">
+        <div class="mt-2 mb-3 ml-3 hero-heading resource-tag">
           {{ tag.replace("-", " ") }}
         </div>
         <div class="project-cards-container" >
