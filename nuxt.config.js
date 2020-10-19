@@ -15,7 +15,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'The Futurist Foundation',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -24,9 +24,9 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || '',
       },
-      {hid: 'og:title', name: 'og:title', content: 'Futurist Network'},
+      {hid: 'og:title', name: 'og:title', content: 'The Futurist Foundation'},
       {hid: 'og:image', name: 'og:image', content: OG_IMAGE},
-      {hid: 'og:url', name: 'og:url', content: 'http://futurist.network/'},
+      {hid: 'og:url', name: 'og:url', content: 'https://thefuturistfoundation.com/'},
       {hid: 'og:type', name: 'og:type', content: 'website'},
     ],
     link: [
