@@ -1,8 +1,8 @@
 <template>
-  <b-card class="project-card m-4">
+  <b-card class="project-card m-4 pb-3">
     <div class="flex-col" style="min-height: 200px;">
-      <div class="d-flex">
-        <img class="circle mr-3" :src="project.logo" />
+      <div class="flex mb-4 align-items-center">
+        <img class="logo mr-3" :src="project.logo" />
         <span class="project-title">{{ project.title }}</span>
       </div>
       <b-card-text classs="project-desc">{{ project.desc }}</b-card-text>
@@ -22,7 +22,7 @@
         class="icon-button"
       >
         <fa-icon :icon="['fab', 'discord']"></fa-icon>
-        Discord
+        Lead
       </b-button>
     </div>
   </b-card>
@@ -69,10 +69,8 @@ export default {
   border-radius: 20px;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.logo {
+  height: 64px;
 }
 
 .icon-button {

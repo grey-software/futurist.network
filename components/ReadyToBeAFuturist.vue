@@ -13,17 +13,20 @@
     <div class="d-flex flex-wrap justify-content-center">
       <div>
         <link-btn
-          txt="Join Discord"
+          txt="Join our Discord"
           link="https://discord.com/invite/Z37nV2Z"
         />
       </div>
 
       <div>
-        <link-btn txt="Youtube" link="https://discord.com/invite/Z37nV2Z" />
+        <link-btn
+          txt="Youtube"
+          link="https://www.youtube.com/channel/UCvHFwQuoelQWENGwcLGssUg"
+        />
       </div>
     </div>
 
-    <subscribe />
+    <!-- <subscribe /> -->
   </div>
 </template>
 

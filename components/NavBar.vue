@@ -33,13 +33,14 @@
       >
       <nuxt-link
         @click.native="checked = false"
-        to="/resources"
+        to="/faq"
         class="f-nav-link nav-link mr-4"
-        >Resources</nuxt-link
+        >FAQ</nuxt-link
       >
-      <button class="paypal-button">
+      <a class="paypal-button" target="_blank"
+        href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url">
         <img class="paypal-icon" src="@/assets/icons/paypal.png" />Donate
-      </button>
+      </a>
     </div>
   </div>
 </template>

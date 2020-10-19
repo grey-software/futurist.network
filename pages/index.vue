@@ -7,14 +7,14 @@
       class="hero f-section d-flex align-content-center justify-content-center flex-column"
     >
       <p class="hero-tag">Propose, Fund, & Work.</p>
-      <div>
+      <div class="flex-col align-items-center">
         <h1 class="hero-heading">
           Crowdsourcing
           <br />the
           <span class="text-rainbow">Future.</span>
         </h1>
         <link-btn
-          txt="Join Discord"
+          txt="Join Our Community"
           link="https://discord.com/invite/Z37nV2Z"
         />
 
@@ -31,21 +31,7 @@
         </div>
       </div>
     </section>
-    <WorkWithExperts id="work-with-experts" />
-    <section class="d-flex flex-col align-items-center mb-5 mt-5">
-      <hr />
-      <div class="hero-heading py-4">
-        Featured
-        <span style="color: #6fffa6;">Projects</span>
-      </div>
-      <!-- <div v-if="projects" class="flex row flex-wrap justify-content-center">
-        <project-card
-          v-for="project in projects"
-          :key="project.title"
-          :project="project"
-        />
-      </div> -->
-    </section>
+    <WorkWithExperts class="mb-5 pb-5" id="work-with-experts" />
     <HowItWorks />
     <ReadyToBeAFuturist />
   </div>

@@ -1,59 +1,45 @@
 {
   "projects": [
     {
+      "name": "Skill Sharing",
+      "desc": "A discord server for members to learn together by sharing their skills and expertise!",
+      "logo": "/logos/projects/linkedin-focu.png",
+      "link": "https://discord.gg/xKEf9az",
+      "discord": "Thiizic#1778"
+    },
+    {
       "name": "Open Source",
-      "desc": "The Open Source discord is a project of the Futurist Foundation. Open source promotes wide access and global security, by allowing knowledge to remain free and open for ALL.",
+      "desc": "A discord server for those who believe knowledge should remain free and open for all!",
       "logo": "/logos/projects/linkedin-focu.png",
       "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
-      "tags": ["open-source"],
-      "discord": "https://discord.gg/5q6z6V4"
+      "discord": "Eric Lotze#5710"
     },
     {
       "name": "Desgin For Good",
-      "desc": "We believe that design is one of the most important aspects of our every day life. It effects people more than they know. Good design should be a requirement. Here we focus on helping projects within the non profit, redesigning, and improving bad designs.",
+      "desc": "A discord server for designers to discuss good design and how to improve bad design!",
       "logo": "/logos/projects/linkedin-focu.png",
-      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
-      "tags": ["open-source"],
-      "discord": "https://discord.gg/ynZgjYf"
-    },
-    {
-      "name": "Skill Sharing",
-      "desc": "Sometimes its hard to learn new things by yourself. Futurist Foundation has started a Skill Sharing server for members to take courses together, study, ask/answer questions and just learn new things.",
-      "logo": "/logos/projects/linkedin-focu.png",
-      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
-      "tags": ["open-source"],
-      "discord": "https://discord.gg/xKEf9az"
+      "link": "https://discord.gg/ynZgjYf",
+      "discord": "Thiizic#1778"
     },
     {
       "name": "Grey Software",
-      "desc": "Grey Software is creating the open source ecosystem of the future where software maintainers mentor students and build free software together!",
+      "desc": "An open-source organization where software maintainers mentor students and build free software together!",
       "logo": "/logos/projects/grey-software.png",
       "link": "https://grey.software",
-      "tags": ["open-source"],
       "discord": "arsala#6051"
     },
     {
       "name": "Toonin",
-      "desc": "Share or stream audio and video over the web in real time.",
+      "desc": "An app that allows you to share or stream audio and video over the web in real time!",
       "link": "https://www.toonin.ml",
       "logo": "/logos/projects/toonin.svg",
-      "tags": ["open-source"],
       "discord": "arsala#6051"
     },
     {
       "name": "Material Math",
-      "desc": "Practice math problems in a fun, beautiful, material experience!",
+      "desc": "An app that allows you to practice math problems in a fun, beautiful, material experience!",
       "link": "https://material-math.grey.software",
       "logo": "/logos/projects/material-math.png",
-      "tags": ["open-source"],
-      "discord": "arsala#6051"
-    },
-    {
-      "name": "LinkedIn Focus",
-      "desc": "Hide the news feed and news panel on LinkedIn so you can focus on your career!",
-      "logo": "/logos/projects/linkedin-focus.png",
-      "link": "https://chrome.google.com/webstore/detail/linkedin-focus/cmafljjdkloacahjddlpaognhjpacdff?hl=en&authuser=2",
-      "tags": ["open-source"],
       "discord": "arsala#6051"
     }
   ]

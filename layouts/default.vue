@@ -62,7 +62,7 @@ export default {
 
 .btn {
   z-index: 1;
-  padding: 8px 50px;
+  padding: 24px 36px;
   border-radius: 30px;
   cursor: pointer;
   font-size: 1em;
@@ -71,6 +71,7 @@ export default {
   font-weight: bold;
   border: none;
   color: white;
+  width: fit-content;
 }
 
 .btn :hover {

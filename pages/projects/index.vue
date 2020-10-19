@@ -11,17 +11,12 @@
       />
     </div>
     <a id="projects" />
-    <div v-for="tag in tags" :key="tag" class="container px-5">
-      <div class="mt-2 mb-3 ml-3 hero-heading resource-tag">
-        {{ tag.replace('-', ' ') }}
-      </div>
-      <div class="project-cards-container">
-        <ProjectCard
-          v-for="(project, index) in projects"
-          :key="index"
-          :project="project"
-        />
-      </div>
+    <div class="project-cards-container">
+      <ProjectCard
+        v-for="(project, index) in projects"
+        :key="index"
+        :project="project"
+      />
     </div>
   </div>
 </template>
@@ -30,7 +25,6 @@
 export default {
   async asyncData({$content, params, error}) {
     const projectsDataStore = await $content('projects').fetch()
-    const tags = new Set()
     const projects = []
     for (const projectData of projectsDataStore[0].projects) {
       const project = {
@@ -43,12 +37,9 @@ export default {
         status: projectData.status,
         discord: projectData.discord,
       }
-      project.tags.forEach(tag => {
-        tags.add(tag)
-      })
       projects.push(project)
     }
-    return {projects, tags}
+    return {projects}
   },
 }
 </script>
@@ -57,6 +48,7 @@ export default {
 .project-cards-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .resource-tag {

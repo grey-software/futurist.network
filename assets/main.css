@@ -30,7 +30,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   color: var(--color-body);
-  background-color: var(--bg);;
+  background-color: var(--bg);
 }
 
 h1,
@@ -47,6 +47,7 @@ h6 {
 }
 
 .flex-col {
+  display: flex;
   flex-direction: column;
 }
 

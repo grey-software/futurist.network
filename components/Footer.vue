@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
   <div class="container f-footer">
     <b-container class="bv-example-row">
@@ -33,18 +32,23 @@
                 </span>
               </a>
 
-              <span class="fa-stack fa-lg">
-                <fa-icon
-                  :icon="['fas', 'circle']"
-                  class="fa-stack-2x"
-                  style="color: #fab74a;"
-                ></fa-icon>
-                <fa-icon
-                  :icon="['fab', 'discord']"
-                  class="fa-stack-1x"
-                  style="color: black; background-color: #fab74a;"
-                ></fa-icon>
-              </span>
+              <a
+                href="https://discord.com/invite/Z37nV2Z"
+                target="_blank"
+              >
+                <span class="fa-stack fa-lg">
+                  <fa-icon
+                    :icon="['fas', 'circle']"
+                    class="fa-stack-2x"
+                    style="color: #fab74a;"
+                  ></fa-icon>
+                  <fa-icon
+                    :icon="['fab', 'discord']"
+                    class="fa-stack-1x"
+                    style="color: black; background-color: #fab74a;"
+                  ></fa-icon>
+                </span>
+              </a>
 
               <span class="fa-stack fa-lg">
                 <fa-icon
@@ -63,7 +67,7 @@
 
           <li>
             <p class="desc" style="padding: 20px 0;">
-              Copyright by @FuturistNetwork - 2020
+              Copyright The Futurist Foundation - 2020
             </p>
           </li>
         </b-col>
@@ -72,11 +76,15 @@
           <li>
             <p class="more pt-5 pb-3">More Links.</p>
             <div class="links">
-              <p>Donate Now</p>
-              <p>Futurist Network</p>
-              <p>Our Team</p>
-              <p>Contact Us</p>
-              <p>FAQ</p>
+              <a
+                target="_blank"
+                href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
+                >Donate Now</a
+              >
+              <a href="https://discord.com/invite/Z37nV2Z"
+                target="_blank">Community</a>
+              <a href="mailto:contact@thefuturistfoundation.com">Contact Us</a>
+              <nuxt-link to="/faq">FAQ</nuxt-link>
             </div>
           </li>
         </b-col>
@@ -115,6 +123,11 @@ img {
 
 .links {
   font-weight: 600;
+}
+
+.links > a {
+  margin-bottom: 16px;
+  display: block;
 }
 
 .links:hover {

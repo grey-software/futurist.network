@@ -1,15 +1,10 @@
 const OG_IMAGE = 'http://futurist.network/_nuxt/img/f-logo.ddc7e6d.png'
-require('dotenv').config()
 
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
-  env: {
-    apiUrl: process.env.API_URL,
-  },
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
