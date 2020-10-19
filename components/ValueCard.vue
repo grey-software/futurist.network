@@ -20,18 +20,18 @@ export default {
     desc: String,
     bgColor: {
       type: String,
-      default: "#0099cc",
+      default: '#0099cc',
     },
-    icon: String
+    icon: String,
   },
   computed: {
     Background() {
       return {
         color: this.bgColor,
-      };
+      }
     },
   },
-};
+}
 </script>
 
 <style scoped>

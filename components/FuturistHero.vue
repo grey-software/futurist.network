@@ -1,6 +1,8 @@
 <template>
   <div class="f-landing">
-    <div class="f-hero d-flex align-content-center justify-content-center flex-column">
+    <div
+      class="f-hero d-flex align-content-center justify-content-center flex-column"
+    >
       <p class="f-hero-tag">Propose, Fund, & Work.</p>
       <div class="f-hero-heading">
         Crowdsourcing
@@ -13,7 +15,6 @@
       <div class="more-indicator animation-more mt">
         <p>MORE</p>
         <fa-icon :icon="['fas', 'angle-double-down']"></fa-icon>
-
       </div>
     </div>
   </div>
@@ -24,8 +25,7 @@ import LinkBtn from '@/components/LinkBtn.vue'
 
 export default {
   components: {
-    LinkBtn
-  }  
+    LinkBtn,
+  },
 }
 </script>
-

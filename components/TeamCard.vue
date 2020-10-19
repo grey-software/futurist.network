@@ -29,37 +29,37 @@ export default {
     name: String,
     discord: String,
     linkedin: String,
-    imgSrc: String
+    imgSrc: String,
   },
   data() {
-    return { isCopied: "Click to copy username" };
+    return {isCopied: 'Click to copy username'}
   },
   methods: {
     copyToClipboard(e) {
       var text = navigator.clipboard
         .writeText(this.discord)
         .then(() => {
-          this.isCopied = "Copied!";
-          console.log(this.isCopied);
+          this.isCopied = 'Copied!'
+          console.log(this.isCopied)
           setTimeout(() => {
-            this.isCopied = "Click to copy username";
-          }, 5000);
+            this.isCopied = 'Click to copy username'
+          }, 5000)
         })
         .catch(() => {
-          this.isCopied = "Try Again!";
+          this.isCopied = 'Try Again!'
           setTimeout(() => {
-            this.isCopied = "Click to copy username";
-          }, 1000);
-        });
-      console.log("Copy " + text);
-    }
+            this.isCopied = 'Click to copy username'
+          }, 1000)
+        })
+      console.log('Copy ' + text)
+    },
   },
   computed: {
     emailAddress() {
-      return "mailto:" + this.mail;
-    }
-  }
-};
+      return 'mailto:' + this.mail
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -81,7 +81,9 @@ export default {
 }
 
 .neu-dark {
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.705), 0 0 22px rgba(255, 255, 255, 0.185);
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.705),
+    0 0 22px rgba(255, 255, 255, 0.185);
 }
 
 .card-body {

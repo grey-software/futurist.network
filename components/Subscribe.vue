@@ -1,12 +1,10 @@
 <template>
-
-  <div class="subscribe-container d-flex align-items-center justify-content-between px-5 py-3">
+  <div
+    class="subscribe-container d-flex align-items-center justify-content-between px-5 py-3"
+  >
     <div class="d-flex align-items-center mr-4">
-      <fa-icon
-        class="fa-4x mr-4"
-        :icon="['fa', 'envelope']"
-      ></fa-icon>
-      <div class="heading">Subscribe For<br />Weekly Updates </div>
+      <fa-icon class="fa-4x mr-4" :icon="['fa', 'envelope']"></fa-icon>
+      <div class="heading">Subscribe For<br />Weekly Updates</div>
     </div>
 
     <div class="flex-col">
@@ -17,18 +15,15 @@
           maxlength="50"
           style="color: white; border-radius: 0;"
         />
-        <b-button
-          size="md"
-          class="btn-subscribe"
-        >
-          <fa-icon
-            class="mr-2"
-            :icon="['fa', 'paper-plane']"
-          ></fa-icon>Subscribe
+        <b-button size="md" class="btn-subscribe">
+          <fa-icon class="mr-2" :icon="['fa', 'paper-plane']"></fa-icon
+          >Subscribe
         </b-button>
       </div>
 
-      <p class="email-promise">* Your email is safe from spam and unsolicited sharing with us!</p>
+      <p class="email-promise">
+        * Your email is safe from spam and unsolicited sharing with us!
+      </p>
     </div>
   </div>
 </template>

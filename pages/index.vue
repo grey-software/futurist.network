@@ -31,7 +31,7 @@
         </div>
       </div>
     </section>
-    <WorkWithExperts id="work-with-experts"/>
+    <WorkWithExperts id="work-with-experts" />
     <section class="d-flex flex-col align-items-center mb-5 mt-5">
       <hr />
       <div class="hero-heading py-4">
@@ -52,18 +52,12 @@
 </template>
 
 <script>
-import Hero from "../components/Hero";
-import HowItWorks from "../components/HowItWorks";
-import ReadyToBeAFuturist from "../components/ReadyToBeAFuturist";
-import WorkWithExperts from "../components/WorkWithExperts";
-import gql from "graphql-tag";
-
-// import ProjectCard from "@/components/ProjectCard";
-// import ProjectsQuery from "@/apollo/queries/projects/Projects.gql";
+import HowItWorks from '../components/HowItWorks'
+import ReadyToBeAFuturist from '../components/ReadyToBeAFuturist'
+import WorkWithExperts from '../components/WorkWithExperts'
 
 export default {
   components: {
-    Hero,
     HowItWorks,
     ReadyToBeAFuturist,
     WorkWithExperts,
@@ -72,23 +66,20 @@ export default {
     return {
       slide: 0,
       sliding: null,
-    };
+    }
   },
   methods: {
     onSlideStart(slide) {
-      this.sliding = true;
+      this.sliding = true
     },
     onSlideEnd(slide) {
-      this.sliding = false;
+      this.sliding = false
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped>
-* {
-  background-color: #050c17;
-}
 
 hr {
   background-color: #fa8a01;

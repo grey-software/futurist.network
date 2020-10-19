@@ -6,13 +6,16 @@
     </h1>
     <div class="w100 d-flex justify-content-center">
       <div class="tag text-center">
-        Come and explore our community via Discord! Chat with experts from all over the world.
-        Discover and experience new things!
+        Come and explore our community via Discord! Chat with experts from all
+        over the world. Discover and experience new things!
       </div>
     </div>
     <div class="d-flex flex-wrap justify-content-center">
       <div>
-        <link-btn txt="Join Discord" link="https://discord.com/invite/Z37nV2Z" />
+        <link-btn
+          txt="Join Discord"
+          link="https://discord.com/invite/Z37nV2Z"
+        />
       </div>
 
       <div>
@@ -20,7 +23,7 @@
       </div>
     </div>
 
-    <subscribe/>
+    <subscribe />
   </div>
 </template>
 

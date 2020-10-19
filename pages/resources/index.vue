@@ -17,28 +17,38 @@
 
 <script>
 export default {
-   async asyncData ({ $content, params, error }) {
+  async asyncData({$content, params, error}) {
     const resourcesDataStore = await $content('resources').fetch()
     console.log(resourcesDataStore)
-    const resources = resourcesDataStore.map((resource) => {
-      return { title: resource.title, desc: resource.desc, icon: resource.icon, link: `/resources/${resource.link}` }
+    const resources = resourcesDataStore.map(resource => {
+      return {
+        title: resource.title,
+        desc: resource.desc,
+        icon: resource.icon,
+        link: `/resources/${resource.link}`,
+      }
     })
-    return { resources }
+    return {resources}
   },
   computed: {
-    sortedTags () {
+    sortedTags() {
       const sortedTags = Array.from(this.tags).sort()
       // Resources with more items should show up higher.
-      sortedTags.sort((a, b) => this.resourcesForTag(b).length - this.resourcesForTag(a).length)
+      sortedTags.sort(
+        (a, b) =>
+          this.resourcesForTag(b).length - this.resourcesForTag(a).length,
+      )
       return sortedTags
-    }
+    },
   },
   methods: {
-    resourcesForTag (tag) {
-      const filteredResources = this.resources.filter(resource => resource.tags.includes(tag))
+    resourcesForTag(tag) {
+      const filteredResources = this.resources.filter(resource =>
+        resource.tags.includes(tag),
+      )
       return filteredResources
-    }
-  }
+    },
+  },
 }
 </script>
 

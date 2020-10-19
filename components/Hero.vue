@@ -1,6 +1,8 @@
 <template>
   <div class="g-landing">
-    <div class="f-hero d-flex align-content-center justify-content-center flex-column">
+    <div
+      class="f-hero d-flex align-content-center justify-content-center flex-column"
+    >
       <p class="f-hero-tag">Propose, Fund, & Work.</p>
       <h1 class="f-hero-heading">
         Crowdsourcing
@@ -18,99 +20,89 @@
   </div>
 </template>
 
-<script>
-import LinkBtn from "@/components/LinkBtn.vue";
-
-export default {
-  components: {
-    LinkBtn
-  },
-};
-</script>
-
 <style>
-  .g-landing {
-    margin: 0 120px;
+.g-landing {
+  margin: 0 120px;
+}
+
+.text-rainbow {
+  color: red;
+  background-image: -webkit-linear-gradient(92deg, red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
   }
 
-  .text-rainbow {
-    color: red;
-    background-image: -webkit-linear-gradient(92deg, red, yellow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 10s infinite linear;
+  to {
+    -webkit-filter: hue-rotate(-360deg);
   }
+}
 
-  @-webkit-keyframes hue {
-    from {
-      -webkit-filter: hue-rotate(0deg);
-    }
+.hero-tag {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7c7c7c;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
 
-    to {
-      -webkit-filter: hue-rotate(-360deg);
-    }
-  }
+.btn {
+  z-index: 1;
+  padding: 8px 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+  font-weight: bold;
+  border: none;
+  color: white;
+}
 
-  .hero-tag {
-    font-size: 18px;
-    font-weight: 600;
-    color: #7c7c7c;
-    letter-spacing: 0;
-    line-height: 1.5;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-  }
+.btn :hover {
+  text-decoration: none;
+}
 
-  .btn {
-    z-index: 1;
-    padding: 8px 50px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1em;
-    letter-spacing: 2px;
-    transition: 0.3s ease;
-    font-weight: bold;
-    border: none;
-    color: white;
-  }
+/* ----------- MORE INDICATOR ------------ */
+.more-indicator {
+  text-align: center;
+  font-size: 14px;
+  padding: 40px 40px;
+  opacity: 0;
+  color: white;
+  font-weight: bold;
+}
 
-  .btn :hover {
-    text-decoration: none;
-  }
+.mt {
+  margin-top: 20px;
+}
 
-  /* ----------- MORE INDICATOR ------------ */
-  .more-indicator {
-    text-align: center;
-    font-size: 14px;
-    padding: 40px 40px;
+/* ANIMATE */
+.animation-more {
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+/* KEYFRAMES */
+@keyframes drive {
+  from {
+    transform: translateY(0);
     opacity: 0;
-    color: white;
-    font-weight: bold;
   }
 
-  .mt {
-    margin-top: 20px;
+  to {
+    transform: translateY(15px);
+    opacity: 1;
   }
-
-  /* ANIMATE */
-  .animation-more {
-    animation-name: drive;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 0.5s;
-    animation-iteration-count: infinite;
-  }
-
-  /* KEYFRAMES */
-  @keyframes drive {
-    from {
-      transform: translateY(0);
-      opacity: 0;
-    }
-
-    to {
-      transform: translateY(15px);
-      opacity: 1;
-    }
-  }
+}
 </style>

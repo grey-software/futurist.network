@@ -10,8 +10,8 @@
 export default {
   props: {
     txt: String,
-    link: String
-  }
+    link: String,
+  },
 }
 </script>
 

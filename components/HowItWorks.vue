@@ -7,10 +7,12 @@
       <div
         class="d-flex container justify-content-between align-items-center flex-column flex-md-row"
       >
-
         <div class="d-flex flex-column">
           <div class="how-it-works-card mb-5">
-            <fa-icon :icon="['fas', 'volume-up']" class="how-it-works-icon"></fa-icon>
+            <fa-icon
+              :icon="['fas', 'volume-up']"
+              class="how-it-works-icon"
+            ></fa-icon>
             <div class="tag-line">
               <p>Pitch a project!</p>
             </div>
@@ -20,7 +22,10 @@
 
         <div class="d-flex column">
           <div class="how-it-works-card mb-5">
-            <fa-icon :icon="['fas', 'link']" class="how-it-works-icon"></fa-icon>
+            <fa-icon
+              :icon="['fas', 'link']"
+              class="how-it-works-icon"
+            ></fa-icon>
             <div class="tag-line">
               <p>Connect with an expert.</p>
             </div>
@@ -30,14 +35,16 @@
 
         <div class="d-flex column">
           <div class="how-it-works-card mb-5">
-            <fa-icon :icon="['fas', 'handshake']" class="how-it-works-icon"></fa-icon>
+            <fa-icon
+              :icon="['fas', 'handshake']"
+              class="how-it-works-icon"
+            ></fa-icon>
             <div class="tag-line">
               <p>Meet & collaborate with the community!</p>
             </div>
             <p class="hero-tag">STEP 3</p>
           </div>
         </div>
-
       </div>
     </div>
   </div>

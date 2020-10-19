@@ -5,12 +5,14 @@
       <b-row>
         <b-col cols="12" md="12" lg="9">
           <li>
-            <img src="../assets/f-logo.png"/>
+            <img src="../assets/f-logo.png" />
           </li>
 
           <li>
-            <p class="desc"> The Futurist Foundation is an organization that allows individuals like you to propose,
-              fund, and work on the technologies of the future.
+            <p class="desc">
+              The Futurist Foundation is an organization that allows individuals
+              like you to propose, fund, and work on the technologies of the
+              future.
             </p>
           </li>
 
@@ -60,13 +62,15 @@
           </li>
 
           <li>
-            <p class="desc" style="padding: 20px 0;">Copyright by @FuturistNetwork - 2020</p>
+            <p class="desc" style="padding: 20px 0;">
+              Copyright by @FuturistNetwork - 2020
+            </p>
           </li>
         </b-col>
 
         <b-col>
           <li>
-            <p class="more pt-5 pb-3"> More Links. </p>
+            <p class="more pt-5 pb-3">More Links.</p>
             <div class="links">
               <p>Donate Now</p>
               <p>Futurist Network</p>
@@ -74,7 +78,6 @@
               <p>Contact Us</p>
               <p>FAQ</p>
             </div>
-
           </li>
         </b-col>
       </b-row>
@@ -82,39 +85,39 @@
   </div>
 </template>
 <style scoped>
-  .f-footer {
-    padding: 40px;
-    color: white;
-  }
+.f-footer {
+  padding: 40px;
+  color: white;
+}
 
-  li {
-    list-style: none;
-  }
+li {
+  list-style: none;
+}
 
-  img {
-    width: auto;
-    height: 90px;
-  }
+img {
+  width: auto;
+  height: 90px;
+}
 
-  .desc {
-    color: lightslategrey;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 40px 0;
-    max-width: 600px;
-  }
+.desc {
+  color: lightslategrey;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 40px 0;
+  max-width: 600px;
+}
 
-  .more {
-    color: #fa8a01;
-    font-weight: 700;
-    font-size: 20px;
-  }
+.more {
+  color: #fa8a01;
+  font-weight: 700;
+  font-size: 20px;
+}
 
-  .links {
-    font-weight: 600;
-  }
+.links {
+  font-weight: 600;
+}
 
-  .links:hover {
-    cursor: pointer;
-  }
+.links:hover {
+  cursor: pointer;
+}
 </style>

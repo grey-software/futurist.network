@@ -1,48 +1,40 @@
 <template>
   <div class="container d-flex flex-column align-items-center p">
     <p class="category">MENTORSHIP</p>
-    <div class="heading mb-4">Work with <br />the <span style="color: #d52be8;">experts.</span></div>
-    <p class="tag text-center">The Futurist Foundation is an organization that allows individuals like you to propose,
-      fund, and work on the technologies of the future.</p>
+    <div class="heading mb-4">
+      Work with <br />the <span style="color: #d52be8;">experts.</span>
+    </div>
+    <p class="tag text-center">
+      The Futurist Foundation is an organization that allows individuals like
+      you to propose, fund, and work on the technologies of the future.
+    </p>
 
-    <div class="w-100 d-flex align-items-center justify-content-center flex-column flex-md-row">
+    <div
+      class="w-100 d-flex align-items-center justify-content-center flex-column flex-md-row"
+    >
       <div class="mr-md-3 text-center">
         <img src="../assets/spaceship.png" />
       </div>
 
       <div class="col group">
-
         <div class="my-3 neumorphism">
-          <fa-icon
-            class="fa-fw icon"
-            :icon="['fa', 'brain']"
-          ></fa-icon>
-          <a class="group-name">
-            A.I.</a>
+          <fa-icon class="fa-fw icon" :icon="['fa', 'brain']"></fa-icon>
+          <a class="group-name"> A.I.</a>
         </div>
 
         <div class="my-3 neumorphism">
-          <fa-icon
-            class="fa-fw icon"
-            :icon="['fa', 'heartbeat']"
-          ></fa-icon>
-          <a class="group-name">
-            Longevity</a>
+          <fa-icon class="fa-fw icon" :icon="['fa', 'heartbeat']"></fa-icon>
+          <a class="group-name"> Longevity</a>
         </div>
 
         <div class="my-3 neumorphism">
-          <fa-icon
-            class="fa-fw icon"
-            :icon="['fa', 'robot']"
-          ></fa-icon>
-          <a class="group-name">
-            Robotics</a>
+          <fa-icon class="fa-fw icon" :icon="['fa', 'robot']"></fa-icon>
+          <a class="group-name"> Robotics</a>
         </div>
       </div>
     </div>
   </div>
 </template>
-
 
 <style scoped>
 * {

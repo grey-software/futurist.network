@@ -37,7 +37,9 @@
         class="f-nav-link nav-link mr-4"
         >Resources</nuxt-link
       >
-      <button class="paypal-button"><img class="paypal-icon" src="@/assets/icons/paypal.png" />Donate</button>
+      <button class="paypal-button">
+        <img class="paypal-icon" src="@/assets/icons/paypal.png" />Donate
+      </button>
     </div>
   </div>
 </template>
@@ -47,9 +49,9 @@ export default {
   data() {
     return {
       checked: false,
-    };
+    }
   },
-};
+}
 </script>
 <style scoped>
 .f-header {
@@ -218,4 +220,3 @@ export default {
   background-color: #003084;
 }
 </style>
-

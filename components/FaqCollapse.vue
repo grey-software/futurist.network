@@ -3,7 +3,7 @@
     <div
       class="p-1 px-3 pt-2 collapse-btn"
       block
-      v-b-toggle="'index'+faqId"
+      v-b-toggle="'index' + faqId"
       variant="info"
       header-tag="header"
       role="tab"
@@ -13,7 +13,7 @@
         <fa-icon :icon="['fas', 'plus']" class="fa-lg"></fa-icon>
       </div>
     </div>
-    <b-collapse :id="'index'+faqId" accordion="my-accordion" role="tabpanel">
+    <b-collapse :id="'index' + faqId" accordion="my-accordion" role="tabpanel">
       <div class="answer ml-3 my-4">{{ answer }}</div>
     </b-collapse>
   </div>
@@ -26,7 +26,7 @@ export default {
     question: String,
     faqId: String,
   },
-};
+}
 </script>
 
 <style scoped>
@@ -54,7 +54,7 @@ export default {
 .answer {
   color: #838383;
   font-size: 18px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.96px;
   font-weight: 600;
 }
