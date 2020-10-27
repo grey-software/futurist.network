@@ -26,9 +26,15 @@
       </div>
     </div>
 
-    <!-- <subscribe /> -->
+    <!-- <Subscribe /> -->
   </div>
 </template>
+
+<script>
+export default {
+  name: "ReadyToBeAFuturist",
+}
+</script>
 
 <style scoped>
 img {
