@@ -1,25 +1,41 @@
 <template>
-  <div
-    class="subscribe-container d-flex align-items-center justify-content-between px-5 py-3"
-  >
-    <div class="d-flex align-items-center mr-4">
-      <fa-icon class="fa-4x mr-4" :icon="['fa', 'envelope']"></fa-icon>
+  <div class="subscribe-container px-5 py-3">
+    <div class="subscribe-container__cta d-flex align-items-center">
+      <fa-icon class="fa-3x cta__icon" :icon="['fa', 'envelope']"></fa-icon>
       <div class="heading">Subscribe For<br />Weekly Updates</div>
     </div>
 
-    <div class="flex-col">
-      <div class="d-flex align-items-center mb-2">
-        <b-input
-          class="form-control no-border"
-          placeholder="your.email@domain"
-          maxlength="50"
-          style="color: white; border-radius: 0;"
-        />
-        <b-button size="md" class="btn-subscribe">
-          <fa-icon class="mr-2" :icon="['fa', 'paper-plane']"></fa-icon
-          >Subscribe
+    <div class="subscribe-container__widget flex-col">
+      <b-form @submit.prevent="subscribeToNewsletter">
+        <div class="widget__email-input d-flex align-items-center">
+          <div class="email-input__input">
+            <b-input
+              v-model="email"
+              class="form-control no-border"
+              placeholder="Enter your email here."
+              maxlength="50"
+              type="email"
+              required
+              style="color: white; border-radius: 0;"
+            />
+          </div>
+          <b-button type="submit" class="btn-subscribe">
+            <fa-icon class="mr-2" :icon="['fa', 'paper-plane']"></fa-icon>
+            <span class="btn-subscribe__text"> Subscribe </span>
+          </b-button>
+        </div>
+        <b-button
+          type="submit"
+          @click.this.
+          :class="[
+            'btn-subscribe--mobile',
+            {'btn-subscribe--highlighted': email.length},
+          ]"
+        >
+          <fa-icon class="mr-2" :icon="['fa', 'paper-plane']"></fa-icon>
+          <span class="btn-subscribe__text"> Subscribe </span>
         </b-button>
-      </div>
+      </b-form>
 
       <p class="email-promise">
         * Your email is safe from spam and unsolicited sharing with us!
@@ -28,35 +44,74 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Subscribe',
+  data() {
+    return {
+      email: '',
+    }
+  },
+  methods: {
+    subscribeToNewsletter() {
+      // TODO: Subscribe User to Mailchimp Newsletter
+      // TODO: Change form display to "Subscribe!" message after subscription has resolved
+    },
+  },
+}
+</script>
+
 <style scoped>
+/* General */
 * {
   background-color: unset;
 }
 
 .subscribe-container {
-  margin: 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  margin: 1.25rem;
   background-color: #fe5c26;
   border-radius: 30px;
   color: white;
-  text-align: start !important;
+  min-height: 15rem;
 }
 
-.btn-subscribe {
-  padding: 8px 16px;
+/* CTA Section  */
+.subscribe-container__cta {
+  margin-right: 6rem;
+  text-align: left;
 }
 
-::placeholder {
-  color: white;
+.cta__icon {
+  margin-right: 1rem;
 }
 
 .heading {
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
   color: white;
-  font-size: 20px;
-  padding: 20px 0 20px 0;
+  font-size: 1.25rem;
+  padding: 1.25rem 0;
   margin: 0;
-  text-align: start !important;
+}
+
+/* Widget Section  */
+.btn-subscribe--mobile {
+  display: none;
+}
+
+.btn-subscribe {
+  padding: 0.2rem 1rem;
+}
+
+.btn-subscribe:hover {
+  color: #6c757d;
+  background: none;
+}
+
+::placeholder {
+  color: white;
 }
 
 .form-group {
@@ -84,13 +139,78 @@ input.form-control:focus {
 }
 
 .no-border {
-  border-right: solid 2px #fe5c26;
-  border-top: solid 2px #fe5c26;
-  border-left: solid 2px #fe5c26;
-  border-bottom: solid 2px;
+  border: none;
 }
 
 .email-promise {
-  text-align: start;
+  font-size: 0.8rem;
+}
+
+.subscribe-container__widget {
+  flex: 2;
+  text-align: left;
+}
+
+.widget__email-input {
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  margin-bottom: 0.3rem;
+}
+
+.email-input__input {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 540px) {
+  /* General */
+  .subscribe-container {
+    flex-direction: column;
+  }
+
+  /* CTA Section  */
+  .subscribe-container__cta {
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta__icon {
+    margin: 0;
+  }
+
+  /* Widget Section  */
+  .subscribe-container__widget {
+    text-align: center;
+  }
+
+  .widget__email-input {
+    margin-bottom: 1rem;
+  }
+
+  .btn-subscribe {
+    display: none;
+  }
+
+  .btn-subscribe--mobile {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .btn-subscribe--highlighted {
+    background-color: #6c757d;
+  }
+
+  .email-input__input {
+    width: 100%;
+  }
+
+  .email-input__input input {
+    text-align: center;
+    width: 100%;
+  }
 }
 </style>
