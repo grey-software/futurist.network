@@ -1,0 +1,1 @@
+// Mailchimp subscribe serverless function here
