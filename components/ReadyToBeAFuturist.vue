@@ -26,13 +26,18 @@
       </div>
     </div>
 
-    <!-- <Subscribe /> -->
+    <Subscribe />
   </div>
 </template>
 
 <script>
+import Subscribe from "@/components/Subscribe"
+
 export default {
   name: "ReadyToBeAFuturist",
+  components: {
+    Subscribe,
+  }
 }
 </script>
 
