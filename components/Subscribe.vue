@@ -6,7 +6,8 @@
     </div>
 
     <div class="subscribe-container__widget flex-col">
-      <b-form @submit.prevent="subscribeToNewsletter">
+      <transition name="slide-fade" mode="out-in">      
+      <b-form v-if="!userSubscribed" @submit.prevent="subscribeToNewsletter">
         <div class="widget__email-input d-flex align-items-center">
           <div class="email-input__input">
             <b-input
@@ -26,7 +27,6 @@
         </div>
         <b-button
           type="submit"
-          @click.this.
           :class="[
             'btn-subscribe--mobile',
             {'btn-subscribe--highlighted': email.length},
@@ -35,27 +35,38 @@
           <fa-icon class="mr-2" :icon="['fa', 'paper-plane']"></fa-icon>
           <span class="btn-subscribe__text"> Subscribe </span>
         </b-button>
+        <p class="email-promise">
+          * Your email is safe from spam and unsolicited sharing with us!
+        </p>
       </b-form>
-
-      <p class="email-promise">
-        * Your email is safe from spam and unsolicited sharing with us!
-      </p>
+      <div v-else class="widget__success-message">
+        <h3>You've subscribed!</h3>
+      </div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios"
+
 export default {
   name: 'Subscribe',
   data() {
     return {
       email: '',
+      userSubscribed: false
     }
   },
   methods: {
-    subscribeToNewsletter() {
-      // TODO: Subscribe User to Mailchimp Newsletter
-      // TODO: Change form display to "Subscribe!" message after subscription has resolved
+    async subscribeToNewsletter() {
+      const response = await axios.get(`https://thefuturistfoundation.com/.netlify/functions/mailchimp-subscribe?email=${this.email}`)
+
+      if (response.statusCode !== 200) {
+        console.log("Something went wrong.")
+      }
+
+      this.userSubscribed = true
     },
   },
 }
@@ -162,10 +173,27 @@ input.form-control:focus {
   align-items: center;
 }
 
+.widget__success-message {
+  text-align: center;
+}
+
+/* Transitions */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-5rem);
+}
+
 @media screen and (max-width: 540px) {
   /* General */
   .subscribe-container {
     flex-direction: column;
+    min-height: 25rem;
   }
 
   /* CTA Section  */
@@ -182,6 +210,7 @@ input.form-control:focus {
   /* Widget Section  */
   .subscribe-container__widget {
     text-align: center;
+    justify-content: center;
   }
 
   .widget__email-input {
