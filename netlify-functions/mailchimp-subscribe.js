@@ -1,4 +1,4 @@
-const client = require("mailchimp-marketing");
+const client = require("@mailchimp/mailchimp_marketing");
 require('dotenv').config();
 
 client.setConfig({
