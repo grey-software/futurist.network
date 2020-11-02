@@ -1,8 +1,7 @@
 <template>
   <div class="container f-footer">
-    <b-container class="bv-example-row">
-      <b-row>
-        <b-col cols="12" md="12" lg="9">
+      <div class="d-flex flex-row flex-wrap justify-space-between row-0">
+        <div class="flex-col col col-md-12 col-lg-9 col-12">
           <li>
             <img src="../assets/f-logo.png" />
           </li>
@@ -70,9 +69,9 @@
               Copyright The Futurist Foundation - 2020
             </p>
           </li>
-        </b-col>
+        </div>
 
-        <b-col>
+        <div class="d-flex flex-column col">
           <li>
             <p class="more pt-5 pb-3">More Links.</p>
             <div class="links">
@@ -87,14 +86,12 @@
               <nuxt-link to="/faq">FAQ</nuxt-link>
             </div>
           </li>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+      </div>
   </div>
 </template>
 <style scoped>
 .f-footer {
-  padding: 40px;
   color: white;
 }
 
@@ -113,6 +110,7 @@ img {
   font-size: 16px;
   padding: 40px 0;
   max-width: 600px;
+  margin-bottom: 0;
 }
 
 .more {
