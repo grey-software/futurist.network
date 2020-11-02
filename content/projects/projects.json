@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "name": "Futurist Network",
+      "desc": "An intranet for futurists to propose, fund and work on the projects of the future!",
+      "logo": "/logos/projects/futurist.network.png",
+      "link": "https://futurist.network",
+      "discord": "Thiizic#1778"
+    },
+    {
       "name": "Skill Sharing",
       "desc": "A discord server for members to learn together by sharing their skills and expertise!",
       "logo": "/logos/projects/skill-sharing.png",
