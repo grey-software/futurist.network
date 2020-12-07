@@ -10,13 +10,13 @@
           >
             <img class="logo tw-py-2" src="/logo.png" />
           </nuxt-link>
-          <nuxt-link
+          <!-- <nuxt-link
             class="flex align-center tw-mx-4"
             to="/resources"
             @click.native="checked = false"
           >
             <div class="tw-font-extrabold tw-text-xl">Resources</div>
-          </nuxt-link>
+          </nuxt-link> -->
           <nuxt-link
             class="flex align-center tw-mx-4"
             to="/projects"

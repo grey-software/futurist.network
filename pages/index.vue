@@ -15,9 +15,19 @@
           target="_blank"
           href="https://discord.com/invite/Z37nV2Z"
           x-large
-          class="p-4 mt-4"
-          ><v-icon x-large class="mr-3">mdi-discord</v-icon> Join Our Community</v-btn
+          class="p-4 my-4"
+          ><v-icon x-large class="mr-3">mdi-discord</v-icon> Join Our
+          Community</v-btn
         >
+        <div class="tw-font-bold tw-text-xl tw-text-center">
+          We're rebuilding this website...Come help us out on Github!
+          <v-btn
+            icon
+            target="_blank"
+            href="https://github.com/grey-software/futurist.network"
+            ><v-icon x-large class="ml-3">mdi-github</v-icon></v-btn
+          >
+        </div>
       </div>
     </section>
   </div>
