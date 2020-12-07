@@ -1,0 +1,46 @@
+{
+    "name": "the-futurist-foundation",
+    "description": "Futurism is the belief in the need to look to the future rather than reflect on the past, coupled with an optimism that personal and social fulfilment lies in the future in the form of technological progress and integration.",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "generate": "nuxt build --target static && nuxt export",
+        "start": "nuxt start",
+        "export": "nuxt export",
+        "serve": "nuxt serve",
+        "lint:js": "eslint --ext .js,.vue .",
+        "lint:js:fix": "eslint --ext .js,.vue --fix ",
+        "lint:style:fix": "prettier -l --write \"{*.js,**/*.js,**/*.vue}\"",
+        "lint:css": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+        "lint:css:fix": "stylelint --fix **/*.{vue,css}",
+        "lint": "yarn lint:js && yarn lint:style"
+    },
+    "dependencies": {
+        "@mailchimp/mailchimp_marketing": "^3.0.22",
+        "@nuxt/content": "^1.10.0",
+        "@nuxtjs/device": "^1.2.7",
+        "axios": "^0.21.0",
+        "bootstrap": "^4.5.3",
+        "bootstrap-vue": "^2.17.3",
+        "core-js": "3.6.5",
+        "dotenv": "^8.2.0",
+        "nuxt": "^2.14.7"
+    },
+    "devDependencies": {
+        "@fortawesome/free-brands-svg-icons": "^5.15.1",
+        "@fortawesome/free-solid-svg-icons": "^5.15.1",
+        "@nuxtjs/dotenv": "^1.4.1",
+        "@nuxtjs/eslint-config": "^3.1.0",
+        "@nuxtjs/eslint-module": "^3.0.0",
+        "@nuxtjs/fontawesome": "^1.1.2",
+        "@nuxtjs/stylelint-module": "^4.0.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.11.0",
+        "eslint-config-prettier": "^6.13.0",
+        "eslint-plugin-nuxt": "^1.0.0",
+        "stylelint": "^13.7.2",
+        "stylelint-config-standard": "^20.0.0"
+    }
+}

@@ -1,31 +1,34 @@
 <template>
-  <b-card class="project-card m-4 pb-3">
-    <div class="flex-col" style="min-height: 200px;">
-      <div class="flex mb-4 align-items-center">
-        <img class="logo mr-3" :src="project.logo" />
-        <span class="project-title">{{ project.title }}</span>
+  <div class="project-card tw-p-4 tw-mb-4">
+    <div>
+      <div class="flex align-center my-4">
+        <img class="logo justify-start" :src="project.logo" />
+        <div class="ml-3">
+          <h5 class="tw-text-2xl tw-font-bold">{{ project.name }}</h5>
+        </div>
       </div>
-      <b-card-text classs="project-desc">{{ project.desc }}</b-card-text>
+
+      <div class="description">
+        <p class="tw-text-xl">{{ project.desc }}</p>
+      </div>
     </div>
-    <div class="spacer" />
-    <div class="mt-5">
-      <b-button class="icon-button mr-3">
-        <a target="_blank" :href="project.link">
-          <fa-icon :icon="['fas', 'globe']"></fa-icon>
-          Link
-        </a>
-      </b-button>
-      <b-button
-        @click="copyToClipboard(project.discord)"
-        v-b-tooltip.hover
-        :title="project.discord"
-        class="icon-button"
+
+    <div class="flex tw-mt-4">
+      <v-btn
+        color="primary"
+        :href="project.repo"
+        outlined
+        target="_blank"
+        class="tw-mr-4"
+        x-large
       >
-        <fa-icon :icon="['fab', 'discord']"></fa-icon>
-        Lead
-      </b-button>
+        <v-icon left large class="mr-3"> mdi-link </v-icon>Link
+      </v-btn>
+      <!-- <v-btn outlined x-large color="primary" :href="project.link" target="_blank">
+        <v-icon left large class="tw-mr-3"> mdi-discord </v-icon>Discord Lead
+      </v-btn> -->
     </div>
-  </b-card>
+  </div>
 </template>
 
 <script>
@@ -34,70 +37,60 @@ export default {
     project: {
       name: String,
       desc: String,
+      logo: String,
       link: String,
-      email: String,
-      discord: String,
-      logo: {
-        url: String,
-      },
-      status: String,
-    },
-  },
-  methods: {
-    copyToClipboard(str) {
-      const el = document.createElement('textarea')
-      el.value = str
-      el.setAttribute('readonly', '')
-      el.style.position = 'absolute'
-      el.style.left = '-9999px'
-      document.body.appendChild(el)
-      el.select()
-      document.execCommand('copy')
-      document.body.removeChild(el)
-    },
-  },
-  computed: {
-    imageUrl() {
-      return `http://159.89.124.15${this.project.image.url}`
+      discord: String
+      
     },
   },
 }
 </script>
 
 <style scoped>
-.btn {
-  border-radius: 20px;
+.status {
+  top: 12px;
+  right: 12px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 0.69;
+  transition: opacity 0.2s ease-out;
 }
 
-.logo {
-  height: 64px;
-}
-
-.icon-button {
-  width: 130px;
-  height: 48px;
-  padding: 8px;
+.status:hover {
+  opacity: 1;
 }
 
 .project-card {
-  color: white;
-  box-shadow: 12px 24px 72px -12px rgba(133, 126, 126, 0.3);
-  margin: 24px;
-  width: 400px;
-  border-radius: 50px;
+  width: 369px;
+  border-radius: 12px;
   background: var(--bg);
+  box-shadow: 12px 24px 72px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-direction: column;
+  margin-right: 2rem;
 }
 
-.project-title {
-  font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.96px;
-  font-weight: 600;
+.logo {
+  height: 48px;
 }
 
-@media (max-width: 810px) {
+.project-heading {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.description {
+  width: 309px;
+}
+
+@media screen and (max-width: 768px) {
   .project-card {
-    width: 100%;
+    margin-right: 0;
   }
 }
 </style>

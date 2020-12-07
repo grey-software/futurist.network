@@ -7,7 +7,7 @@
         to="/"
         @click.native="checked = false"
       >
-        <img class="logo" src="../assets/f-logo.png" />
+        <img class="logo" src="/logo.png" />
       </nuxt-link>
     </div>
     <div class="nav-btn">

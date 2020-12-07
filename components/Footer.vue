@@ -1,98 +1,72 @@
 <template>
-  <div class="container f-footer">
-      <div class="d-flex flex-row flex-wrap justify-space-between row-0">
-        <div class="flex-col col col-md-12 col-lg-9 col-12">
-          <li>
-            <img src="../assets/f-logo.png" />
-          </li>
-
-          <li>
-            <p class="desc">
-              The Futurist Foundation is an organization that allows individuals
-              like you to propose, fund, and work on the technologies of the
-              future.
-            </p>
-          </li>
-
-          <li>
-            <div style="color: #fab74a; justify-items: center;">
-              <a href="mailto:contact@thefuturistfoundation.com">
-                <span class="fa-stack fa-lg">
-                  <fa-icon
-                    :icon="['fas', 'circle']"
-                    class="fa-stack-2x"
-                    style="color: #fab74a;"
-                  ></fa-icon>
-                  <fa-icon
-                    :icon="['fas', 'envelope']"
-                    class="fa-stack-1x"
-                    style="color: black; background-color: #fab74a;"
-                  ></fa-icon>
-                </span>
-              </a>
-
-              <a
-                href="https://discord.com/invite/Z37nV2Z"
-                target="_blank"
-              >
-                <span class="fa-stack fa-lg">
-                  <fa-icon
-                    :icon="['fas', 'circle']"
-                    class="fa-stack-2x"
-                    style="color: #fab74a;"
-                  ></fa-icon>
-                  <fa-icon
-                    :icon="['fab', 'discord']"
-                    class="fa-stack-1x"
-                    style="color: black; background-color: #fab74a;"
-                  ></fa-icon>
-                </span>
-              </a>
-
-              <span class="fa-stack fa-lg">
-                <fa-icon
-                  :icon="['fas', 'circle']"
-                  class="fa-stack-2x"
-                  style="color: #fab74a;"
-                ></fa-icon>
-                <fa-icon
-                  :icon="['fab', 'linkedin']"
-                  class="fa-stack-1x"
-                  style="color: black; background-color: #fab74a;"
-                ></fa-icon>
-              </span>
-            </div>
-          </li>
-
-          <li>
-            <p class="desc" style="padding: 20px 0;">
-              Copyright The Futurist Foundation - 2020
-            </p>
-          </li>
-        </div>
-
-        <div class="d-flex flex-column col">
-          <li>
-            <p class="more pt-5 pb-3">More Links.</p>
-            <div class="links">
-              <a
-                target="_blank"
-                href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
-                >Donate Now</a
-              >
-              <a href="https://discord.com/invite/Z37nV2Z"
-                target="_blank">Community</a>
-              <a href="mailto:contact@thefuturistfoundation.com">Contact Us</a>
-              <nuxt-link to="/faq">FAQ</nuxt-link>
-            </div>
-          </li>
+  <div class="tw-container tw-py-6 tw-mx-auto tw-px-4">
+    <div class="tw-mt-5 sm:tw-flex tw-justify-space-between">
+      <div class="tw-w-full sm:tw-w-1/2 tw-flex-col tw-mr-auto tw-mb-4">
+        <nuxt-link to="/">
+          <img class="tw-mb-6" src="/logo.png" />
+        </nuxt-link>
+        <p>
+          The Futurist Foundation is an organization that allows individuals
+          like you to propose, fund, and create the technologies of the future.
+        </p>
+        <div class="tw-mt-6">
+          <a href="https://discord.com/invite/Z37nV2Z" class="footer-link">
+            <v-icon x-large>mdi-discord</v-icon>
+          </a>
+          <a href="https://www.instagram.com/utm.cssc" class="footer-link tw-ml-2">
+            <v-icon x-large>mdi-youtube</v-icon>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCvHFwQuoelQWENGwcLGssUg"
+            class="footer-link tw-ml-2"
+          >
+            <v-icon x-large>mdi-reddit</v-icon>
+          </a>
+          <a
+            href="https://github.com/grey-software/futurist.network"
+            class="footer-link ml-2"
+          >
+            <v-icon x-large>mdi-github</v-icon>
+          </a>
         </div>
       </div>
+
+      <div class="flex-col xs:tw-align-end">
+          <div class="tw-font-bold tw-text-xl tw-mb-4">More Links</div>
+          <div class="links">
+            <nuxt-link to="/resources"> Resources </nuxt-link>
+            <a
+              target="_blank"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SJAKPG8YBNKSN&source=url"
+              >Donate Now</a
+            >
+            <a href="https://discord.gg/SHwbmVg" target="_blank">Community</a>
+            <a href="mailto:contact@thefuturistfoundation.com">Contact Us</a>
+            <nuxt-link to="/faq">FAQ</nuxt-link>
+          </div>
+      </div>
+    </div>
   </div>
 </template>
+
 <style scoped>
-.f-footer {
-  color: white;
+.logo {
+  height: 84px;
+}
+
+svg:hover {
+  fill: var(--color-primary-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 35px;
+  color: var(--color-primary);
 }
 
 li {
@@ -101,34 +75,29 @@ li {
 
 img {
   width: auto;
-  height: 90px;
+  height: 70px;
+}
+
+.hello {
+  padding: 0 0 30px 0;
 }
 
 .desc {
-  color: lightslategrey;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 40px 0;
-  max-width: 600px;
-  margin-bottom: 0;
-}
-
-.more {
-  color: #fa8a01;
-  font-weight: 700;
-  font-size: 20px;
+  max-width: 420px;
 }
 
 .links {
-  font-weight: 600;
+  font-size: 18px;
 }
 
 .links > a {
-  margin-bottom: 16px;
+  color: var(--color-body);
+  margin-bottom: 10px;
   display: block;
 }
 
-.links:hover {
+.links > a:hover {
   cursor: pointer;
+  color: var(--color-primary);
 }
 </style>

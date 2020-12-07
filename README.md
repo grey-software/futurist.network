@@ -1,4 +1,4 @@
-# futurist.network
+# The Futurist Network Website
 
 ## Build Setup
 

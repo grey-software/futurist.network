@@ -1,46 +1,50 @@
 {
-    "name": "the-futurist-foundation",
-    "description": "Futurism is the belief in the need to look to the future rather than reflect on the past, coupled with an optimism that personal and social fulfilment lies in the future in the form of technological progress and integration.",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "nuxt",
-        "build": "nuxt build",
-        "generate": "nuxt build --target static && nuxt export",
-        "start": "nuxt start",
-        "export": "nuxt export",
-        "serve": "nuxt serve",
-        "lint:js": "eslint --ext .js,.vue .",
-        "lint:js:fix": "eslint --ext .js,.vue --fix ",
-        "lint:style:fix": "prettier -l --write \"{*.js,**/*.js,**/*.vue}\"",
-        "lint:css": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-        "lint:css:fix": "stylelint --fix **/*.{vue,css}",
-        "lint": "yarn lint:js && yarn lint:style"
-    },
-    "dependencies": {
-        "@mailchimp/mailchimp_marketing": "^3.0.22",
-        "@nuxt/content": "^1.10.0",
-        "@nuxtjs/device": "^1.2.7",
-        "axios": "^0.21.0",
-        "bootstrap": "^4.5.3",
-        "bootstrap-vue": "^2.17.3",
-        "core-js": "3.6.5",
-        "dotenv": "^8.2.0",
-        "nuxt": "^2.14.7"
-    },
-    "devDependencies": {
-        "@fortawesome/free-brands-svg-icons": "^5.15.1",
-        "@fortawesome/free-solid-svg-icons": "^5.15.1",
-        "@nuxtjs/dotenv": "^1.4.1",
-        "@nuxtjs/eslint-config": "^3.1.0",
-        "@nuxtjs/eslint-module": "^3.0.0",
-        "@nuxtjs/fontawesome": "^1.1.2",
-        "@nuxtjs/stylelint-module": "^4.0.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.11.0",
-        "eslint-config-prettier": "^6.13.0",
-        "eslint-plugin-nuxt": "^1.0.0",
-        "stylelint": "^13.7.2",
-        "stylelint-config-standard": "^20.0.0"
+  "name": "web-app-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint": "yarn lint:js && yarn lint:style"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.11.1",
+    "@nuxtjs/axios": "^5.12.3",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/pwa": "^3.3.2",
+    "@nuxtjs/svg": "^0.1.12",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "core-js": "^3.8.0",
+    "nuxt": "^2.14.9"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.1",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/tailwindcss": "^3.3.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.2",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0"
+  }
 }

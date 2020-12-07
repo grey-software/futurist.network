@@ -1,0 +1,25 @@
+:root {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --color-heading: rgb(165, 190, 210);
+  --color-body: #d1d5db;
+  --bg: rgb(24, 26, 27);
+}
+
+.flex {
+  display: flex;
+}
+
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-rainbow {
+  color: #ef4444;
+  background-image: -webkit-linear-gradient(92deg, #ef4444, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+}
