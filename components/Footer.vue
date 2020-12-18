@@ -1,24 +1,26 @@
 <template>
-  <div class="tw-container tw-py-6 tw-mx-auto tw-px-4">
-    <div class="tw-mt-5 sm:tw-flex tw-justify-space-between">
-      <div class="tw-w-full sm:tw-w-1/2 tw-flex-col tw-mr-auto tw-mb-4">
+  <div class="t-container t-py-6 t-mx-auto t-screen-phone:t-px-4">
+    <div class="t-mt-5 sm:t-flex t-justify-space-between">
+      <div class="t-w-full sm:t-w-1/2 t-flex-col t-mr-auto t-mb-4">
         <nuxt-link to="/">
-          <img class="tw-mb-6" src="/logo.png" />
+          <img class="t-mb-6" src="/logo.png" />
         </nuxt-link>
         <p>
-          The Futurist Foundation is an organization that allows individuals
-          like you to propose, fund, and create the technologies of the future.
+          The Futurist Foundation is a non-profit organization on a mission to 
+          promote crowd-sourced projects seeking to educate the public on the 
+          matters of futurism, and to support research into legal and ethical 
+          questions concerning future technology and its usage. 
         </p>
-        <div class="tw-mt-6">
+        <div class="t-mt-6">
           <a href="https://discord.com/invite/Z37nV2Z" class="footer-link">
             <v-icon x-large>mdi-discord</v-icon>
           </a>
-          <a href="https://www.instagram.com/utm.cssc" class="footer-link tw-ml-2">
+          <a href="https://www.youtube.com/channel/UCvHFwQuoelQWENGwcLGssUg" class="footer-link t-ml-2">
             <v-icon x-large>mdi-youtube</v-icon>
           </a>
           <a
             href="https://www.youtube.com/channel/UCvHFwQuoelQWENGwcLGssUg"
-            class="footer-link tw-ml-2"
+            class="footer-link t-ml-2"
           >
             <v-icon x-large>mdi-reddit</v-icon>
           </a>
@@ -31,8 +33,8 @@
         </div>
       </div>
 
-      <div class="flex-col xs:tw-align-end">
-          <div class="tw-font-bold tw-text-xl tw-mb-4">More Links</div>
+      <div class="flex-col xs:t-align-end">
+          <div class="t-font-bold t-text-xl t-mb-4">More Links</div>
           <div class="links">
             <nuxt-link to="/resources"> Resources </nuxt-link>
             <a

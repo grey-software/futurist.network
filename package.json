@@ -27,14 +27,15 @@
     "@nuxtjs/pwa": "^3.3.2",
     "@nuxtjs/svg": "^0.1.12",
     "@nuxtjs/vuetify": "^1.11.2",
+    "@tailwindcss/typography": "^0.3.1",
     "core-js": "^3.8.0",
-    "nuxt": "^2.14.9"
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-module": "^3.0.1",
     "@nuxtjs/stylelint-module": "^4.0.0",
-    "@nuxtjs/tailwindcss": "^3.3.3",
+    "@nuxtjs/tailwindcss": "^3.4.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
@@ -45,6 +46,8 @@
     "prettier": "^2.2.1",
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "autoprefixer": "^9",
+    "postcss": "^7"
   }
 }

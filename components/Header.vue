@@ -1,55 +1,51 @@
 <template>
   <div>
-    <v-app-bar app elevate-on-scroll flat>
-      <div class="tw-container flex tw-mx-auto align-center">
-        <div class="flex tw-align-center tw-mr-auto">
-          <nuxt-link
-            class="flex align-center tw-mr-5"
-            to="/"
-            @click.native="checked = false"
-          >
-            <img class="logo tw-py-2" src="/logo.png" />
-          </nuxt-link>
-          <!-- <nuxt-link
-            class="flex align-center tw-mx-4"
-            to="/resources"
-            @click.native="checked = false"
-          >
-            <div class="tw-font-extrabold tw-text-xl">Resources</div>
-          </nuxt-link> -->
-          <nuxt-link
-            class="flex align-center tw-mx-4"
-            to="/projects"
-            @click.native="checked = false"
-          >
-            <div class="tw-font-extrabold tw-text-xl">Projects</div>
-          </nuxt-link>
+    <v-app-bar app elevate-on-scroll>
+      <div class="t-container t-flex t-mx-auto t-screen-tablet-portrait:t-px-6 t-pt-2 t-content-center">
+        <div class="t-flex t-align-content-center t-mr-auto">
+          <div class="flex t-items-center t-mr-auto">
+            <nuxt-link class="flex t-align-content-center" to="/">
+              <img class="t-h-48px" src="/logo.png" />
+            </nuxt-link>
+            <nuxt-link
+              to="/vision"
+              class="t-hidden t-screen-tablet-landscape:t-block t-mx-4 header-link"
+              >Vision</nuxt-link
+            >
+            <nuxt-link
+              to="/projects"
+              class="t-hidden t-screen-tablet-landscape:t-block t-mx-4 header-link"
+              >Projects</nuxt-link
+            >
+          </div>
         </div>
-        <div class="navbar-spacer tw-mx-auto"></div>
+        <div class="t-mx-auto"></div>
 
         <div class="flex align-center">
-          <a href="https://discord.gg/u3JM2cu" class="tw-mx-2">
+          <a
+            href="https://discord.gg/u3JM2cu"
+            class="t-mx-2 t-hidden t-screen-tablet-landscape:t-block"
+          >
             <v-icon x-large>mdi-discord</v-icon>
           </a>
           <a
             href="https://github.com/grey-software/futurist.network"
-            class="tw-mx-2"
+            class="t-mx-2 t-hidden t-screen-tablet-landscape:t-block"
           >
             <v-icon x-large>mdi-github</v-icon>
           </a>
           <v-menu open-on-hover offset-y>
-            <template v-slot:activator="{ on, attrs }">
+            <template v-slot:activator="{on, attrs}">
               <v-btn
-                class="tw-mx-4"
+                class="t-mx-2"
                 large
-                rounded
                 color="primary"
                 dark
+                icon
                 v-bind="attrs"
                 v-on="on"
               >
                 <v-icon x-large>mdi-charity</v-icon>
-                Donate
               </v-btn>
             </template>
             <v-list>
@@ -66,7 +62,7 @@
             </v-list>
           </v-menu>
           <v-app-bar-nav-icon
-            class="tw-mx-2"
+            class="t-mx-2"
             x-large
             @click="drawerOpen = !drawerOpen"
           ></v-app-bar-nav-icon>
@@ -74,17 +70,17 @@
       </div>
     </v-app-bar>
     <v-navigation-drawer disable-resize-watcher v-model="drawerOpen" app right>
-      <SideDrawer />
+      <SideBar />
     </v-navigation-drawer>
   </div>
 </template>
 
 <script>
-import SideDrawer from '@/components/SideDrawer'
+import SideBar from '@/components/SideBar'
 
 export default {
   components: {
-    SideDrawer,
+    SideBar,
   },
   data() {
     return {
