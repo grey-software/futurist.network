@@ -1,5 +1,7 @@
 <template>
-  <div class="flex t-screen-phone:t-flex-col-reverse t-screen-tablet-portrait:flex t-items-center t-justify-between">
+  <div
+    class="flex t-screen-phone:t-flex-col-reverse t-screen-tablet-portrait:flex t-items-center t-justify-between"
+  >
     <div class="t-w-full t-screen-tablet-portrait:t-w-1/2 flex-col">
       <h1
         class="t-text-3xl t-screen-tablet-portrait:text-5xl t-screen-tablet-pc:text-6xl t-font-extrabold t-text-gray-50 t-mb-4"
@@ -23,7 +25,12 @@
           </nuxt-link>
         </v-btn>
 
-        <v-btn class="t-mb-3" target="_blank" :href="button2.link" v-if="button2">
+        <v-btn
+          class="t-mb-3"
+          :target="button2.internal ? '' : '_blank'"
+          :href="button2.link"
+          v-if="button2"
+        >
           <nuxt-link :to="button2.internal ? button2.link : ''">
             <v-icon>{{ button2.icon }}</v-icon>
             {{ button2.text }}
@@ -31,7 +38,9 @@
         </v-btn>
       </div>
     </div>
-    <div class="flex t-screen-phone:t-justify-center t-justify-end t-w-full t-screen-tablet-portrait:t-w-1/2 t-screen-phone:t-mb-4">
+    <div
+      class="flex t-screen-phone:t-justify-center t-justify-end t-w-full t-screen-tablet-portrait:t-w-1/2 t-screen-phone:t-mb-4"
+    >
       <img
         class="t-screen-phone:t-h-10 t-screen-tablet-portrait:t-h-12 t-screen-pc:t-h-14"
         :src="image"

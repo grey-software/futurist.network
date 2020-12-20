@@ -6,6 +6,9 @@
  */
 module.exports = {
   theme: {
+    colors: {
+      primary: '#f29e03',
+    },
     spacing: {
       1: '2px',
       2: '4px',

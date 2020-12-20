@@ -1,12 +1,11 @@
 <template>
   <section class="t-container h-screen mx-auto t-mt-6">
     <h1 class="t-text-6xl t-font-extrabold">Our Projects</h1>
-    <div class="flex t-flex-wrap">
+    <div class="flex t-flex-wrap t-justify-center">
       <project-card
         v-for="(project, id) in projects"
         :key="id"
         :project="project"
-        class="t-w-full t-screen-tablet-portrait:t-w-1/3 "
       />
     </div>
   </section>

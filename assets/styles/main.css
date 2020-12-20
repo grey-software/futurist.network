@@ -23,3 +23,14 @@
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
 }
+
+.shadowed-image {
+  -webkit-filter: drop-shadow(0 0 4px #bbb);
+  filter: drop-shadow(0 0 4px #bbb);
+  transition: filter -webkit-filter 0.2s ease-out;
+}
+
+.shadowed-image:hover {
+  -webkit-filter: drop-shadow(0 0 8px #bbb);
+  filter: drop-shadow(0 0 8px #bbb);
+}
